@@ -1,0 +1,9 @@
+link: https://archive.org/details/microsoftoffice2010languagepack_20200227_1159
+Microsoft Office 2010 Language Pack English
+by Microsoft
+
+Topics office, mui, LIP
+Microsoft Office 2010 Language pack English. Includes 32bit and 64bit installs.See "office 2010 37 language packs.txt" for the names of other languages in this set.
+Addeddate 2020-02-27 12:00:52
+Identifier microsoftoffice2010languagepack_20200227_1159
+Scanner Internet Archive HTML5 Uploader 1.6.4
