@@ -9,7 +9,7 @@
 #trad_eng = traduction anglaise
 #hint_eng = indice anglais
 irregulier_DE=[
-    {"inf":"an/fangen","pras":"fängt...an","prat":"fing...an","perf":"hat angefangen","trad_fr":"commencer","hint_fr":"débuter","trad_eng":"to start","hint_eng":"something"},
+    {"inf":"an/fangen","pras":"fängt...an","prat":"fing...an","perf":"hat angefangen","trad_fr":"commencer","hint_fr":"débuter","trad_eng":"to start","hint_eng":"to begin"},
     {"inf":"befehlen","pras":"befiehlt","prat":"befahl","perf":"hat befohlen","trad_fr":"ordonner","hint_fr":"donner un ordre","trad_eng":"to give an order","hint_eng":""},
     {"inf":"beginnen","pras":"beginnt","prat":"begann","perf":"hat begonnen","trad_fr":"commencer","hint_fr":"débuter","trad_eng":"to start","hint_eng":"to begin"},
     {"inf":"betrügen","pras":"betrügt","prat":"betrog","perf":"hat betrogen","trad_fr":"tromper","hint_fr":"trahir","trad_eng":"to betray","hint_eng":"to cheat"},
