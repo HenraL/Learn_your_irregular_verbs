@@ -31,20 +31,26 @@ while cont=="go":
 cont="go"
 while cont=="go":
     languagE=input("{}\nPlease enter your choice (a whole figure between 0 and 4 (included)):".format(Language))
-    if formaT=="0":
-        formaT=int(formaT)
+    if languagE=="0":
+        languagE=int(languagE)
         cont="stop"
-    elif formaT=="1":
-        formaT=int(formaT)
+    elif languagE=="1":
+        languagE=int(languagE)
         cont="stop"
-    elif formaT=="2":
-        formaT=int(formaT)
+    elif languagE=="2":
+        languagE=int(languagE)
         cont="stop"
-    elif formaT=="" or formaT==" " or formaT==" ":
-        formaT=0
+    elif languagE=="3":
+        languagE=int(languagE)
+        cont="stop"
+    elif languagE=="4":
+        languagE=int(languagE)
+        cont="stop"
+    elif languagE=="" or languagE==" " or languagE==" ":
+        languagE=0
         cont="stop"
     else:
-        print("Please ensure that you have only entered a whole figure that is between 0 and 2.\nYou have entered: {}".format(formaT))
+        print("Please ensure that you have only entered a whole figure that is between 0 and 4.\nYou have entered: {}".format(languagE))
         pause()
 # print("Files in current firectory:\n{}".format())
 dot=""
