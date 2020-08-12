@@ -4,16 +4,121 @@
 def attention():
     attsing="\n           ^\n          / \\\n         / _ \\\n        / | | \\\n       /  | |  \\\n      /   | |   \\\n     /    | |    \\\n    /     | |     \\\n   /      |_|      \\\n  /        _        \\\n /        |_|        \\\n/_____________________\\\n"
     return attsing
-print ("attention...........................[OK]")
+print ("attention............................[OK]")
 def pause():
     pause=input("Please press enter to continue...")
-print ("pause...............................[OK]")
+print ("pause................................[OK]")
+def installer(a):
+    os.system("{}".format(a))
+print("installer............................[OK]")
+def watermarkf(s):
+    print("\ncreated by Henry Letellier\n ._____. \n |.   .| \n |  |  | \n |\___/| \n |_____| ")
+    sleep(s)
+print("watermarkf...........................[OK]")
+def watermarkat(s):
+    print("*=============================================================================================================*\n|      @@@@@@@@   @@@@@@   @@@@@@@@        @@      @@@@@@@@  @@@@@@@@  @@@@@@@@      @@@@@@@@  @@       @@    |\n|      @@        @      @  @@             @  @        @@     @@        @@      @     @@      @  @@     @@     |\n|      @@        @      @  @@            @    @       @@     @@        @@      @     @@      @   @@   @@      |\n|      @@        @@@@@@@   @@@@@@@@     @@@@@@@@      @@     @@@@@@@@  @@      @     @@@@@@@@     @@ @@       |\n|      @@        @  @      @@          @        @     @@     @@        @@      @     @@      @     @@@        |\n|      @@        @   @     @@         @          @    @@     @@        @@      @     @@      @     @@         |\n|      @@@@@@@@  @    @    @@@@@@@@  @            @   @@     @@@@@@@@  @@@@@@@@      @@@@@@@@     @@          |\n|                                                                                                             |\n|              @@       @@  @@@@@@@@@  @@      @@  @@@@@@@@   @@       @@                                     |\n|              @@       @@  @@         @@@     @@  @@       @  @@     @@                                      |\n|              @@       @@  @@         @@ @    @@  @@       @   @@   @@                                       |\n|              @@@@@@@@@@@  @@@@@@@@@  @@  @   @@  @@@@@@@@@     @@ @@                                        |\n|              @@       @@  @@         @@   @  @@  @@    @        @@@                                         |\n|              @@       @@  @@         @@    @ @@  @@     @       @@                                          |\n|              @@       @@  @@@@@@@@@  @@     @@@  @@      @     @@                                           |\n|                                                                                                             |\n|      @@         @@@@@@@@  @@@@@@@@@@@  @@@@@@@@@@@  @@         @@         @@@@@@@@   @@@@@@@  @@@@@@@@      |\n|      @@         @@            @@       @@           @@         @@            @@      @@       @@       @    |\n|      @@         @@            @@       @@           @@         @@            @@      @@       @@       @    |\n|      @@         @@@@@@@@      @@       @@@@@@@@@@@  @@         @@            @@      @@@@@@@  @@@@@@@@@     |\n|      @@         @@            @@       @@           @@         @@            @@      @@       @@   @        |\n|      @@         @@            @@       @@           @@         @@            @@      @@       @@    @       |\n|      @@@@@@@@@  @@@@@@@@      @@       @@@@@@@@@@@  @@@@@@@@@  @@@@@@@@@@ @@@@@@@@   @@@@@@@  @@     @      |\n.=============================================================================================================.")
+    sleep(s)
+print("watermarkat..........................[OK]")
+
 # *=================================================================*
 # |                    Important message                            |
 # *=================================================================*
 print("{}\nBefore we start:\n- Please make sure that you are running this program with admin rights\n- Please make sure you have installed pip on you're computer.\nIf this is not the case, you can download and install it here: https://bit.ly/3fNqe3F".format(attention()))
+pause()
+pause()
+pause()
 
+# *=================================================================*
+# |                       Importing libraries                       |
+# *=================================================================*
 
+try:
+    installer("pip install pip")
+    print ("pip.................................[OK]")
+    succespip="T"
+except:
+    print ("pip.................................[Fail]")
+    succespip="F"
+
+try:
+    import os
+    print ("os..................................[OK]")
+    succeso="T"
+except:
+    print ("os..................................[Fail]")
+    succeso="F"
+try:
+    import glob
+    print ("glob................................[OK]")
+    succesg="T"
+except:
+    print ("glob................................[Fail]")
+    succesg="F"
+try:
+    import platform
+    print ("platform............................[OK]")
+    succespl="T"
+except:
+    print ("platform............................[Fail]")
+    succespl="F"
+try:
+    import pygame
+    print ("pygame..............................[OK]")
+    succespy="T"
+except:
+    print("pygame..............................[Installing]")
+    try:
+        installer("py -m pip install -U pygame --user")
+        print ("pygame..............................[Installed]")
+        try:
+            print("keys to play the game:\n    - space to shoot\n    - right arrow to go right\n    - left arrow to go left")
+            pause()
+            pause()
+            installer("py -m pygame.examples.aliens")
+            print("testing..............................[Success]")
+            succespy="T"
+        except:
+            print("testing..............................[Fail]")
+            succespy="F"
+    except:
+        print ("pygame..............................[Installation Failed]")
+        print ("pygame..............................[Fail]")
+        succespy="F"  
+try:
+    import shutil
+    print ("shutil..............................[OK]")
+    success="T"
+except:
+    print ("shutil..............................[Fail]")
+    success="F"
+try:
+    from time import sleep
+    print ("time................................[OK]")
+    succesti="T"
+except:
+    print ("time................................[Fail]")
+    succesti="F"
+
+try:
+    import thorpy
+    print ("thorpy..............................[OK]")
+    succesthor="T"
+except:
+    print("thorpy.............................[Installing]")
+    try:
+        installer("py -m pip install -U thorpy --user")
+        print ("thorpy.............................[Installed]")
+        succesthor="T"
+    except:
+        print ("thorpy..............................[Installation Failed]")
+        print ("thorpy..............................[Fail]")
+        succesthor="F"
+
+if succespip=="T" and succeso=="T" and succeso=="T" and succesg=="T" and succespl=="T" and succespy=="T" and success=="T" and succesti=="T" and succesthor=="T":
+    print ("Libraries...........................[OK]")
+else:
+    print ("Libraries...........................[Fail]")
+    pause()
 # *=================================================================*
 # |                    Creating the German list                     |
 # *=================================================================*
@@ -126,51 +231,6 @@ print ("irregular_FR........................[OK]")
 # *=================================================================*
 print ("irregular_ES........................[OK]")
 # *=================================================================*
-# |                       Importing libraries                       |
-# *=================================================================*
-try:
-    import os
-    print ("os..................................[OK]")
-    succeso="T"
-except:
-    print ("os..................................[Fail]")
-    succeso="F"
-try:
-    import glob
-    print ("glob................................[OK]")
-    succesg="T"
-except:
-    print ("glob................................[Fail]")
-    succesg="F"
-try:
-    import platform
-    print ("platform............................[OK]")
-    succespl="T"
-except:
-    print ("platform............................[Fail]")
-    succespl="F"
-try:
-    import pygame
-    print ("pygame..............................[OK]")
-    succespy="T"
-except:
-    print ("pygame..............................[Fail]")
-    succespy="F"
-    try:
-        
-try:
-    import shutil
-    print ("shutil..............................[OK]")
-    success="T"
-except:
-    print ("shutil..............................[Fail]")
-    success="F"
-if succeso=="T" and succeso=="T" and succesg=="T" and succespl=="T" and succespy=="T" and success=="T":
-    print ("Libraries...........................[OK]")
-else:
-    print ("Libraries...........................[Fail]")
-    pause()
-# *=================================================================*
 # |                    Asking for the wished language               |                     |
 # *=================================================================*
 LanguageChosen="n"
@@ -261,7 +321,7 @@ givenSum=36
 dots=givenSum
 #----------------------------- Innitiating audio list --------------
 sound=["Thriller.m4a"]
-files=["anfangen","ass","befahl","befehlen","befiehlt","begann","beginnen","beginnt","betrog","betrügen","betrügt","bewarb sich","bewerben","bewirb sich","bieten","bietet","bitten","bittet","bleiben","bleibt","blieb","bot","brach","brechen","bricht","darf","durfte","dürfen","einladen","eintreten","empfahl","empfand","empfangen","empfehlen","empfiehlt","empfinden","empfindet","empfing","empfägnt","erschrak","erschrecken","erschrickt","essen","fahren","fand","fiel","finden","findet","fing...an","fliegen","fliegt","fliehen","flieht","fliessen","fliesst","flog","floh","floss","frass","fressen","frieren","friert","frisst","fror","fuhr","fährt","fällt","fängt...an","gab","geben","gehen","geht","gelang","gelingen","gelingt","geniessen","geniesst","genoss","geschah","geschehen","geschieht","gewann","gewinnen","gewinnt","gibt","ging","greifen","greift","griff","haben","half","halten","hat angefangen","hat befohlen","hat betrogen","hat eingeladen","hat empfangen","hat empfohlen","hat empfunden","hat geahlten","hat gebeten","hat geboten","hat gebrochen","hat gedurft","hat gefressen","hat gefroren","hat gefunden","hat gegeben","hat gegessen","hat gegriffen","hat gehabt","hat gehangen","hat geheissen","hat geholfen","hat gekonnt","hat geladen","hat gelassen","hat gelegen","hat gelesen","hat geliehen","hat gelogen","hat gemusst","hat genocht","hat genomen","hat genossen","hat gepfiffen","hat geraten","hat gerissen","hat gerochen","hat gerufen","hat geschienen","hat geschlafen","hat geschlagen","hat geschlossen","hat geschnitten","hat geschoben","hat geschossen","hat geschreiben","hat geschrien","hat geschwiegen","hat gesehen","hat gesessen","hat gesprochen","hat gestanden","hat gestanden1","hat gestolen","hat gestritten","hat gesungen","hat getragen","hat getroffen","hat gewaschen","hat gewonnen","hat sich geworben","hat vergessen","hat verloren","hat verstanden","hat vorgeworfen","hat...begonnen","hat","hat1","hatte","heissen","heisst","helfen","hielt","hiess","hilft","hing","hält","hängen","hängt","Infinitiv","isst","ist eingetreten","ist erschrocken","ist geblieben","ist gefahren","ist gefallen","ist geflogen","ist geflohen","ist geflossen","ist gegangen","ist gekommen","ist gekrochen","ist gelaufen","ist gelitten","ist gelungen","ist geritten","ist geschehen","ist geschritten","ist geschwommen","ist gesprungen","ist gestiegen","ist gestorben","ist getrunken","ist gewachsen","ist geworden","ist umgezogen","ist verschwunden","kam","kann","kommen","kommt","konnte","kreichen","kriecht","kroch","können","laden","lag","las","lassen","laufen","leiden","leiden1","leidet","leihen","lesen","lief","liegen","liegt","lieh","liess","liest","litt","log","lud...ein","lud","lädt...ein","lädt","lässt","lässt1","lügen","lügt","mag","mochte","muss","musste","mögen","müssen","nahm","nehmen","nimmt","perfekt","perfekt1","pfeifen","pfeift","pfif","Präsen","präsen1","Präteritum","präteritum1","raten","reissen","reisst","reiten","reitet","riechen","rief","riet","riss","ritt","roch","rufen","ruft","rät","sah","sang","sass","scheiben","schein","scheinen","scheint","schiessen","schlafen","schlagen","schlief","schliessen","schliesst","schliesst1","schloss","schlug","schlägt","schneiden","schneidet","schnitt","schob","schoss","schreibt","schreien","schreit","schreiten","schreitet","schrie","schrieb","schritt","schwam","schweigen","schweigt","schwieg","schwimmen","schwimmt","sehen","sieht","singen","singt","sitzen","sitzt","sprach","sprang","sprechen","spricht","springen","springt","stahl","stand","starb","stehen","stehlen","steht","steigen","steigt","sterben","stieg","stiehlt","stirbt","streiten","streitet","stritt","traf","tragen","trank","trat...ein","treffen","trifft","trinken","trinkt","tritt...ein","trug","um ziehen","vergass","vergessen","vergisst","verlieren","verliert","verlor","verschwand","verschwinden","verschwindet","verstand","verstehen","versteht","vor werfen","wachsen","warf...for","waschen","werden","wird","wirft...vor","wuchs","wurde","wusch","wäschst","wäscht","zieht...um","zog...um"]
+files=["anfangen","ass","befahl","befehlen","befiehlt","begann","beginnen","beginnt","betrog","betrügen","betrügt","bewarb sich","bewerben","bewirb sich","bieten","bietet","bitten","bittet","bleiben","bleibt","blieb","bot","brach","brechen","bricht","darf","durfte","dürfen","einladen","eintreten","empfahl","empfand","empfangen","empfehlen","empfiehlt","empfinden","empfindet","empfing","empfägnt","erschrak","erschrecken","erschrickt","essen","fahren","fand","fiel","finden","findet","fing...an","fliegen","fliegt","fliehen","flieht","fliessen","fliesst","flog","floh","floss","frass","fressen","frieren","friert","frisst","fror","fuhr","fährt","fällt","fängt...an","gab","geben","gehen","geht","gelang","gelingen","gelingt","geniessen","geniesst","genoss","geschah","geschehen","geschieht","gewann","gewinnen","gewinnt","gibt","ging","greifen","greift","griff","haben","half","halten","hat angefangen","hat befohlen","hat betrogen","hat eingeladen","hat empfangen","hat empfohlen","hat empfunden","hat gehalten","hat gebeten","hat geboten","hat gebrochen","hat gedurft","hat gefressen","hat gefroren","hat gefunden","hat gegeben","hat gegessen","hat gegriffen","hat gehabt","hat gehangen","hat geheissen","hat geholfen","hat gekonnt","hat geladen","hat gelassen","hat gelegen","hat gelesen","hat geliehen","hat gelogen","hat gemusst","hat genocht","hat genomen","hat genossen","hat gepfiffen","hat geraten","hat gerissen","hat gerochen","hat gerufen","hat geschienen","hat geschlafen","hat geschlagen","hat geschlossen","hat geschnitten","hat geschoben","hat geschossen","hat geschreiben","hat geschrien","hat geschwiegen","hat gesehen","hat gesessen","hat gesprochen","hat gestanden","hat gestolen","hat gestritten","hat gesungen","hat getragen","hat getroffen","hat gewaschen","hat gewonnen","hat sich geworben","hat vergessen","hat verloren","hat verstanden","hat vorgeworfen","hat...begonnen","hat","hatte","heissen","heisst","helfen","hielt","hiess","hilft","hing","hält","hängen","hängt","Infinitiv","isst","ist eingetreten","ist erschrocken","ist geblieben","ist gefahren","ist gefallen","ist geflogen","ist geflohen","ist geflossen","ist gegangen","ist gekommen","ist gekrochen","ist gelaufen","ist gelitten","ist gelungen","ist geritten","ist geschehen","ist geschritten","ist geschwommen","ist gesprungen","ist gestiegen","ist gestorben","ist getrunken","ist gewachsen","ist geworden","ist umgezogen","ist verschwunden","kam","kann","kommen","kommt","konnte","kreichen","kriecht","kroch","können","laden","lag","las","lassen","laufen","leiden","leidet","leihen","lesen","lief","liegen","liegt","lieh","liess","liest","litt","log","lud...ein","lud","lädt...ein","lädt","lässt","lügen","lügt","mag","mochte","muss","musste","mögen","müssen","nahm","nehmen","nimmt","perfekt","pfeifen","pfeift","pfif","Präsen","Präteritum","raten","reissen","reisst","reiten","reitet","riechen","rief","riet","riss","ritt","roch","rufen","ruft","rät","sah","sang","sass","scheiben","schein","scheinen","scheint","schiessen","schlafen","schlagen","schlief","schliessen","schliesst","schloss","schlug","schlägt","schneiden","schneidet","schnitt","schob","schoss","schreibt","schreien","schreit","schreiten","schreitet","schrie","schrieb","schritt","schwam","schweigen","schweigt","schwieg","schwimmen","schwimmt","sehen","sieht","singen","singt","sitzen","sitzt","sprach","sprang","sprechen","spricht","springen","springt","stahl","stand","starb","stehen","stehlen","steht","steigen","steigt","sterben","stieg","stiehlt","stirbt","streiten","streitet","stritt","traf","tragen","trank","trat...ein","treffen","trifft","trinken","trinkt","tritt...ein","trug","um ziehen","vergass","vergessen","vergisst","verlieren","verliert","verlor","verschwand","verschwinden","verschwindet","verstand","verstehen","versteht","vor werfen","wachsen","warf...for","waschen","werden","wird","wirft...vor","wuchs","wurde","wusch","wäschst","wäscht","zieht...um","zog...um"]
 #----------------------------- Innitiating extension list --------------
 formatt=["mp4","wav","mp3"]
 formaT=0
@@ -272,15 +332,15 @@ for a in range(len(files)):
     dot=""
     for i in range(dots-sums):
         dot+="."
-    if os.path.exists("{}{}".format(fullpath,sound[a])):
-        print ("Sound: {}.{}{}[OK]".format(sound[a],formatt[formaT],dot))
+    if os.path.exists("{}{}.{}".format(fullpath,files[a],formatt[formaT])):
+        print ("Sound: {}.{}{}[OK]".format(files[a],formatt[formaT],dot))
     else:
-        print ("""Fatal Error: The file : "{}" does not exist in the folder Audio.\nTrying to copy from the source folder of the program""".format(sound[a]))
+        print ("""Fatal Error: The file : "{}.{}" does not exist in the folder Audio.\nTrying to copy from the source folder of the program""".format(files[a],formatt[formaT]))
         try:
-            filePath = shutil.copy('{}'.format(sound[a]), '{}'.format(fullpath))
-            print ("Sound: {}.{}{}[Copied]".format(sound[a],formatt[formaT],dot))
+            filePath = shutil.copy('{}.{}'.format(files[a],formatt[formaT]), '{}'.format(fullpath))
+            print ("Sound: {}.{}{}[Copied]".format(files[a],formatt[formaT],dot))
         except:
-            print ("""{}\nLeathal Error:\nThe file : "{}" does not exist at the source of the program, please run the file {}_Sounds.exe and make sure the installation path is {}.""".format(attention(),sound[a],filenames,fullpath))
+            print ("""{}\nLeathal Error:\nThe file : "{}.{}" does not exist at the source of the program, please run the file {}_Sounds.exe and make sure the installation path is {}.""".format(attention(),files[a],formatt[formaT],filenames,fullpath))
             break
 pause()
 # *=================================================================*
@@ -290,3 +350,5 @@ print ("Launching program")
 for i in range(114):
     print(".",end="")
 
+
+watermarkf(3)
