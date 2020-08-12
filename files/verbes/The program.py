@@ -8,6 +8,11 @@ print ("attention...........................[OK]")
 def pause():
     pause=input("Please press enter to continue...")
 print ("pause...............................[OK]")
+# *=================================================================*
+# |                    Important message                            |
+# *=================================================================*
+print("{}\nBefore we start:\n- Please make sure that you are running this program with admin rights\n- Please make sure you have installed pip on you're computer.\nIf this is not the case, you can download and install it here: https://bit.ly/3fNqe3F".format(attention()))
+
 
 # *=================================================================*
 # |                    Creating the German list                     |
@@ -151,6 +156,8 @@ try:
 except:
     print ("pygame..............................[Fail]")
     succespy="F"
+    try:
+        
 try:
     import shutil
     print ("shutil..............................[OK]")
