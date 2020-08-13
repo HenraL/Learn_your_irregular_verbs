@@ -1,0 +1,22 @@
+1) Words and definitions
+	a.	The User can choose to just learn the words and their definition
+	b.	The User can choose to learn the definition then the words 
+2) Words and tenses
+	a.	The User can choose to learn the words and their tenses
+	b.      The User can choose to learn the tenses and the words
+3) Words Tenses & definition
+	a.	The User can choose to learn the words, their tenses and definition
+	b.	The User can choose to learn the words, their definition and tenses
+	c.	The User can choose to learn the tenses, their words and definiton
+	d.	The User can choose to learn the tenses, their definition and words
+	e.	The User can choose to learn the definition, their tenses and words
+	f.	The User can choose to learn the definition, their words and tenses
+4)	The User can choose to view the list of :
+	a.	Verbs
+	b.	Tenses
+		i.	Of a specific tense
+		ii.	Of all the tenses
+	c.	The English translation
+	d.	The French translation
+	e.	The word and the chosen language for the translation
+	f.	Everything
