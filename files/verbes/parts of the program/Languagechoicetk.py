@@ -2,84 +2,63 @@ from tkinter import *
 import sys
 #import webbrowser
 
-def languageDE(value):
-    if value=="1":
-        Language="D"
-        fenetre.destroy
-    elif value=="2":
-        Language="E"
-        fenetre.destroy
-    elif value=="3":
-        Language="F"
-        fenetre.destroy
-    elif value=="4":
-        Language="ES"
-        fenetre.destroy
-    else:
-        Language="quit"
-        fenetre.destroy
-    print("dd")
 def pause():
     pause=input("Please press enter to continue...")
 print ("pause................................[OK]")
-def chosen_language(Language):
-    LanguageChosen="n"
-    while LanguageChosen!="y":
-        # Language="D"
-        if Language=="D" or Language=="De" or Language=="DE" or Language=="de":
-            Corresponds="German"
-            filenames="de"
-            LanguageChosen="y"
-        elif Language=="E" or Language=="En" or Language=="EN" or Language=="en":
-            Corresponds="English"
-            filenames="en"
-            LanguageChosen="y"
-        elif Language=="F" or Language=="Fr" or Language=="FR" or Language=="fr":
-            Corresponds="French"
-            filenames="fr"
-            LanguageChosen="y"
-        elif Language=="Es" or Language=="ES" or Language=="es":
-            Corresponds="Spanish"
-            filenames="es"
-            LanguageChosen="y"
-        else:
-            print("Goodbye, See you next time")
-            sys.exit(0)
-            pause()
-        #global Corresponds, filenames
-        return Corresponds, filenames
-        break
 def languageDE():
     Language="D"
-    chosen_language(Language)
-    fenetre.destroy
-    print(Language)
-    return Language
+    Corresponds="German"
+    filenames="de"
+    print(Language, Corresponds, filenames)
+    return Language, Corresponds, filenames
 def languageE():
     Language="E"
-    chosen_language(Language)
-    fenetre.destroy
-    print(Language)
-    return Language
+    Corresponds="English"
+    filenames="en"
+    print(Language, Corresponds, filenames)
+    return Language, Corresponds, filenames
 def languageF():
     Language="F"
-    chosen_language(Language)
-    fenetre.destroy
-    print(Language)
-    return Language
+    Corresponds="French"
+    filenames="fr"
+    print(Language, Corresponds, filenames)
+    return Language, Corresponds, filenames
 def languageES():
     Language="ES"
-    chosen_language(Language)
-    fenetre.destroy
-    print(Language)
-    return Language
-def languagequit():
-    Language="quit"
-    chosen_language(Language)
-    fenetre.destroy
-    print(Language)
-    return Language
+    Corresponds="Spanish"
+    filenames="es"
+    print(Language, Corresponds, filenames)
+    return Language, Corresponds, filenames
 
+def TlanguageE():
+    TLanguage="E"
+    chosen_language(Language)
+    print(TLanguage, Corresponds, filenames)
+    return TLanguage, Corresponds, filenames
+def TlanguageF():
+    TLanguage="F"
+    chosen_language(Language)
+    print(TLanguage, Corresponds, filenames)
+    return TLanguage, Corresponds, filenames
+
+def languagequit():
+    fenetre.destroy()
+    print("Goodbye, See you next time")
+    aaaa = Tk()
+    aaaa['bg']='white'
+    aaaa.title("Language:")
+    aaaa.geometry("250x200")
+    aaaa.minsize(250,200)
+    #aaaa.iconbitmap("the icone of the software in.ico")
+    aaaa.config(background="#2CDF85")
+    label = Label(aaaa, text="Goodbye, see you next time. :-)", font=(Font,Size), bg=LBG, fg=LFG)
+    label.pack(side=TOP, pady=10, expand=YES,fill=X)#padx=5)
+    bouton=Button(aaaa, text="close", font=(Font,Size), bg=WBG, fg=WFG, command=aaaa.destroy ,activebackground=hbq, activeforeground=hfq)
+    bouton.pack(side=BOTTOM,pady=10, expand=YES,fill=X)#padx=5)
+
+
+    aaaa.mainloop()
+    sys.exit(0)
 #Font="Algerian"
 Font="Times_New_Roman"
 #Font=""

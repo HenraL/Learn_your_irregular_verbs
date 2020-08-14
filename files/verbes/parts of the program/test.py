@@ -1,4 +1,3 @@
-
 #The imports
 from tkinter import *
 import sys
