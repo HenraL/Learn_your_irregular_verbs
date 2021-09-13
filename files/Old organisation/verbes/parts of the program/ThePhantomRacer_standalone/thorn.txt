@@ -1,0 +1,42 @@
+VOYP 0.4
+VOY 0
+a
+e
+i
+o
+u
+y
+on
+in
+en
+an
+CONSHP 0.5
+CONSH
+qu
+ck
+k
+w
+t
+z
+p
+s
+sh
+d
+f
+x 0.01
+g
+c
+v
+b
+n
+m
+thor 0.2
+thorn 0.2
+dur 0.2
+CONSS 0
+r
+l
+j
+h 0.1
+SPEC 0
+a

@@ -1,0 +1,251 @@
+0) Files
+1) Words and definitions
+	a.	The User can choose to just learn the words and their definition
+	b.	The User can choose to learn the definition then the words 
+2) Words and tenses
+	a.	The User can choose to learn the words and their tenses
+	b.      The User can choose to learn the tenses and the words
+3) Words Tenses & definition
+	a.	The User can choose to learn the words, their tenses then definition
+	b.	The User can choose to learn the words, their definition and tenses
+	c.	The User can choose to learn the tenses, their words and definiton
+	d.	The User can choose to learn the tenses, their definition and words
+	e.	The User can choose to learn the definition, their tenses and words
+	f.	The User can choose to learn the definition, their words and tenses
+4) Overview
+	a.	Verbs
+	b.	Tenses
+		i.	Of a specific tense
+		ii.	Of all the tenses
+	c.	The English translation
+	d.	The French translation
+	e.	The word and the chosen language for the translation
+	f.	Everything
+5) About
+	a. The author
+	b. ...
+		i. My watermarks
+		ii. You're score
+		iii. Time spent
+		iiii. Current OS
+		iiiii. Helpers
+	c. How to
+	sep
+	d. Hidden
+	sep
+	e. Sound & video
+		i.all the sounds
+		ii. specific sound
+		iii. Where to find the sounds
+		sep
+		iiii. all the videos
+		iiiii. specific video
+		iiiiii. Where to find the videos
+		iiiiii. ...
+
+def WD():
+	string="ddddd"
+	fenetre = Tk()
+	fenetre['bg']='white'
+
+
+	Frame1=Frame(fenetre, borderwidth=2, relief=GROOVE)
+	Frame1.pack(side=LEFT, padx=30, pady=30)
+
+
+	value = StringVar() 
+	value.set("texte par défaut")
+	entree = Entry(Frame1, textvariable=string, width=30)
+	entree.pack(side=LEFT,padx=10,pady=10)
+	bouton=Button(Frame1, text="Valider", command=fenetre.quit)
+	bouton.pack(side=RIGHT,padx=10,pady=10)
+
+	fenetre.mainloop()
+def DW():
+	string="ddddd"
+	fenetre = Tk()
+	fenetre['bg']='white'
+
+
+	Frame1=Frame(fenetre, borderwidth=2, relief=GROOVE)
+	Frame1.pack(side=LEFT, padx=30, pady=30)
+
+
+	value = StringVar() 
+	value.set("texte par défaut")
+	entree = Entry(Frame1, textvariable=string, width=30)
+	entree.pack(side=LEFT,padx=10,pady=10)
+	bouton=Button(Frame1, text="Valider", command=fenetre.quit)
+	bouton.pack(side=RIGHT,padx=10,pady=10)
+def WT():
+	string="ddddd"
+	fenetre = Tk()
+	fenetre['bg']='white'
+
+
+	Frame1=Frame(fenetre, borderwidth=2, relief=GROOVE)
+	Frame1.pack(side=LEFT, padx=30, pady=30)
+
+
+	value = StringVar() 
+	value.set("texte par défaut")
+	entree = Entry(Frame1, textvariable=string, width=30)
+	entree.pack(side=LEFT,padx=10,pady=10)
+	bouton=Button(Frame1, text="Valider", command=fenetre.quit)
+	bouton.pack(side=RIGHT,padx=10,pady=10)
+def TW():
+	string="ddddd"
+	fenetre = Tk()
+	fenetre['bg']='white'
+
+
+	Frame1=Frame(fenetre, borderwidth=2, relief=GROOVE)
+	Frame1.pack(side=LEFT, padx=30, pady=30)
+
+
+	value = StringVar() 
+	value.set("texte par défaut")
+	entree = Entry(Frame1, textvariable=string, width=30)
+	entree.pack(side=LEFT,padx=10,pady=10)
+	bouton=Button(Frame1, text="Valider", command=fenetre.quit)
+	bouton.pack(side=RIGHT,padx=10,pady=10)
+def WTD():
+	string="ddddd"
+	fenetre = Tk()
+	fenetre['bg']='white'
+
+
+	Frame1=Frame(fenetre, borderwidth=2, relief=GROOVE)
+	Frame1.pack(side=LEFT, padx=30, pady=30)
+
+
+	value = StringVar() 
+	value.set("texte par défaut")
+	entree = Entry(Frame1, textvariable=string, width=30)
+	entree.pack(side=LEFT,padx=10,pady=10)
+	bouton=Button(Frame1, text="Valider", command=fenetre.quit)
+	bouton.pack(side=RIGHT,padx=10,pady=10)
+def WDT():
+	string="ddddd"
+	fenetre = Tk()
+	fenetre['bg']='white'
+
+
+	Frame1=Frame(fenetre, borderwidth=2, relief=GROOVE)
+	Frame1.pack(side=LEFT, padx=30, pady=30)
+
+
+	value = StringVar() 
+	value.set("texte par défaut")
+	entree = Entry(Frame1, textvariable=string, width=30)
+	entree.pack(side=LEFT,padx=10,pady=10)
+	bouton=Button(Frame1, text="Valider", command=fenetre.quit)
+	bouton.pack(side=RIGHT,padx=10,pady=10)
+def TWD():
+	string="ddddd"
+	fenetre = Tk()
+	fenetre['bg']='white'
+
+
+	Frame1=Frame(fenetre, borderwidth=2, relief=GROOVE)
+	Frame1.pack(side=LEFT, padx=30, pady=30)
+
+
+	value = StringVar() 
+	value.set("texte par défaut")
+	entree = Entry(Frame1, textvariable=string, width=30)
+	entree.pack(side=LEFT,padx=10,pady=10)
+	bouton=Button(Frame1, text="Valider", command=fenetre.quit)
+	bouton.pack(side=RIGHT,padx=10,pady=10)
+def TDW():
+	string="ddddd"
+	fenetre = Tk()
+	fenetre['bg']='white'
+
+
+	Frame1=Frame(fenetre, borderwidth=2, relief=GROOVE)
+	Frame1.pack(side=LEFT, padx=30, pady=30)
+
+
+	value = StringVar() 
+	value.set("texte par défaut")
+	entree = Entry(Frame1, textvariable=string, width=30)
+	entree.pack(side=LEFT,padx=10,pady=10)
+	bouton=Button(Frame1, text="Valider", command=fenetre.quit)
+	bouton.pack(side=RIGHT,padx=10,pady=10)
+def DTW():
+	string="ddddd"
+	fenetre = Tk()
+	fenetre['bg']='white'
+
+
+	Frame1=Frame(fenetre, borderwidth=2, relief=GROOVE)
+	Frame1.pack(side=LEFT, padx=30, pady=30)
+
+
+	value = StringVar() 
+	value.set("texte par défaut")
+	entree = Entry(Frame1, textvariable=string, width=30)
+	entree.pack(side=LEFT,padx=10,pady=10)
+	bouton=Button(Frame1, text="Valider", command=fenetre.quit)
+	bouton.pack(side=RIGHT,padx=10,pady=10)
+def DWT():
+	string="ddddd"
+	fenetre = Tk()
+	fenetre['bg']='white'
+
+
+	Frame1=Frame(fenetre, borderwidth=2, relief=GROOVE)
+	Frame1.pack(side=LEFT, padx=30, pady=30)
+
+
+	value = StringVar() 
+	value.set("texte par défaut")
+	entree = Entry(Frame1, textvariable=string, width=30)
+	entree.pack(side=LEFT,padx=10,pady=10)
+	bouton=Button(Frame1, text="Valider", command=fenetre.quit)
+	bouton.pack(side=RIGHT,padx=10,pady=10)
+def V():
+	print("hi")
+def OST():
+	print("hi")
+def OAT():
+	print("hi")
+def ET():
+	print("hi")
+def FT():
+	print("hi")
+def WCLT():
+	print("hi")
+def EVE():
+	print("hi")
+def Author():
+	print("hi")
+def Watermarks():
+	print("hi")
+def Score():
+	print("hi")
+def TS():
+	print("hi")
+def COS():
+	print("hi")
+def HELPERS():
+	print("hi")
+def HT():
+	print("hi")
+def HID():
+	print("hi")
+def AS():
+	print("hi")
+def Ss():
+	print("hi")
+def FS():
+	print("hi")
+def AV():
+	print("hi")
+def SV():
+	print("hi")
+def FV():
+	print("hi")
+def TS():
+	print("hi")
