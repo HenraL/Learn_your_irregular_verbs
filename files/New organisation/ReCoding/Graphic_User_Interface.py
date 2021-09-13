@@ -19,12 +19,16 @@ class Windows:
         #__________________ Default colours for the foreground and the Background __________________
         self.universalBackground="white"
         self.universalForeground="black"
+        #__________________ Default size for tkinter windows __________________
+        self.size_x=700
+        self.size_y=350
+        self.geometry=f"{self.size_x}x{self.size_y}"
         #__________________ Vars for the software Icon __________________
         self.icon=""
         self.hasIcon=False
         #_________________ Watermark _________________
         self.watermark=f"{chr(169)} Created by Henry Letellier"
-        # self.innerPadding=5
+        self.innerPadding=5
         self.PMethod="written" #Preview Method (liked to a radio on the main menu screen)
         #_________________ Name of the folders for the different files _________________
         self.ProgressFolder="SavedProgress"
@@ -175,8 +179,17 @@ class Windows:
                 ms=int(ms[1])
             except:
                 pass
-            return {"d":d,"mo":mo,"y":y,"h":h,"minute":minute,"s":s,"ms":ms}
-        def DoubleTermCall(self,exercise,):
+            r={"dp":int(d),"mop":int(mo),"yp":int(y),"hp":int(h),"minutep":int(minute),"sp":int(s),"msp":int(ms)}
+            p={"dp":"","mop":"","yp":"","hp":"","minutep":"","sp":"","msp":""}
+            for i in p:
+                e=int(r[i])
+                if e>1:
+                    p[i]="s"
+            return {"d":d,"mo":mo,"y":y,"h":h,"minute":minute,"s":s,"ms":ms,"r":r,"p":p}
+        def TrippleTermCall(self,exercise,WTOrTW=0):
+            print(f"Tripple Term Call,exercise={exercise},WTOrTW={WTOrTW}")
+
+        def DoubleTermCall(self,exercise,TDOrDT=0):
             update.date(self)
             log.ExerciseStarted(self,exercise)
             start_time=self.Alls
@@ -213,7 +226,10 @@ class Windows:
                     hintES=current['hint_es']
                 if 'hint_fr' in current:
                     hintFR=current['hint_fr']
-                result=Windows.SubOperations.AskDouble(self,typeRequired="definition",word=term,correctAnswer=current[lang],hintFR=hintFR,hintENG=hintENG,hintDE=hintDE,hintES=hintES)
+                if TDOrDT==0:
+                    result=Windows.SubOperations.AskDouble(self,typeRequired="definition",word=term,correctAnswer=current[lang],hintFR=hintFR,hintENG=hintENG,hintDE=hintDE,hintES=hintES)
+                else:
+                    result=Windows.SubOperations.AskDouble(self,typeRequired="term",word=current[lang],correctAnswer=term,hintFR=hintFR,hintENG=hintENG,hintDE=hintDE,hintES=hintES)
                 print("################################################################################################################################################################################")
                 print(f"\n\n\nexercise={exercise}\nstart_time={start_time}\ncontinueExercise={continueExercise}\nindex={index}\nscore={score}\nself.ListLength={self.ListLength}\nresult={result}\n\n\n")
                 print("################################################################################################################################################################################")
@@ -230,8 +246,9 @@ class Windows:
             update.date(self)
             log.ExerciseStopped(self,exercise)
             end_time=self.Alls
+            Windows.SaveProgress(self,language=self.ChosenLanguage,progress=index,score=score,exercise=exercise,time_start=start_time,time_end=end_time)
             Windows.ScoreBoard(self,score=score,answ_questions=index,tot_questions=self.ListLength,exercise=exercise,time_start=start_time,time_stop=end_time)
-            log.questions(self,language=self.ChosenLanguage,progress=index,score=score,exercise=exercise,time_start=start_time,time_end=end_time)
+            log.questions(self,answ_questions=index,tot_questions=self.ListLength,exercise=exercise)
             log.score(self,score,exercise)
             log.Time(self,Start_time=start_time,Stop_time=end_time,exercise=exercise)
         def gameCheck(hintUsed,Answer,correctAnswer,AnswerRevealed):
@@ -344,6 +361,8 @@ class Windows:
                 print(f"\ncorrectAnswer={correctAnswer}\nself.hintUsed={self.hintUsed}\nself.AnswerRevealed={self.AnswerRevealed}\ncorrectAnswer={correctAnswer}\n\n\n")
                 print("")
             TTT = Tk()
+            TTT.geometry(self.geometry)
+            TTT.minsize(self.size_x,self.size_y)
             TTT['bg']=self.universalBackground
             if self.hasIcon==True:TTT.iconbitmap=self.icon
             WordLabel=Label(TTT,text=f"What is the {typeRequired} of {word}:",bg=self.universalBackground,font=self.defaultFont,anchor="w",wraplength=400)
@@ -392,77 +411,26 @@ class Windows:
             """ Words then the definition """
             TT.destroy()
             exercise="Words then the definition"
-            
+            Windows.SubOperations.DoubleTermCall(self,exercise,TDOrDT=0)
             Windows.Home(self)
         def DW():
             """ Definition then the words """
             TT.destroy()
             exercise="Definition then the words"
-            update.date(self)
-            log.ExerciseStarted(self,exercise)
-            start_time=self.Alls
-            continueExercise=True
-            index=0
-            score=0
-            print(f"\n\n\nexercise={exercise}\nstart_time={start_time}\ncontinueExercise={continueExercise}\nindex={index}\nscore={score}\nself.ListLength={self.ListLength}\n\n\n")
-            while continueExercise==True and index<=self.ListLength:
-                print(f"\n\n\nexercise={exercise}\nstart_time={start_time}\ncontinueExercise={continueExercise}\nindex={index}\nscore={score}\nself.ListLength={self.ListLength}\n\n\n")
-                # print(f"self.ContentLanguage={self.ContentLanguage}")
-                current=self.ContentLanguage[index]
-                term=""
-                if 'trad_fr' in current:
-                    term+=f"{current['trad_fr']}/"
-                if 'trad_eng' in current:
-                    term+=f"{current['trad_eng']}/"
-                if 'trad_de' in current:
-                    term+=f"{current['trad_de']}/"
-                if 'trad_es' in current:
-                    term+=f"{current['trad_es']}"
-                if self.ChosenLanguage=='EN':
-                    lang='infinitive'
-                elif self.ChosenLanguage=='DE':
-                    lang='inf'
-                elif self.ChosenLanguage=='ES':
-                    lang=''
-                else:
-                    lang='infinitif'
-                hintENG=hintDE=hintES=hintFR=""
-                if 'hint_eng' in current:
-                    hintENG=current['hint_eng']
-                if 'hint_de' in current:
-                    hintDE=current['hint_de']
-                if 'hint_es' in current:
-                    hintES=current['hint_es']
-                if 'hint_fr' in current:
-                    hintFR=current['hint_fr']
-                result=Windows.SubOperations.AskDouble(self,typeRequired="term",word=current[lang],correctAnswer=term,hintFR=hintFR,hintENG=hintENG,hintDE=hintDE,hintES=hintES)
-                print("################################################################################################################################################################################")
-                print(f"\n\n\nexercise={exercise}\nstart_time={start_time}\ncontinueExercise={continueExercise}\nindex={index}\nscore={score}\nself.ListLength={self.ListLength}\nresult={result}\n\n\n")
-                print("################################################################################################################################################################################")
-                if self.ToAdd=="Stop exercise":
-                    continueExercise=False
-                else:
-                    print(f"result={result},self.ToAdd={self.ToAdd}")
-                    score+=self.ToAdd
-                    index+=1
-                    print(f"score={score},index={index}")
-                print(f"\n\n\nexercise={exercise}\nstart_time={start_time}\ncontinueExercise={continueExercise}\nindex={index}\nscore={score}\nself.ListLength={self.ListLength}\nresult={result}\n\n\n")
-                
-            print("out of loop")
-            update.date(self)
-            log.ExerciseStopped(self,exercise)
-            end_time=self.Alls
-            Windows.ScoreBoard(self,score=score,answ_questions=index,tot_questions=self.ListLength,exercise=exercise,time_start=start_time,time_stop=end_time)
-            log.questions(self,index,self.ListLength,exercise)
-            log.score(self,score,exercise)
-            log.Time(self,Start_time=start_time,Stop_time=end_time,exercise=exercise)
+            Windows.SubOperations.DoubleTermCall(self,exercise,TDOrDT=1)
             Windows.Home(self)
         def WT():
             """ Words then their tenses """
-            Windows.WT(self)
+            TT.destroy()
+            exercise="Words then their tenses"
+            Windows.SubOperations.DoubleTermCall(self,exercise,TDOrDT=1)
+            Windows.Home(self)
         def TW():
             """ Tenses then the words """
-            Windows.TW(self)
+            TT.destroy()
+            exercise="Tenses then the words"
+            Windows.SubOperations.DoubleTermCall(self,exercise,TDOrDT=1)
+            Windows.Home(self)
         def WTD():
             """ Words, tenses then definition """
             Windows.WTD(self)
@@ -570,13 +538,12 @@ class Windows:
                 self.PMethod="written"
             else:
                 self.PMethod="radio"
-        size_x=700
-        size_y=350
+        
         TT = Tk()
         TT["bg"]=self.universalBackground
         TT.title("Main Menu - Language")
-        TT.geometry(f"{size_x}x{size_y}")
-        TT.minsize(size_x,size_y)
+        TT.geometry(self.geometry)
+        TT.minsize(self.size_x,self.size_y)
         if self.hasIcon==True:TT.iconbitmap=self.icon
         TT.config(background="#00b8bb")
         menubar = Menu(TT)
@@ -700,122 +667,26 @@ class Windows:
     def Language(self):
         """Choose the language"""
         TTT=Tk()
+        TTT.geometry(self.geometry)
+        TTT.minsize(self.size_x,self.size_y)
         TTT.title="Select the language"
         TTT['bg']=self.universalBackground
         if self.hasIcon==True:TTT.iconbitmap=self.icon
         TTT.mainloop()
     def DW(self):
-        string="ddddd"
-        fenetre = Tk()
-        fenetre['bg']='white'
-
-
-        Frame1=Frame(fenetre, borderwidth=2, relief=GROOVE)
-        Frame1.pack(side=LEFT, padx=30, pady=30)
-
-
-        value = StringVar() 
-        value.set("texte par défaut")
-        entree = Entry(Frame1, textvariable=string, width=30)
-        entree.pack(side=LEFT,padx=10,pady=10)
-        bouton=Button(Frame1, text="Valider", command=fenetre.quit)
-        bouton.pack(side=RIGHT,padx=10,pady=10)
+        print("ee")
     def WT(self):
-        string="ddddd"
-        fenetre = Tk()
-        fenetre['bg']='white'
-
-
-        Frame1=Frame(fenetre, borderwidth=2, relief=GROOVE)
-        Frame1.pack(side=LEFT, padx=30, pady=30)
-
-
-        value = StringVar() 
-        value.set("texte par défaut")
-        entree = Entry(Frame1, textvariable=string, width=30)
-        entree.pack(side=LEFT,padx=10,pady=10)
-        bouton=Button(Frame1, text="Valider", command=fenetre.quit)
-        bouton.pack(side=RIGHT,padx=10,pady=10)
+        print("ee")
     def TW(self):
-        string="ddddd"
-        fenetre = Tk()
-        fenetre['bg']='white'
-
-
-        Frame1=Frame(fenetre, borderwidth=2, relief=GROOVE)
-        Frame1.pack(side=LEFT, padx=30, pady=30)
-
-
-        value = StringVar() 
-        value.set("texte par défaut")
-        entree = Entry(Frame1, textvariable=string, width=30)
-        entree.pack(side=LEFT,padx=10,pady=10)
-        bouton=Button(Frame1, text="Valider", command=fenetre.quit)
-        bouton.pack(side=RIGHT,padx=10,pady=10)
+        print("ee")
     def WTD(self):
-        string="ddddd"
-        fenetre = Tk()
-        fenetre['bg']='white'
-
-
-        Frame1=Frame(fenetre, borderwidth=2, relief=GROOVE)
-        Frame1.pack(side=LEFT, padx=30, pady=30)
-
-
-        value = StringVar() 
-        value.set("texte par défaut")
-        entree = Entry(Frame1, textvariable=string, width=30)
-        entree.pack(side=LEFT,padx=10,pady=10)
-        bouton=Button(Frame1, text="Valider", command=fenetre.quit)
-        bouton.pack(side=RIGHT,padx=10,pady=10)
+        print("ee")
     def WDT(self):
-        string="ddddd"
-        fenetre = Tk()
-        fenetre['bg']='white'
-
-
-        Frame1=Frame(fenetre, borderwidth=2, relief=GROOVE)
-        Frame1.pack(side=LEFT, padx=30, pady=30)
-
-
-        value = StringVar() 
-        value.set("texte par défaut")
-        entree = Entry(Frame1, textvariable=string, width=30)
-        entree.pack(side=LEFT,padx=10,pady=10)
-        bouton=Button(Frame1, text="Valider", command=fenetre.quit)
-        bouton.pack(side=RIGHT,padx=10,pady=10)
+        print("ee")
     def TWD(self):
-        string="ddddd"
-        fenetre = Tk()
-        fenetre['bg']='white'
-
-
-        Frame1=Frame(fenetre, borderwidth=2, relief=GROOVE)
-        Frame1.pack(side=LEFT, padx=30, pady=30)
-
-
-        value = StringVar() 
-        value.set("texte par défaut")
-        entree = Entry(Frame1, textvariable=string, width=30)
-        entree.pack(side=LEFT,padx=10,pady=10)
-        bouton=Button(Frame1, text="Valider", command=fenetre.quit)
-        bouton.pack(side=RIGHT,padx=10,pady=10)
+        print("ee")
     def TDW(self):
-        string="ddddd"
-        fenetre = Tk()
-        fenetre['bg']='white'
-
-
-        Frame1=Frame(fenetre, borderwidth=2, relief=GROOVE)
-        Frame1.pack(side=LEFT, padx=30, pady=30)
-
-
-        value = StringVar() 
-        value.set("texte par défaut")
-        entree = Entry(Frame1, textvariable=string, width=30)
-        entree.pack(side=LEFT,padx=10,pady=10)
-        bouton=Button(Frame1, text="Valider", command=fenetre.quit)
-        bouton.pack(side=RIGHT,padx=10,pady=10)
+        print("ee")
     def Author(self):
         print("hi")
     def Watermarks(self):
@@ -853,6 +724,16 @@ class Windows:
             f=open(f"{self.ProgressFolder}/{self.username}_{language}_{exercise}.save","w")
             f.write(f"{language}\n{exercise}\n{progress}\n{score}\n{d}\n{mo}\n{y}\n{h}\n{minute}\n{s}\n{ms}\n")
             f.close()
+            Saved=Tk()
+            Saved.geometry(self.geometry)
+            Saved.minsize(self.size_x,self.size_y)
+            if self.hasIcon==True:Saved.iconbitmap=self.icon
+            Saved.title("Saved")
+            SavedLabel=Label(Saved,text="Progress Saved",bg=self.universalBackground,fg=self.universalForeground,font=self.defaultFont,anchor="center")
+            SavedLabel.pack(side=TOP, fill=X)
+            SavedButton=Button(Saved,text="OK!",bg=self.universalBackground,fg=self.universalForeground,font=self.defaultFont,anchor="center",command=Saved.destroy)
+            SavedButton.pack(side=TOP,fill=X)
+            Saved.mainloop()
             Progress.destroy()
         def DiscardTheProgress():
             Progress.destroy()
@@ -864,29 +745,32 @@ class Windows:
         minute=timeInfo["minute"]
         s=timeInfo["s"]
         ms=timeInfo["ms"]
-        r={"dp":d,"mop":mo,"yp":y,"hp":h,"minutep":minute,"sp":s,"msp":ms}
-        p={"dp":"","mop":"","yp":"","hp":"","minutep":"","sp":"","msp":""}
-        for i in p:
-            if r[i]>1:
-                p[i]="s"
+        p=timeInfo["p"]
+
         Progress=Tk()
+        Progress.geometry(self.geometry)
+        Progress.minsize(self.size_x,self.size_y)
+        if self.hasIcon==True:Progress.iconbitmap=self.icon
         Progress.title("Save Progress?")
         Progress['bg']=self.universalBackground
         TitleLabel=Label(Progress,text="Do you wish to save your progress?",bg=self.universalForeground,fg=self.universalBackground,font=self.defaultFont,anchor="center")
         TitleLabel.pack(side=TOP,fill=X)
-        FrameOptions=Frame(Progress,bg=self.universalBackground,border=FLAT,borderwidth=0)
-        FrameOptions.pack(side=TOP,fill=X)
+        FrameOptions=Frame(Progress,bg=self.universalBackground,relief=FLAT,borderwidth=0)
+        FrameOptions.pack(side=TOP,fill=BOTH)
         ButtonYes=Button(FrameOptions,text="Yes",bg=self.universalBackground,fg=self.universalForeground,command=SaveTheProgress,anchor="center",font=self.defaultFont)
-        ButtonYes.pack(side=LEFT,fill=X,padx=10)
+        ButtonYes.pack(side=TOP,fill=BOTH,pady=5)
         ButtonNo=Button(FrameOptions,text="No",bg=self.universalBackground,fg=self.universalForeground,command=DiscardTheProgress,anchor="center",font=self.defaultFont)
-        ButtonNo.pack(side=LEFT,fill=X,padx=10)
-        InfoLabel=Label(Progress,text=f"For the language '{language}', Your score is {score}, and your progress is {progress}/{self.ListLength*2} in a total of {y} year{p['yp']}, {mo} month{p['mop']}, {d} day{p['dp']}, {h} hour{p['hp']}, {minute} minute{p['minutep']} {s} second{p['sp']}, {ms} millisecond{p['msp']}",bg=self.universalForeground,fg=self.universalBackground,font=self.defaultFont,anchor="center")
+        ButtonNo.pack(side=BOTTOM,fill=BOTH,pady=5)
+        InfoLabel=Label(Progress,text=f"For the language '{language}'.\nYour score is {score}.\nAnd your progress is {progress}/{self.ListLength*2} in a total of {y} year{p['yp']}, {mo} month{p['mop']}, {d} day{p['dp']}, {h} hour{p['hp']}, {minute} minute{p['minutep']} {s} second{p['sp']}, {ms} millisecond{p['msp']}",bg=self.universalForeground,fg=self.universalBackground,font=self.defaultFont,anchor="center")
         InfoLabel.pack(side=TOP,fill=X)
         Progress.mainloop()
 
 
     def goodbye(self):
         TT=Tk()
+        TT.geometry(self.geometry)
+        TT.minsize(self.size_x,self.size_y)
+        if self.hasIcon==True:TT.iconbitmap=self.icon
         TT["bg"]=self.universalBackground
         Go=Label(TT,text="Goodbye",anchor="center",bg=self.universalBackground)
         Go.pack(fill=X)
@@ -905,12 +789,11 @@ class Windows:
         minute=timeInfo["minute"]
         s=timeInfo["s"]
         ms=timeInfo["ms"]
-        r={"dp":d,"mop":mo,"yp":y,"hp":h,"minutep":minute,"sp":s,"msp":ms}
-        p={"dp":"","mop":"","yp":"","hp":"","minutep":"","sp":"","msp":""}
-        for i in p:
-            if r[i]>1:
-                p[i]="s"
+        p=timeInfo["p"]
         TS=Tk()
+        TS.geometry(self.geometry)
+        TS.minsize(self.size_x,self.size_y)
+        if self.hasIcon==True:TS.iconbitmap=self.icon
         TS['bg']=self.universalBackground
         TS.title("Results")
         LabelTitle=Label(TS,text="The Results",bg=self.universalForeground,fg=self.universalBackground)
@@ -963,11 +846,7 @@ class log(Windows):
         log.AppendLog(self,f"[{self.Alls}]: You have answered {answ_questions} question{plurala} of {tot_questions} question{pluralt} for the exercise '{exercise}'.\n")
     def Time(self,Start_time,Stop_time,exercise):
         timeInfo=Windows.SubOperations.splitTime(self,Start_time,Stop_time)
-        r={"dp":timeInfo["d"],"mop":timeInfo["mo"],"yp":timeInfo["y"],"hp":timeInfo["h"],"minutep":timeInfo["minute"],"sp":timeInfo["s"],"msp":timeInfo["ms"]}
-        p={"dp":"","mop":"","yp":"","hp":"","minutep":"","sp":"","msp":""}
-        for i in p:
-            if r[i]>1:
-                p[i]="s"
+        p=timeInfo["p"]
         log.AppendLog(self,f"[{self.Alls}]: You took {timeInfo['y']} year{p['yp']}, {timeInfo['mo']} month{p['mop']}, {timeInfo['d']} day{p['dp']}, {timeInfo['h']} hour{p['hp']}, {timeInfo['minute']} minute{p['minutep']} {timeInfo['s']} second{p['sp']}, {timeInfo['ms']} millisecond{p['msp']} for the exercise: '{exercise}', exercise started at {Start_time} and finished at {Stop_time}.\n")
     def ExerciseStarted(self,exercise):
         update.date(self)
@@ -999,6 +878,9 @@ class log(Windows):
         f.close()
         content=content.split("\n")
         Display=Tk()
+        Display.geometry(self.geometry)
+        Display.minsize(self.size_x,self.size_y)
+        if self.hasIcon==True:Display.iconbitmap=self.icon
         Display.title(f"Log of {self.unsername}")
         Display["bg"]=self.universalBackground
         WindowTitle=Label(Display,text=f"Log of {self.username}",fg=self.universalForeground,bg=self.universalBackground,anchor="center")
