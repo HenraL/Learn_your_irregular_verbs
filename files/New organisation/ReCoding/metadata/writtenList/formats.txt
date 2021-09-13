@@ -1,0 +1,2 @@
+for excel: AINSI
+for python: UTF-8

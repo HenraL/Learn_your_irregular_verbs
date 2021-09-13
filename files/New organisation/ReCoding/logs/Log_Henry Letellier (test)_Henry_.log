@@ -1,0 +1,409 @@
+[13/9/2021:15h49min47s472728ms]: Program Leanr Your Vocab started.
+[13/9/2021:15h49min50s911874ms]: Program Leanr Your Vocab stopped.
+[13/9/2021:16h20min17s363178ms]: Program Leanr Your Vocab started.
+[13/9/2021:16h20min24s223823ms]: Program Leanr Your Vocab stopped.
+[13/9/2021:16h21min14s525590ms]: Program Leanr Your Vocab started.
+[13/9/2021:16h21min19s770933ms]: Exercise Words then the definition started.
+[13/9/2021:16h21min22s550363ms]: Exercise Words then the definition stopped.
+[13/9/2021:16h21min25s41594ms]: You have answered 0 question of 206 questions for the exercise 'Words then the definition'.
+[13/9/2021:16h21min25s54882ms]: Your score is '0' for the exercise: 'Words then the definition'.
+[13/9/2021:16h21min25s66884ms]: You took 0 year, 0 month, 0 day, 0 hour, 0 minute 3 seconds, -220570 millisecond for the exercise: 'Words then the definition', exercise started at 13/9/2021:16h21min19s770933ms and finished at 13/9/2021:16h21min22s550363ms.
+[13/9/2021:16h21min31s366341ms]: Program Leanr Your Vocab stopped.
+[13/9/2021:16h25min46s190006ms]: Program Leanr Your Vocab started.
+[13/9/2021:16h25min46s194001ms]:##################################################################################################################################
+[13/9/2021:16h25min46s194001ms]:Begining of usseless but usable data.
+[13/9/2021:16h25min46s202005ms]:name=nt
+[13/9/2021:16h25min46s205999ms]:CPU count=16
+[13/9/2021:16h25min46s210013ms]:Curent directory=.
+[13/9/2021:16h25min46s214007ms]:Directory seperator=/
+[13/9/2021:16h25min46s218005ms]:defpath=.;C:\bin
+[13/9/2021:16h25min46s222009ms]:devnull=nul
+[13/9/2021:16h25min46s226005ms]:device_encoding(0)=cp850
+[13/9/2021:16h25min46s229999ms]:device_encoding(1)=cp850
+[13/9/2021:16h25min46s234012ms]:device_encoding(2)=cp850
+[13/9/2021:16h25min46s238006ms]:environement=environ({'ALLUSERSPROFILE': 'C:\\ProgramData', 'APPDATA': 'C:\\Users\\Henry_PC\\AppData\\Roaming', 'CHROME_CRASHPAD_PIPE_NAME': '\\\\.\\pipe\\crashpad_2396_MAYHSGACLXXSGOVP', 'COMMONPROGRAMFILES': 'C:\\Program Files\\Common Files', 'COMMONPROGRAMFILES(X86)': 'C:\\Program Files (x86)\\Common Files', 'COMMONPROGRAMW6432': 'C:\\Program Files\\Common Files', 'COMPUTERNAME': 'LAPTOP-JJKPAN17', 'COMSPEC': 'C:\\Windows\\system32\\cmd.exe', 'DRIVERDATA': 'C:\\Windows\\System32\\Drivers\\DriverData', 'FPS_BROWSER_APP_PROFILE_STRING': 'Internet Explorer', 'FPS_BROWSER_USER_PROFILE_STRING': 'Default', 'GAMEFIRSTUSERPATH': 'C:\\ProgramData\\ASUS\\GameFirst', 'GAMETURBO': 'C:\\Program Files (x86)\\ASUS\\GameFirst\\', 'HOMEDRIVE': 'C:', 'HOMEPATH': '\\Users\\Henry_PC', 'LOCALAPPDATA': 'C:\\Users\\Henry_PC\\AppData\\Local', 'LOGONSERVER': '\\\\LAPTOP-JJKPAN17', 'MOZ_PLUGIN_PATH': 'C:\\Program Files (x86)\\Foxit Software\\Foxit PDF Reader\\plugins\\', 'NUMBER_OF_PROCESSORS': '16', 'ONEDRIVE': 'C:\\Users\\Henry_PC\\OneDrive', 'ORIGINAL_XDG_CURRENT_DESKTOP': 'undefined', 'OS': 'Windows_NT', 'PATH': 'C:\\Program Files\\Python39\\Scripts\\;C:\\Program Files\\Python39\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\ProgramData\\DockerDesktop\\version-bin;C:\\Users\\Henry_PC\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Henry_PC\\AppData\\Local\\GitHubDesktop\\bin;C:\\Users\\Henry_PC\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\Henry_PC\\.dotnet\\tools', 'PATHEXT': '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW;.CPL', 'PROCESSOR_ARCHITECTURE': 'AMD64', 'PROCESSOR_IDENTIFIER': 'AMD64 Family 23 Model 96 Stepping 1, AuthenticAMD', 'PROCESSOR_LEVEL': '23', 'PROCESSOR_REVISION': '6001', 'PROGRAMDATA': 'C:\\ProgramData', 'PROGRAMFILES': 'C:\\Program Files', 'PROGRAMFILES(X86)': 'C:\\Program Files (x86)', 'PROGRAMW6432': 'C:\\Program Files', 'PSMODULEPATH': 'C:\\Users\\Henry_PC\\Documents\\WindowsPowerShell\\Modules;C:\\Program Files\\WindowsPowerShell\\Modules;C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules', 'PUBLIC': 'C:\\Users\\Public', 'SESSIONNAME': 'Console', 'SYSTEMDRIVE': 'C:', 'SYSTEMROOT': 'C:\\Windows', 'TEMP': 'C:\\Users\\Henry_PC\\AppData\\Local\\Temp', 'TMP': 'C:\\Users\\Henry_PC\\AppData\\Local\\Temp', 'USERDOMAIN': 'LAPTOP-JJKPAN17', 'USERDOMAIN_ROAMINGPROFILE': 'LAPTOP-JJKPAN17', 'USERNAME': 'Henry_', 'USERPROFILE': 'C:\\Users\\Henry_PC', 'WINDIR': 'C:\\Windows', 'TERM_PROGRAM': 'vscode', 'TERM_PROGRAM_VERSION': '1.60.0', 'LANG': 'en_GB.UTF-8', 'COLORTERM': 'truecolor', 'VSCODE_GIT_IPC_HANDLE': '\\\\.\\pipe\\vscode-git-bc94916b67-sock', 'GIT_ASKPASS': 'c:\\Users\\Henry_PC\\AppData\\Local\\Programs\\Microsoft VS Code\\resources\\app\\extensions\\git\\dist\\askpass.sh', 'VSCODE_GIT_ASKPASS_NODE': 'C:\\Users\\Henry_PC\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe', 'VSCODE_GIT_ASKPASS_MAIN': 'c:\\Users\\Henry_PC\\AppData\\Local\\Programs\\Microsoft VS Code\\resources\\app\\extensions\\git\\dist\\askpass-main.js'})
+[13/9/2021:16h25min46s242004ms]:cwd=C:\Users\Henry_PC\Documents\001_GitHub_projects\Learn_German_irregular_verbs\files\New organisation\ReCoding
+[13/9/2021:16h25min46s246012ms]:dir Content=['Credits.py', 'DATAbases.py', 'Graphic_User_Interface.py', 'img', 'Launch.py', 'logs', 'Main.py', 'metadata', 'recoding_Learn_your_Vocab.code-workspace', 'requirements.py', 'SearchBar.py', 'second_window_tk.py', '__pycache__']
+[13/9/2021:16h25min46s250020ms]:Logged in account=Henry_
+[13/9/2021:16h25min46s254026ms]:Current process ID=21132
+[13/9/2021:16h25min46s258005ms]:exstep=.
+[13/9/2021:16h25min46s262004ms]:F_OK=0
+[13/9/2021:16h25min46s266000ms]:getcwdb=b'C:\\Users\\Henry_PC\\Documents\\001_GitHub_projects\\Learn_German_irregular_verbs\\files\\New organisation\\ReCoding'
+[13/9/2021:16h25min46s274526ms]:PPID=16152
+[13/9/2021:16h25min46s278552ms]:get_inheritable=True
+[13/9/2021:16h25min46s282533ms]:supports_bytes_environ=False
+[13/9/2021:16h25min46s286525ms]:O_APPEND=8
+[13/9/2021:16h25min46s290543ms]:O_BINARY=32768
+[13/9/2021:16h25min46s294533ms]:O_CREAT=256
+[13/9/2021:16h25min46s298524ms]:__spec__=ModuleSpec(name='os', loader=<_frozen_importlib_external.SourceFileLoader object at 0x000001D0A0592700>, origin='C:\\Program Files\\Python39\\lib\\os.py')
+[13/9/2021:16h25min46s302521ms]:O_RDONLY=0
+[13/9/2021:16h25min46s306525ms]:O_WRONLY=1
+[13/9/2021:16h25min46s310529ms]:O_RDWR=2
+[13/9/2021:16h25min46s314549ms]:O_EXCL=1024
+[13/9/2021:16h25min46s318521ms]:O_TRUNC=512
+[13/9/2021:16h25min46s326534ms]:O_NOINHERIT=128
+[13/9/2021:16h25min46s330520ms]:O_SHORT_LIVED=4096
+[13/9/2021:16h25min46s334519ms]:O_TEMPORARY=64
+[13/9/2021:16h25min46s338524ms]:O_RANDOM=16
+[13/9/2021:16h25min46s342526ms]:O_SEQUENTIAL=32
+[13/9/2021:16h25min46s350521ms]:O_TEXT=16384
+[13/9/2021:16h25min46s354552ms]:R_OK=4
+[13/9/2021:16h25min46s358524ms]:W_OK=2
+[13/9/2021:16h25min46s362529ms]:X_OK=1
+[13/9/2021:16h25min46s366536ms]:SEEK_SET=0
+[13/9/2021:16h25min46s370827ms]:SEEK_CUR=1
+[13/9/2021:16h25min46s371869ms]:SEEK_END=2
+[13/9/2021:16h25min46s375912ms]:supports_dir_fd=set()
+[13/9/2021:16h25min46s379923ms]:supports_effective_ids=set()
+[13/9/2021:16h25min46s383893ms]:supports_fd={<built-in function stat>, <built-in function truncate>}
+[13/9/2021:16h25min46s391908ms]:supports_follow_symlinks={<built-in function stat>}
+[13/9/2021:16h25min46s395936ms]:P_NOWAIT=1
+[13/9/2021:16h25min46s399910ms]:P_NOWAITO=3
+[13/9/2021:16h25min46s403936ms]:P_WAIT=0
+[13/9/2021:16h25min46s407907ms]:P_DETACH=4
+[13/9/2021:16h25min46s411920ms]:P_OVERLAY=2
+[13/9/2021:16h25min46s415900ms]:directory string=..
+[13/9/2021:16h25min46s419920ms]:separate pathname components=\
+[13/9/2021:16h25min46s427913ms]:character seperating search paths=;
+[13/9/2021:16h25min46s431935ms]:default search path=.;C:\bin
+[13/9/2021:16h25min46s435911ms]:string used to separate lines=
+
+[13/9/2021:16h25min46s439932ms]:The files path of the null device=nul
+[13/9/2021:16h25min46s443928ms]:terminal size=os.terminal_size(columns=123, lines=15)
+[13/9/2021:16h25min46s447932ms]:Endining of usseless but usable data.
+[13/9/2021:16h25min46s447932ms]:##################################################################################################################################
+[13/9/2021:16h25min55s863452ms]: Program Leanr Your Vocab stopped.
+[13/9/2021:16h29min54s371592ms]: Program Learn Your Vocab started.
+[13/9/2021:16h29min54s375589ms]:##################################################################################################################################
+[13/9/2021:16h29min54s375589ms]:Begining of usseless but usable data.
+[13/9/2021:16h29min54s387596ms]:name=nt
+[13/9/2021:16h29min54s395594ms]:CPU count=16
+[13/9/2021:16h29min54s399596ms]:Curent directory=.
+[13/9/2021:16h29min54s403601ms]:Directory seperator=/
+[13/9/2021:16h29min54s407597ms]:defpath=.;C:\bin
+[13/9/2021:16h29min54s415590ms]:devnull=nul
+[13/9/2021:16h29min54s419594ms]:device_encoding(0)=cp850
+[13/9/2021:16h29min54s423600ms]:device_encoding(1)=cp850
+[13/9/2021:16h29min54s427597ms]:device_encoding(2)=cp850
+[13/9/2021:16h29min54s431591ms]:environement=environ({'ALLUSERSPROFILE': 'C:\\ProgramData', 'APPDATA': 'C:\\Users\\Henry_PC\\AppData\\Roaming', 'CHROME_CRASHPAD_PIPE_NAME': '\\\\.\\pipe\\crashpad_2396_MAYHSGACLXXSGOVP', 'COMMONPROGRAMFILES': 'C:\\Program Files\\Common Files', 'COMMONPROGRAMFILES(X86)': 'C:\\Program Files (x86)\\Common Files', 'COMMONPROGRAMW6432': 'C:\\Program Files\\Common Files', 'COMPUTERNAME': 'LAPTOP-JJKPAN17', 'COMSPEC': 'C:\\Windows\\system32\\cmd.exe', 'DRIVERDATA': 'C:\\Windows\\System32\\Drivers\\DriverData', 'FPS_BROWSER_APP_PROFILE_STRING': 'Internet Explorer', 'FPS_BROWSER_USER_PROFILE_STRING': 'Default', 'GAMEFIRSTUSERPATH': 'C:\\ProgramData\\ASUS\\GameFirst', 'GAMETURBO': 'C:\\Program Files (x86)\\ASUS\\GameFirst\\', 'HOMEDRIVE': 'C:', 'HOMEPATH': '\\Users\\Henry_PC', 'LOCALAPPDATA': 'C:\\Users\\Henry_PC\\AppData\\Local', 'LOGONSERVER': '\\\\LAPTOP-JJKPAN17', 'MOZ_PLUGIN_PATH': 'C:\\Program Files (x86)\\Foxit Software\\Foxit PDF Reader\\plugins\\', 'NUMBER_OF_PROCESSORS': '16', 'ONEDRIVE': 'C:\\Users\\Henry_PC\\OneDrive', 'ORIGINAL_XDG_CURRENT_DESKTOP': 'undefined', 'OS': 'Windows_NT', 'PATH': 'C:\\Program Files\\Python39\\Scripts\\;C:\\Program Files\\Python39\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\ProgramData\\DockerDesktop\\version-bin;C:\\Users\\Henry_PC\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Henry_PC\\AppData\\Local\\GitHubDesktop\\bin;C:\\Users\\Henry_PC\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\Henry_PC\\.dotnet\\tools', 'PATHEXT': '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW;.CPL', 'PROCESSOR_ARCHITECTURE': 'AMD64', 'PROCESSOR_IDENTIFIER': 'AMD64 Family 23 Model 96 Stepping 1, AuthenticAMD', 'PROCESSOR_LEVEL': '23', 'PROCESSOR_REVISION': '6001', 'PROGRAMDATA': 'C:\\ProgramData', 'PROGRAMFILES': 'C:\\Program Files', 'PROGRAMFILES(X86)': 'C:\\Program Files (x86)', 'PROGRAMW6432': 'C:\\Program Files', 'PSMODULEPATH': 'C:\\Users\\Henry_PC\\Documents\\WindowsPowerShell\\Modules;C:\\Program Files\\WindowsPowerShell\\Modules;C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules', 'PUBLIC': 'C:\\Users\\Public', 'SESSIONNAME': 'Console', 'SYSTEMDRIVE': 'C:', 'SYSTEMROOT': 'C:\\Windows', 'TEMP': 'C:\\Users\\Henry_PC\\AppData\\Local\\Temp', 'TMP': 'C:\\Users\\Henry_PC\\AppData\\Local\\Temp', 'USERDOMAIN': 'LAPTOP-JJKPAN17', 'USERDOMAIN_ROAMINGPROFILE': 'LAPTOP-JJKPAN17', 'USERNAME': 'Henry_', 'USERPROFILE': 'C:\\Users\\Henry_PC', 'WINDIR': 'C:\\Windows', 'TERM_PROGRAM': 'vscode', 'TERM_PROGRAM_VERSION': '1.60.0', 'LANG': 'en_GB.UTF-8', 'COLORTERM': 'truecolor', 'VSCODE_GIT_IPC_HANDLE': '\\\\.\\pipe\\vscode-git-bc94916b67-sock', 'GIT_ASKPASS': 'c:\\Users\\Henry_PC\\AppData\\Local\\Programs\\Microsoft VS Code\\resources\\app\\extensions\\git\\dist\\askpass.sh', 'VSCODE_GIT_ASKPASS_NODE': 'C:\\Users\\Henry_PC\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe', 'VSCODE_GIT_ASKPASS_MAIN': 'c:\\Users\\Henry_PC\\AppData\\Local\\Programs\\Microsoft VS Code\\resources\\app\\extensions\\git\\dist\\askpass-main.js'})
+[13/9/2021:16h29min54s435589ms]:cwd=C:\Users\Henry_PC\Documents\001_GitHub_projects\Learn_German_irregular_verbs\files\New organisation\ReCoding
+[13/9/2021:16h29min54s439618ms]:dir Content=['Credits.py', 'DATAbases.py', 'Graphic_User_Interface.py', 'img', 'Launch.py', 'logs', 'Main.py', 'metadata', 'recoding_Learn_your_Vocab.code-workspace', 'requirements.py', 'SearchBar.py', 'second_window_tk.py', '__pycache__']
+[13/9/2021:16h29min54s443590ms]:Logged in account=Henry_
+[13/9/2021:16h29min54s451619ms]:Current process ID=4080
+[13/9/2021:16h29min54s455892ms]:exstep=.
+[13/9/2021:16h29min54s460987ms]:F_OK=0
+[13/9/2021:16h29min54s464977ms]:getcwdb=b'C:\\Users\\Henry_PC\\Documents\\001_GitHub_projects\\Learn_German_irregular_verbs\\files\\New organisation\\ReCoding'
+[13/9/2021:16h29min54s468976ms]:PPID=16152
+[13/9/2021:16h29min54s472984ms]:get_inheritable=True
+[13/9/2021:16h29min54s476986ms]:supports_bytes_environ=False
+[13/9/2021:16h29min54s480963ms]:O_APPEND=8
+[13/9/2021:16h29min54s488956ms]:O_BINARY=32768
+[13/9/2021:16h29min54s492979ms]:O_CREAT=256
+[13/9/2021:16h29min54s496986ms]:__spec__=ModuleSpec(name='os', loader=<_frozen_importlib_external.SourceFileLoader object at 0x000001CC56CF2700>, origin='C:\\Program Files\\Python39\\lib\\os.py')
+[13/9/2021:16h29min54s500959ms]:O_RDONLY=0
+[13/9/2021:16h29min54s504962ms]:O_WRONLY=1
+[13/9/2021:16h29min54s512969ms]:O_RDWR=2
+[13/9/2021:16h29min54s517173ms]:O_EXCL=1024
+[13/9/2021:16h29min54s520963ms]:O_TRUNC=512
+[13/9/2021:16h29min54s524980ms]:O_NOINHERIT=128
+[13/9/2021:16h29min54s528984ms]:O_SHORT_LIVED=4096
+[13/9/2021:16h29min54s536954ms]:O_TEMPORARY=64
+[13/9/2021:16h29min54s540956ms]:O_RANDOM=16
+[13/9/2021:16h29min54s544956ms]:O_SEQUENTIAL=32
+[13/9/2021:16h29min54s548956ms]:O_TEXT=16384
+[13/9/2021:16h29min54s552956ms]:R_OK=4
+[13/9/2021:16h29min54s556956ms]:W_OK=2
+[13/9/2021:16h29min54s562210ms]:X_OK=1
+[13/9/2021:16h29min54s566239ms]:SEEK_SET=0
+[13/9/2021:16h29min54s570237ms]:SEEK_CUR=1
+[13/9/2021:16h29min54s574258ms]:SEEK_END=2
+[13/9/2021:16h29min54s578258ms]:supports_dir_fd=set()
+[13/9/2021:16h29min54s586238ms]:supports_effective_ids=set()
+[13/9/2021:16h29min54s590240ms]:supports_fd={<built-in function stat>, <built-in function truncate>}
+[13/9/2021:16h29min54s594237ms]:supports_follow_symlinks={<built-in function stat>}
+[13/9/2021:16h29min54s598270ms]:P_NOWAIT=1
+[13/9/2021:16h29min54s603695ms]:P_NOWAITO=3
+[13/9/2021:16h29min54s607723ms]:P_WAIT=0
+[13/9/2021:16h29min54s615719ms]:P_DETACH=4
+[13/9/2021:16h29min54s619721ms]:P_OVERLAY=2
+[13/9/2021:16h29min54s623718ms]:directory string=..
+[13/9/2021:16h29min54s627720ms]:separate pathname components=\
+[13/9/2021:16h29min54s631721ms]:character seperating search paths=;
+[13/9/2021:16h29min54s635740ms]:default search path=.;C:\bin
+[13/9/2021:16h29min54s643719ms]:string used to separate lines=\
+
+[13/9/2021:16h29min54s647721ms]:The files path of the null device=nul
+[13/9/2021:16h29min54s651725ms]:terminal size=os.terminal_size(columns=123, lines=15)
+[13/9/2021:16h29min54s655725ms]:Ending of usseless but usable data.
+[13/9/2021:16h29min54s655725ms]:##################################################################################################################################
+[13/9/2021:16h29min59s742516ms]: Program Learn Your Vocab stopped.
+[13/9/2021:17h20min33s554268ms]: Program Learn Your Vocab started.
+[13/9/2021:17h20min33s562259ms]:##################################################################################################################################
+[13/9/2021:17h20min33s562259ms]:Begining of usseless but usable data.
+[13/9/2021:17h20min33s570253ms]:name=nt
+[13/9/2021:17h20min33s574239ms]:CPU count=16
+[13/9/2021:17h20min33s582244ms]:Curent directory=.
+[13/9/2021:17h20min33s586253ms]:Directory seperator=/
+[13/9/2021:17h20min33s590250ms]:defpath=.;C:\bin
+[13/9/2021:17h20min33s594260ms]:devnull=nul
+[13/9/2021:17h20min33s602262ms]:device_encoding(0)=cp850
+[13/9/2021:17h20min33s606284ms]:device_encoding(1)=cp850
+[13/9/2021:17h20min33s610260ms]:device_encoding(2)=cp850
+[13/9/2021:17h20min33s614242ms]:environement=environ({'ALLUSERSPROFILE': 'C:\\ProgramData', 'APPDATA': 'C:\\Users\\Henry_PC\\AppData\\Roaming', 'CHROME_CRASHPAD_PIPE_NAME': '\\\\.\\pipe\\crashpad_2396_MAYHSGACLXXSGOVP', 'COMMONPROGRAMFILES': 'C:\\Program Files\\Common Files', 'COMMONPROGRAMFILES(X86)': 'C:\\Program Files (x86)\\Common Files', 'COMMONPROGRAMW6432': 'C:\\Program Files\\Common Files', 'COMPUTERNAME': 'LAPTOP-JJKPAN17', 'COMSPEC': 'C:\\Windows\\system32\\cmd.exe', 'DRIVERDATA': 'C:\\Windows\\System32\\Drivers\\DriverData', 'FPS_BROWSER_APP_PROFILE_STRING': 'Internet Explorer', 'FPS_BROWSER_USER_PROFILE_STRING': 'Default', 'GAMEFIRSTUSERPATH': 'C:\\ProgramData\\ASUS\\GameFirst', 'GAMETURBO': 'C:\\Program Files (x86)\\ASUS\\GameFirst\\', 'HOMEDRIVE': 'C:', 'HOMEPATH': '\\Users\\Henry_PC', 'LOCALAPPDATA': 'C:\\Users\\Henry_PC\\AppData\\Local', 'LOGONSERVER': '\\\\LAPTOP-JJKPAN17', 'MOZ_PLUGIN_PATH': 'C:\\Program Files (x86)\\Foxit Software\\Foxit PDF Reader\\plugins\\', 'NUMBER_OF_PROCESSORS': '16', 'ONEDRIVE': 'C:\\Users\\Henry_PC\\OneDrive', 'ORIGINAL_XDG_CURRENT_DESKTOP': 'undefined', 'OS': 'Windows_NT', 'PATH': 'C:\\Program Files\\Python39\\Scripts\\;C:\\Program Files\\Python39\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\ProgramData\\DockerDesktop\\version-bin;C:\\Users\\Henry_PC\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Henry_PC\\AppData\\Local\\GitHubDesktop\\bin;C:\\Users\\Henry_PC\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\Henry_PC\\.dotnet\\tools', 'PATHEXT': '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW;.CPL', 'PROCESSOR_ARCHITECTURE': 'AMD64', 'PROCESSOR_IDENTIFIER': 'AMD64 Family 23 Model 96 Stepping 1, AuthenticAMD', 'PROCESSOR_LEVEL': '23', 'PROCESSOR_REVISION': '6001', 'PROGRAMDATA': 'C:\\ProgramData', 'PROGRAMFILES': 'C:\\Program Files', 'PROGRAMFILES(X86)': 'C:\\Program Files (x86)', 'PROGRAMW6432': 'C:\\Program Files', 'PSMODULEPATH': 'C:\\Users\\Henry_PC\\Documents\\WindowsPowerShell\\Modules;C:\\Program Files\\WindowsPowerShell\\Modules;C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules', 'PUBLIC': 'C:\\Users\\Public', 'SESSIONNAME': 'Console', 'SYSTEMDRIVE': 'C:', 'SYSTEMROOT': 'C:\\Windows', 'TEMP': 'C:\\Users\\Henry_PC\\AppData\\Local\\Temp', 'TMP': 'C:\\Users\\Henry_PC\\AppData\\Local\\Temp', 'USERDOMAIN': 'LAPTOP-JJKPAN17', 'USERDOMAIN_ROAMINGPROFILE': 'LAPTOP-JJKPAN17', 'USERNAME': 'Henry_', 'USERPROFILE': 'C:\\Users\\Henry_PC', 'WINDIR': 'C:\\Windows', 'TERM_PROGRAM': 'vscode', 'TERM_PROGRAM_VERSION': '1.60.0', 'LANG': 'en_GB.UTF-8', 'COLORTERM': 'truecolor', 'VSCODE_GIT_IPC_HANDLE': '\\\\.\\pipe\\vscode-git-bc94916b67-sock', 'GIT_ASKPASS': 'c:\\Users\\Henry_PC\\AppData\\Local\\Programs\\Microsoft VS Code\\resources\\app\\extensions\\git\\dist\\askpass.sh', 'VSCODE_GIT_ASKPASS_NODE': 'C:\\Users\\Henry_PC\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe', 'VSCODE_GIT_ASKPASS_MAIN': 'c:\\Users\\Henry_PC\\AppData\\Local\\Programs\\Microsoft VS Code\\resources\\app\\extensions\\git\\dist\\askpass-main.js'})
+[13/9/2021:17h20min33s618261ms]:cwd=C:\Users\Henry_PC\Documents\001_GitHub_projects\Learn_German_irregular_verbs\files\New organisation\ReCoding
+[13/9/2021:17h20min33s626249ms]:dir Content=['Credits.py', 'DATAbases.py', 'Graphic_User_Interface.py', 'img', 'Launch.py', 'logs', 'Main.py', 'metadata', 'recoding_Learn_your_Vocab.code-workspace', 'requirements.py', 'SearchBar.py', 'second_window_tk.py', '__pycache__']
+[13/9/2021:17h20min33s630244ms]:Logged in account=Henry_
+[13/9/2021:17h20min33s634270ms]:Current process ID=4496
+[13/9/2021:17h20min33s642238ms]:exstep=.
+[13/9/2021:17h20min33s646273ms]:F_OK=0
+[13/9/2021:17h20min33s650272ms]:getcwdb=b'C:\\Users\\Henry_PC\\Documents\\001_GitHub_projects\\Learn_German_irregular_verbs\\files\\New organisation\\ReCoding'
+[13/9/2021:17h20min33s654240ms]:PPID=16152
+[13/9/2021:17h20min33s658259ms]:get_inheritable=True
+[13/9/2021:17h20min33s666279ms]:supports_bytes_environ=False
+[13/9/2021:17h20min33s670263ms]:O_APPEND=8
+[13/9/2021:17h20min33s674246ms]:O_BINARY=32768
+[13/9/2021:17h20min33s678263ms]:O_CREAT=256
+[13/9/2021:17h20min33s686541ms]:__spec__=ModuleSpec(name='os', loader=<_frozen_importlib_external.SourceFileLoader object at 0x000001EBF7C92700>, origin='C:\\Program Files\\Python39\\lib\\os.py')
+[13/9/2021:17h20min33s690249ms]:O_RDONLY=0
+[13/9/2021:17h20min33s694270ms]:O_WRONLY=1
+[13/9/2021:17h20min33s702244ms]:O_RDWR=2
+[13/9/2021:17h20min33s706246ms]:O_EXCL=1024
+[13/9/2021:17h20min33s714462ms]:O_TRUNC=512
+[13/9/2021:17h20min33s718248ms]:O_NOINHERIT=128
+[13/9/2021:17h20min33s722265ms]:O_SHORT_LIVED=4096
+[13/9/2021:17h20min33s730247ms]:O_TEMPORARY=64
+[13/9/2021:17h20min33s734246ms]:O_RANDOM=16
+[13/9/2021:17h20min33s742277ms]:O_SEQUENTIAL=32
+[13/9/2021:17h20min33s746274ms]:O_TEXT=16384
+[13/9/2021:17h20min33s750242ms]:R_OK=4
+[13/9/2021:17h20min33s758271ms]:W_OK=2
+[13/9/2021:17h20min33s762266ms]:X_OK=1
+[13/9/2021:17h20min33s770245ms]:SEEK_SET=0
+[13/9/2021:17h20min33s774274ms]:SEEK_CUR=1
+[13/9/2021:17h20min33s782256ms]:SEEK_END=2
+[13/9/2021:17h20min33s786276ms]:supports_dir_fd=set()
+[13/9/2021:17h20min33s790266ms]:supports_effective_ids=set()
+[13/9/2021:17h20min33s798280ms]:supports_fd={<built-in function stat>, <built-in function truncate>}
+[13/9/2021:17h20min33s802260ms]:supports_follow_symlinks={<built-in function stat>}
+[13/9/2021:17h20min33s806269ms]:P_NOWAIT=1
+[13/9/2021:17h20min33s814253ms]:P_NOWAITO=3
+[13/9/2021:17h20min33s818274ms]:P_WAIT=0
+[13/9/2021:17h20min33s822269ms]:P_DETACH=4
+[13/9/2021:17h20min33s830460ms]:P_OVERLAY=2
+[13/9/2021:17h20min33s834272ms]:directory string=..
+[13/9/2021:17h20min33s838265ms]:separate pathname components=\
+[13/9/2021:17h20min33s846281ms]:character seperating search paths=;
+[13/9/2021:17h20min33s850246ms]:default search path=.;C:\bin
+[13/9/2021:17h20min33s854245ms]:string used to separate lines="
+"
+[13/9/2021:17h20min33s863552ms]:The files path of the null device=nul
+[13/9/2021:17h20min33s867615ms]:terminal size=os.terminal_size(columns=123, lines=15)
+[13/9/2021:17h20min33s871594ms]:Ending of usseless but usable data.
+[13/9/2021:17h20min33s871594ms]:##################################################################################################################################
+[13/9/2021:17h21min24s816782ms]: Exercise Words then the definition started.
+[13/9/2021:17h22min50s170810ms]: Exercise Words then the definition stopped.
+[13/9/2021:17h23min35s710634ms]: You have answered 19 questions of 206 questions for the exercise 'Words then the definition'.
+[13/9/2021:17h23min35s730636ms]: Your score is '0' for the exercise: 'Words then the definition'.
+[13/9/2021:17h23min35s746642ms]: You took 0 year, 0 month, 0 day, 0 hour, 1 minute 26 seconds, -645972 millisecond for the exercise: 'Words then the definition', exercise started at 13/9/2021:17h21min24s816782ms and finished at 13/9/2021:17h22min50s170810ms.
+[13/9/2021:17h23min42s169077ms]: Program Learn Your Vocab stopped.
+[13/9/2021:17h25min8s343931ms]: Program Learn Your Vocab started.
+[13/9/2021:17h25min8s347958ms]:##################################################################################################################################
+[13/9/2021:17h25min8s347958ms]:Begining of usseless but usable data.
+[13/9/2021:17h25min8s359930ms]:name=nt
+[13/9/2021:17h25min8s363938ms]:CPU count=16
+[13/9/2021:17h25min8s371936ms]:Curent directory=.
+[13/9/2021:17h25min8s375962ms]:Directory seperator=/
+[13/9/2021:17h25min8s383935ms]:defpath=.;C:\bin
+[13/9/2021:17h25min8s387975ms]:devnull=nul
+[13/9/2021:17h25min8s391959ms]:device_encoding(0)=cp850
+[13/9/2021:17h25min8s395933ms]:device_encoding(1)=cp850
+[13/9/2021:17h25min8s403937ms]:device_encoding(2)=cp850
+[13/9/2021:17h25min8s407932ms]:environement=environ({'ALLUSERSPROFILE': 'C:\\ProgramData', 'APPDATA': 'C:\\Users\\Henry_PC\\AppData\\Roaming', 'CHROME_CRASHPAD_PIPE_NAME': '\\\\.\\pipe\\crashpad_2396_MAYHSGACLXXSGOVP', 'COMMONPROGRAMFILES': 'C:\\Program Files\\Common Files', 'COMMONPROGRAMFILES(X86)': 'C:\\Program Files (x86)\\Common Files', 'COMMONPROGRAMW6432': 'C:\\Program Files\\Common Files', 'COMPUTERNAME': 'LAPTOP-JJKPAN17', 'COMSPEC': 'C:\\Windows\\system32\\cmd.exe', 'DRIVERDATA': 'C:\\Windows\\System32\\Drivers\\DriverData', 'FPS_BROWSER_APP_PROFILE_STRING': 'Internet Explorer', 'FPS_BROWSER_USER_PROFILE_STRING': 'Default', 'GAMEFIRSTUSERPATH': 'C:\\ProgramData\\ASUS\\GameFirst', 'GAMETURBO': 'C:\\Program Files (x86)\\ASUS\\GameFirst\\', 'HOMEDRIVE': 'C:', 'HOMEPATH': '\\Users\\Henry_PC', 'LOCALAPPDATA': 'C:\\Users\\Henry_PC\\AppData\\Local', 'LOGONSERVER': '\\\\LAPTOP-JJKPAN17', 'MOZ_PLUGIN_PATH': 'C:\\Program Files (x86)\\Foxit Software\\Foxit PDF Reader\\plugins\\', 'NUMBER_OF_PROCESSORS': '16', 'ONEDRIVE': 'C:\\Users\\Henry_PC\\OneDrive', 'ORIGINAL_XDG_CURRENT_DESKTOP': 'undefined', 'OS': 'Windows_NT', 'PATH': 'C:\\Program Files\\Python39\\Scripts\\;C:\\Program Files\\Python39\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\ProgramData\\DockerDesktop\\version-bin;C:\\Users\\Henry_PC\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Henry_PC\\AppData\\Local\\GitHubDesktop\\bin;C:\\Users\\Henry_PC\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\Henry_PC\\.dotnet\\tools', 'PATHEXT': '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW;.CPL', 'PROCESSOR_ARCHITECTURE': 'AMD64', 'PROCESSOR_IDENTIFIER': 'AMD64 Family 23 Model 96 Stepping 1, AuthenticAMD', 'PROCESSOR_LEVEL': '23', 'PROCESSOR_REVISION': '6001', 'PROGRAMDATA': 'C:\\ProgramData', 'PROGRAMFILES': 'C:\\Program Files', 'PROGRAMFILES(X86)': 'C:\\Program Files (x86)', 'PROGRAMW6432': 'C:\\Program Files', 'PSMODULEPATH': 'C:\\Users\\Henry_PC\\Documents\\WindowsPowerShell\\Modules;C:\\Program Files\\WindowsPowerShell\\Modules;C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules', 'PUBLIC': 'C:\\Users\\Public', 'SESSIONNAME': 'Console', 'SYSTEMDRIVE': 'C:', 'SYSTEMROOT': 'C:\\Windows', 'TEMP': 'C:\\Users\\Henry_PC\\AppData\\Local\\Temp', 'TMP': 'C:\\Users\\Henry_PC\\AppData\\Local\\Temp', 'USERDOMAIN': 'LAPTOP-JJKPAN17', 'USERDOMAIN_ROAMINGPROFILE': 'LAPTOP-JJKPAN17', 'USERNAME': 'Henry_', 'USERPROFILE': 'C:\\Users\\Henry_PC', 'WINDIR': 'C:\\Windows', 'TERM_PROGRAM': 'vscode', 'TERM_PROGRAM_VERSION': '1.60.0', 'LANG': 'en_GB.UTF-8', 'COLORTERM': 'truecolor', 'VSCODE_GIT_IPC_HANDLE': '\\\\.\\pipe\\vscode-git-bc94916b67-sock', 'GIT_ASKPASS': 'c:\\Users\\Henry_PC\\AppData\\Local\\Programs\\Microsoft VS Code\\resources\\app\\extensions\\git\\dist\\askpass.sh', 'VSCODE_GIT_ASKPASS_NODE': 'C:\\Users\\Henry_PC\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe', 'VSCODE_GIT_ASKPASS_MAIN': 'c:\\Users\\Henry_PC\\AppData\\Local\\Programs\\Microsoft VS Code\\resources\\app\\extensions\\git\\dist\\askpass-main.js'})
+[13/9/2021:17h25min8s415937ms]:cwd=C:\Users\Henry_PC\Documents\001_GitHub_projects\Learn_German_irregular_verbs\files\New organisation\ReCoding
+[13/9/2021:17h25min8s419935ms]:dir Content=['Credits.py', 'DATAbases.py', 'Graphic_User_Interface.py', 'img', 'Launch.py', 'logs', 'Main.py', 'metadata', 'recoding_Learn_your_Vocab.code-workspace', 'requirements.py', 'SearchBar.py', 'second_window_tk.py', '__pycache__']
+[13/9/2021:17h25min8s423935ms]:Logged in account=Henry_
+[13/9/2021:17h25min8s427933ms]:Current process ID=23468
+[13/9/2021:17h25min8s435965ms]:exstep=.
+[13/9/2021:17h25min8s439934ms]:F_OK=0
+[13/9/2021:17h25min8s443931ms]:getcwdb=b'C:\\Users\\Henry_PC\\Documents\\001_GitHub_projects\\Learn_German_irregular_verbs\\files\\New organisation\\ReCoding'
+[13/9/2021:17h25min8s451962ms]:PPID=16152
+[13/9/2021:17h25min8s455959ms]:get_inheritable=True
+[13/9/2021:17h25min8s459932ms]:supports_bytes_environ=False
+[13/9/2021:17h25min8s467960ms]:O_APPEND=8
+[13/9/2021:17h25min8s471959ms]:O_BINARY=32768
+[13/9/2021:17h25min8s475958ms]:O_CREAT=256
+[13/9/2021:17h25min8s479957ms]:__spec__=ModuleSpec(name='os', loader=<_frozen_importlib_external.SourceFileLoader object at 0x000001F56CBB2700>, origin='C:\\Program Files\\Python39\\lib\\os.py')
+[13/9/2021:17h25min8s487964ms]:O_RDONLY=0
+[13/9/2021:17h25min8s491973ms]:O_WRONLY=1
+[13/9/2021:17h25min8s495931ms]:O_RDWR=2
+[13/9/2021:17h25min8s503960ms]:O_EXCL=1024
+[13/9/2021:17h25min8s511955ms]:O_TRUNC=512
+[13/9/2021:17h25min8s515964ms]:O_NOINHERIT=128
+[13/9/2021:17h25min8s519957ms]:O_SHORT_LIVED=4096
+[13/9/2021:17h25min8s528150ms]:O_TEMPORARY=64
+[13/9/2021:17h25min8s532152ms]:O_RANDOM=16
+[13/9/2021:17h25min8s536146ms]:O_SEQUENTIAL=32
+[13/9/2021:17h25min8s543960ms]:O_TEXT=16384
+[13/9/2021:17h25min8s548152ms]:R_OK=4
+[13/9/2021:17h25min8s551955ms]:W_OK=2
+[13/9/2021:17h25min8s560144ms]:X_OK=1
+[13/9/2021:17h25min8s564148ms]:SEEK_SET=0
+[13/9/2021:17h25min8s567933ms]:SEEK_CUR=1
+[13/9/2021:17h25min8s575958ms]:SEEK_END=2
+[13/9/2021:17h25min8s580149ms]:supports_dir_fd=set()
+[13/9/2021:17h25min8s583955ms]:supports_effective_ids=set()
+[13/9/2021:17h25min8s591955ms]:supports_fd={<built-in function stat>, <built-in function truncate>}
+[13/9/2021:17h25min8s596144ms]:supports_follow_symlinks={<built-in function stat>}
+[13/9/2021:17h25min8s599930ms]:P_NOWAIT=1
+[13/9/2021:17h25min8s608161ms]:P_NOWAITO=3
+[13/9/2021:17h25min8s612161ms]:P_WAIT=0
+[13/9/2021:17h25min8s619932ms]:P_DETACH=4
+[13/9/2021:17h25min8s624145ms]:P_OVERLAY=2
+[13/9/2021:17h25min8s627957ms]:directory string=..
+[13/9/2021:17h25min8s635933ms]:separate pathname components=\
+[13/9/2021:17h25min8s639930ms]:character seperating search paths=;
+[13/9/2021:17h25min8s648198ms]:default search path=.;C:\bin
+[13/9/2021:17h25min8s651940ms]:string used to separate lines="
+"
+[13/9/2021:17h25min8s659959ms]:The files path of the null device=nul
+[13/9/2021:17h25min8s664231ms]:terminal size=os.terminal_size(columns=123, lines=15)
+[13/9/2021:17h25min8s667940ms]:Ending of usseless but usable data.
+[13/9/2021:17h25min8s667940ms]:##################################################################################################################################
+[13/9/2021:17h25min11s39100ms]: Exercise Words then the definition started.
+[13/9/2021:17h26min35s106243ms]: Exercise Words then the definition stopped.
+[13/9/2021:17h26min37s100134ms]: You have answered 2 questions of 206 questions for the exercise 'Words then the definition'.
+[13/9/2021:17h26min37s116127ms]: Your score is '1' for the exercise: 'Words then the definition'.
+[13/9/2021:17h26min37s132133ms]: You took 0 year, 0 month, 0 day, 0 hour, 1 minute 24 seconds, 67143 milliseconds for the exercise: 'Words then the definition', exercise started at 13/9/2021:17h25min11s39100ms and finished at 13/9/2021:17h26min35s106243ms.
+[13/9/2021:17h26min40s127245ms]: Program Learn Your Vocab stopped.
+[13/9/2021:17h28min33s753066ms]: Program Learn Your Vocab started.
+[13/9/2021:17h28min33s761077ms]:##################################################################################################################################
+[13/9/2021:17h28min33s761077ms]:Begining of usseless but usable data.
+[13/9/2021:17h28min33s769069ms]:name=nt
+[13/9/2021:17h28min33s773074ms]:CPU count=16
+[13/9/2021:17h28min33s781080ms]:Curent directory=.
+[13/9/2021:17h28min33s785070ms]:Directory seperator=/
+[13/9/2021:17h28min33s789073ms]:defpath=.;C:\bin
+[13/9/2021:17h28min33s797069ms]:devnull=nul
+[13/9/2021:17h28min33s801070ms]:device_encoding(0)=cp850
+[13/9/2021:17h28min33s805077ms]:device_encoding(1)=cp850
+[13/9/2021:17h28min33s809078ms]:device_encoding(2)=cp850
+[13/9/2021:17h28min33s817068ms]:environement=environ({'ALLUSERSPROFILE': 'C:\\ProgramData', 'APPDATA': 'C:\\Users\\Henry_PC\\AppData\\Roaming', 'CHROME_CRASHPAD_PIPE_NAME': '\\\\.\\pipe\\crashpad_2396_MAYHSGACLXXSGOVP', 'COMMONPROGRAMFILES': 'C:\\Program Files\\Common Files', 'COMMONPROGRAMFILES(X86)': 'C:\\Program Files (x86)\\Common Files', 'COMMONPROGRAMW6432': 'C:\\Program Files\\Common Files', 'COMPUTERNAME': 'LAPTOP-JJKPAN17', 'COMSPEC': 'C:\\Windows\\system32\\cmd.exe', 'DRIVERDATA': 'C:\\Windows\\System32\\Drivers\\DriverData', 'FPS_BROWSER_APP_PROFILE_STRING': 'Internet Explorer', 'FPS_BROWSER_USER_PROFILE_STRING': 'Default', 'GAMEFIRSTUSERPATH': 'C:\\ProgramData\\ASUS\\GameFirst', 'GAMETURBO': 'C:\\Program Files (x86)\\ASUS\\GameFirst\\', 'HOMEDRIVE': 'C:', 'HOMEPATH': '\\Users\\Henry_PC', 'LOCALAPPDATA': 'C:\\Users\\Henry_PC\\AppData\\Local', 'LOGONSERVER': '\\\\LAPTOP-JJKPAN17', 'MOZ_PLUGIN_PATH': 'C:\\Program Files (x86)\\Foxit Software\\Foxit PDF Reader\\plugins\\', 'NUMBER_OF_PROCESSORS': '16', 'ONEDRIVE': 'C:\\Users\\Henry_PC\\OneDrive', 'ORIGINAL_XDG_CURRENT_DESKTOP': 'undefined', 'OS': 'Windows_NT', 'PATH': 'C:\\Program Files\\Python39\\Scripts\\;C:\\Program Files\\Python39\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\ProgramData\\DockerDesktop\\version-bin;C:\\Users\\Henry_PC\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Henry_PC\\AppData\\Local\\GitHubDesktop\\bin;C:\\Users\\Henry_PC\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\Henry_PC\\.dotnet\\tools', 'PATHEXT': '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW;.CPL', 'PROCESSOR_ARCHITECTURE': 'AMD64', 'PROCESSOR_IDENTIFIER': 'AMD64 Family 23 Model 96 Stepping 1, AuthenticAMD', 'PROCESSOR_LEVEL': '23', 'PROCESSOR_REVISION': '6001', 'PROGRAMDATA': 'C:\\ProgramData', 'PROGRAMFILES': 'C:\\Program Files', 'PROGRAMFILES(X86)': 'C:\\Program Files (x86)', 'PROGRAMW6432': 'C:\\Program Files', 'PSMODULEPATH': 'C:\\Users\\Henry_PC\\Documents\\WindowsPowerShell\\Modules;C:\\Program Files\\WindowsPowerShell\\Modules;C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules', 'PUBLIC': 'C:\\Users\\Public', 'SESSIONNAME': 'Console', 'SYSTEMDRIVE': 'C:', 'SYSTEMROOT': 'C:\\Windows', 'TEMP': 'C:\\Users\\Henry_PC\\AppData\\Local\\Temp', 'TMP': 'C:\\Users\\Henry_PC\\AppData\\Local\\Temp', 'USERDOMAIN': 'LAPTOP-JJKPAN17', 'USERDOMAIN_ROAMINGPROFILE': 'LAPTOP-JJKPAN17', 'USERNAME': 'Henry_', 'USERPROFILE': 'C:\\Users\\Henry_PC', 'WINDIR': 'C:\\Windows', 'TERM_PROGRAM': 'vscode', 'TERM_PROGRAM_VERSION': '1.60.0', 'LANG': 'en_GB.UTF-8', 'COLORTERM': 'truecolor', 'VSCODE_GIT_IPC_HANDLE': '\\\\.\\pipe\\vscode-git-bc94916b67-sock', 'GIT_ASKPASS': 'c:\\Users\\Henry_PC\\AppData\\Local\\Programs\\Microsoft VS Code\\resources\\app\\extensions\\git\\dist\\askpass.sh', 'VSCODE_GIT_ASKPASS_NODE': 'C:\\Users\\Henry_PC\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe', 'VSCODE_GIT_ASKPASS_MAIN': 'c:\\Users\\Henry_PC\\AppData\\Local\\Programs\\Microsoft VS Code\\resources\\app\\extensions\\git\\dist\\askpass-main.js'})
+[13/9/2021:17h28min33s821071ms]:cwd=C:\Users\Henry_PC\Documents\001_GitHub_projects\Learn_German_irregular_verbs\files\New organisation\ReCoding
+[13/9/2021:17h28min33s825070ms]:dir Content=['Credits.py', 'DATAbases.py', 'Graphic_User_Interface.py', 'img', 'Launch.py', 'logs', 'Main.py', 'metadata', 'recoding_Learn_your_Vocab.code-workspace', 'requirements.py', 'SearchBar.py', 'second_window_tk.py', '__pycache__']
+[13/9/2021:17h28min33s833362ms]:Logged in account=Henry_
+[13/9/2021:17h28min33s837070ms]:Current process ID=22940
+[13/9/2021:17h28min33s841356ms]:exstep=.
+[13/9/2021:17h28min33s845087ms]:F_OK=0
+[13/9/2021:17h28min33s853076ms]:getcwdb=b'C:\\Users\\Henry_PC\\Documents\\001_GitHub_projects\\Learn_German_irregular_verbs\\files\\New organisation\\ReCoding'
+[13/9/2021:17h28min33s857359ms]:PPID=16152
+[13/9/2021:17h28min33s861068ms]:get_inheritable=True
+[13/9/2021:17h28min33s865078ms]:supports_bytes_environ=False
+[13/9/2021:17h28min33s873091ms]:O_APPEND=8
+[13/9/2021:17h28min33s877071ms]:O_BINARY=32768
+[13/9/2021:17h28min33s881069ms]:O_CREAT=256
+[13/9/2021:17h28min33s885081ms]:__spec__=ModuleSpec(name='os', loader=<_frozen_importlib_external.SourceFileLoader object at 0x0000019D1E342700>, origin='C:\\Program Files\\Python39\\lib\\os.py')
+[13/9/2021:17h28min33s893092ms]:O_RDONLY=0
+[13/9/2021:17h28min33s897073ms]:O_WRONLY=1
+[13/9/2021:17h28min33s901070ms]:O_RDWR=2
+[13/9/2021:17h28min33s905081ms]:O_EXCL=1024
+[13/9/2021:17h28min33s909090ms]:O_TRUNC=512
+[13/9/2021:17h28min33s917165ms]:O_NOINHERIT=128
+[13/9/2021:17h28min33s921065ms]:O_SHORT_LIVED=4096
+[13/9/2021:17h28min33s925065ms]:O_TEMPORARY=64
+[13/9/2021:17h28min33s933063ms]:O_RANDOM=16
+[13/9/2021:17h28min33s937079ms]:O_SEQUENTIAL=32
+[13/9/2021:17h28min33s945284ms]:O_TEXT=16384
+[13/9/2021:17h28min33s949272ms]:R_OK=4
+[13/9/2021:17h28min33s957969ms]:W_OK=2
+[13/9/2021:17h28min33s962152ms]:X_OK=1
+[13/9/2021:17h28min33s966155ms]:SEEK_SET=0
+[13/9/2021:17h28min33s974162ms]:SEEK_CUR=1
+[13/9/2021:17h28min33s977962ms]:SEEK_END=2
+[13/9/2021:17h28min33s981956ms]:supports_dir_fd=set()
+[13/9/2021:17h28min33s985966ms]:supports_effective_ids=set()
+[13/9/2021:17h28min33s993978ms]:supports_fd={<built-in function stat>, <built-in function truncate>}
+[13/9/2021:17h28min33s997967ms]:supports_follow_symlinks={<built-in function stat>}
+[13/9/2021:17h28min34s5969ms]:P_NOWAIT=1
+[13/9/2021:17h28min34s9952ms]:P_NOWAITO=3
+[13/9/2021:17h28min34s17954ms]:P_WAIT=0
+[13/9/2021:17h28min34s21954ms]:P_DETACH=4
+[13/9/2021:17h28min34s29968ms]:P_OVERLAY=2
+[13/9/2021:17h28min34s33954ms]:directory string=..
+[13/9/2021:17h28min34s41950ms]:separate pathname components=\
+[13/9/2021:17h28min34s45960ms]:character seperating search paths=;
+[13/9/2021:17h28min34s53944ms]:default search path=.;C:\bin
+[13/9/2021:17h28min34s57950ms]:string used to separate lines="
+"
+[13/9/2021:17h28min34s65964ms]:The files path of the null device=nul
+[13/9/2021:17h28min34s69962ms]:terminal size=os.terminal_size(columns=123, lines=15)
+[13/9/2021:17h28min34s77959ms]:Ending of usseless but usable data.
+[13/9/2021:17h28min34s77959ms]:##################################################################################################################################
+[13/9/2021:17h28min48s820810ms]: Exercise Words then the definition started.
+[13/9/2021:17h29min8s828586ms]: Exercise Words then the definition stopped.
+[13/9/2021:17h29min11s731479ms]: You have answered 2 questions of 206 questions for the exercise 'Words then the definition'.
+[13/9/2021:17h29min11s787499ms]: Your score is '1' for the exercise: 'Words then the definition'.
+[13/9/2021:17h29min11s811885ms]: You took 0 year, 0 month, 0 day, 0 hour, 1 minute -40 second, 7776 milliseconds for the exercise: 'Words then the definition', exercise started at 13/9/2021:17h28min48s820810ms and finished at 13/9/2021:17h29min8s828586ms.
+[13/9/2021:17h29min15s178896ms]: Program Learn Your Vocab stopped.
+[13/9/2021:17h49min4s779272ms]: Program Learn Your Vocab started.
+[13/9/2021:17h49min4s791266ms]:##################################################################################################################################
+[13/9/2021:17h49min4s791266ms]:Begining of usseless but usable data.
+[13/9/2021:17h49min4s807264ms]:name=nt
+[13/9/2021:17h49min4s815274ms]:CPU count=16
+[13/9/2021:17h49min4s823273ms]:Curent directory=.
+[13/9/2021:17h49min4s831272ms]:Directory seperator=/
+[13/9/2021:17h49min4s835274ms]:defpath=.;C:\bin
+[13/9/2021:17h49min4s843267ms]:devnull=nul
+[13/9/2021:17h49min4s847272ms]:device_encoding(0)=cp850
+[13/9/2021:17h49min4s851271ms]:device_encoding(1)=cp850
+[13/9/2021:17h49min4s859266ms]:device_encoding(2)=cp850
+[13/9/2021:17h49min4s867271ms]:environement=environ({'ALLUSERSPROFILE': 'C:\\ProgramData', 'APPDATA': 'C:\\Users\\Henry_PC\\AppData\\Roaming', 'CHROME_CRASHPAD_PIPE_NAME': '\\\\.\\pipe\\crashpad_2396_MAYHSGACLXXSGOVP', 'COMMONPROGRAMFILES': 'C:\\Program Files\\Common Files', 'COMMONPROGRAMFILES(X86)': 'C:\\Program Files (x86)\\Common Files', 'COMMONPROGRAMW6432': 'C:\\Program Files\\Common Files', 'COMPUTERNAME': 'LAPTOP-JJKPAN17', 'COMSPEC': 'C:\\Windows\\system32\\cmd.exe', 'DRIVERDATA': 'C:\\Windows\\System32\\Drivers\\DriverData', 'FPS_BROWSER_APP_PROFILE_STRING': 'Internet Explorer', 'FPS_BROWSER_USER_PROFILE_STRING': 'Default', 'GAMEFIRSTUSERPATH': 'C:\\ProgramData\\ASUS\\GameFirst', 'GAMETURBO': 'C:\\Program Files (x86)\\ASUS\\GameFirst\\', 'HOMEDRIVE': 'C:', 'HOMEPATH': '\\Users\\Henry_PC', 'LOCALAPPDATA': 'C:\\Users\\Henry_PC\\AppData\\Local', 'LOGONSERVER': '\\\\LAPTOP-JJKPAN17', 'MOZ_PLUGIN_PATH': 'C:\\Program Files (x86)\\Foxit Software\\Foxit PDF Reader\\plugins\\', 'NUMBER_OF_PROCESSORS': '16', 'ONEDRIVE': 'C:\\Users\\Henry_PC\\OneDrive', 'ORIGINAL_XDG_CURRENT_DESKTOP': 'undefined', 'OS': 'Windows_NT', 'PATH': 'C:\\Program Files\\Python39\\Scripts\\;C:\\Program Files\\Python39\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\ProgramData\\DockerDesktop\\version-bin;C:\\Users\\Henry_PC\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Henry_PC\\AppData\\Local\\GitHubDesktop\\bin;C:\\Users\\Henry_PC\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\Henry_PC\\.dotnet\\tools', 'PATHEXT': '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW;.CPL', 'PROCESSOR_ARCHITECTURE': 'AMD64', 'PROCESSOR_IDENTIFIER': 'AMD64 Family 23 Model 96 Stepping 1, AuthenticAMD', 'PROCESSOR_LEVEL': '23', 'PROCESSOR_REVISION': '6001', 'PROGRAMDATA': 'C:\\ProgramData', 'PROGRAMFILES': 'C:\\Program Files', 'PROGRAMFILES(X86)': 'C:\\Program Files (x86)', 'PROGRAMW6432': 'C:\\Program Files', 'PSMODULEPATH': 'C:\\Users\\Henry_PC\\Documents\\WindowsPowerShell\\Modules;C:\\Program Files\\WindowsPowerShell\\Modules;C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules', 'PUBLIC': 'C:\\Users\\Public', 'SESSIONNAME': 'Console', 'SYSTEMDRIVE': 'C:', 'SYSTEMROOT': 'C:\\Windows', 'TEMP': 'C:\\Users\\Henry_PC\\AppData\\Local\\Temp', 'TMP': 'C:\\Users\\Henry_PC\\AppData\\Local\\Temp', 'USERDOMAIN': 'LAPTOP-JJKPAN17', 'USERDOMAIN_ROAMINGPROFILE': 'LAPTOP-JJKPAN17', 'USERNAME': 'Henry_', 'USERPROFILE': 'C:\\Users\\Henry_PC', 'WINDIR': 'C:\\Windows', 'TERM_PROGRAM': 'vscode', 'TERM_PROGRAM_VERSION': '1.60.0', 'LANG': 'en_GB.UTF-8', 'COLORTERM': 'truecolor', 'VSCODE_GIT_IPC_HANDLE': '\\\\.\\pipe\\vscode-git-bc94916b67-sock', 'GIT_ASKPASS': 'c:\\Users\\Henry_PC\\AppData\\Local\\Programs\\Microsoft VS Code\\resources\\app\\extensions\\git\\dist\\askpass.sh', 'VSCODE_GIT_ASKPASS_NODE': 'C:\\Users\\Henry_PC\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe', 'VSCODE_GIT_ASKPASS_MAIN': 'c:\\Users\\Henry_PC\\AppData\\Local\\Programs\\Microsoft VS Code\\resources\\app\\extensions\\git\\dist\\askpass-main.js'})
+[13/9/2021:17h49min4s871271ms]:cwd=C:\Users\Henry_PC\Documents\001_GitHub_projects\Learn_German_irregular_verbs\files\New organisation\ReCoding
+[13/9/2021:17h49min4s879272ms]:dir Content=['Credits.py', 'DATAbases.py', 'Graphic_User_Interface.py', 'img', 'Launch.py', 'logs', 'Main.py', 'metadata', 'recoding_Learn_your_Vocab.code-workspace', 'requirements.py', 'SearchBar.py', 'second_window_tk.py', '__pycache__']
+[13/9/2021:17h49min4s887272ms]:Logged in account=Henry_
+[13/9/2021:17h49min4s895269ms]:Current process ID=18972
+[13/9/2021:17h49min4s899271ms]:exstep=.
+[13/9/2021:17h49min4s903271ms]:F_OK=0
+[13/9/2021:17h49min4s911268ms]:getcwdb=b'C:\\Users\\Henry_PC\\Documents\\001_GitHub_projects\\Learn_German_irregular_verbs\\files\\New organisation\\ReCoding'
+[13/9/2021:17h49min4s915273ms]:PPID=16152
+[13/9/2021:17h49min4s919266ms]:get_inheritable=True
+[13/9/2021:17h49min4s927268ms]:supports_bytes_environ=False
+[13/9/2021:17h49min4s931279ms]:O_APPEND=8
+[13/9/2021:17h49min4s939290ms]:O_BINARY=32768
+[13/9/2021:17h49min4s945157ms]:O_CREAT=256
+[13/9/2021:17h49min4s950493ms]:__spec__=ModuleSpec(name='os', loader=<_frozen_importlib_external.SourceFileLoader object at 0x000001C2B7B32700>, origin='C:\\Program Files\\Python39\\lib\\os.py')
+[13/9/2021:17h49min4s955594ms]:O_RDONLY=0
+[13/9/2021:17h49min4s959629ms]:O_WRONLY=1
+[13/9/2021:17h49min4s963648ms]:O_RDWR=2
+[13/9/2021:17h49min4s971627ms]:O_EXCL=1024
+[13/9/2021:17h49min4s975855ms]:O_TRUNC=512
+[13/9/2021:17h49min4s979636ms]:O_NOINHERIT=128
+[13/9/2021:17h49min4s987660ms]:O_SHORT_LIVED=4096
+[13/9/2021:17h49min4s991663ms]:O_TEMPORARY=64
+[13/9/2021:17h49min4s995649ms]:O_RANDOM=16
+[13/9/2021:17h49min4s999622ms]:O_SEQUENTIAL=32
+[13/9/2021:17h49min5s7649ms]:O_TEXT=16384
+[13/9/2021:17h49min5s11622ms]:R_OK=4
+[13/9/2021:17h49min5s19639ms]:W_OK=2
+[13/9/2021:17h49min5s23635ms]:X_OK=1
+[13/9/2021:17h49min5s27658ms]:SEEK_SET=0
+[13/9/2021:17h49min5s35656ms]:SEEK_CUR=1
+[13/9/2021:17h49min5s39645ms]:SEEK_END=2
+[13/9/2021:17h49min5s43648ms]:supports_dir_fd=set()
+[13/9/2021:17h49min5s53374ms]:supports_effective_ids=set()
+[13/9/2021:17h49min5s55906ms]:supports_fd={<built-in function stat>, <built-in function truncate>}
+[13/9/2021:17h49min5s63951ms]:supports_follow_symlinks={<built-in function stat>}
+[13/9/2021:17h49min5s67945ms]:P_NOWAIT=1
+[13/9/2021:17h49min5s75940ms]:P_NOWAITO=3
+[13/9/2021:17h49min5s79965ms]:P_WAIT=0
+[13/9/2021:17h49min5s83966ms]:P_DETACH=4
+[13/9/2021:17h49min5s91940ms]:P_OVERLAY=2
+[13/9/2021:17h49min5s95978ms]:directory string=..
+[13/9/2021:17h49min5s99956ms]:separate pathname components=\
+[13/9/2021:17h49min5s107977ms]:character seperating search paths=;
+[13/9/2021:17h49min5s111973ms]:default search path=.;C:\bin
+[13/9/2021:17h49min5s115964ms]:string used to separate lines="
+"
+[13/9/2021:17h49min5s123971ms]:The files path of the null device=nul
+[13/9/2021:17h49min5s127944ms]:terminal size=os.terminal_size(columns=123, lines=15)
+[13/9/2021:17h49min5s131966ms]:Ending of usseless but usable data.
+[13/9/2021:17h49min5s131966ms]:##################################################################################################################################

@@ -1,0 +1,468 @@
+import requirements as rq
+import DATAbases as DB
+import Graphic_User_Interface as GUI
+import os,sys
+def pause():
+    pause=input("Press enter to continue...")
+print(f"os={os.getcwd()}")
+# pause()
+RQI=rq.root()
+DBI=DB.languages()
+rq.root.start(RQI)
+e=DB.languages.start(DBI) #Bypass the DATA load process
+class root:
+    def __init__(self,e):
+        self.PyVersion=sys.version_info.major
+        self.BG=e
+        self.EN=e["EN"]
+        self.DE=e["DE"]
+        self.FR=e["FR"]
+        self.ES=e["ES"]
+    def start(self):
+        print(f"EN={self.EN}\nDE={self.DE}\nFR={self.FR}\nES={self.ES}")
+    def AddInfoToDict(self,Dict,key,element):
+        try:
+            Dict[key]=element
+        except:
+            Dict[key]=f"Failed for {key}"
+# e={"EN":"","DE":"","FR":"","ES":""} #bypass the DATA load process
+RI=root(e)
+root.start(RI)
+GUII=GUI.Windows(EN=e["EN"],DE=e["DE"],ES=e["ES"],FR=e["FR"])
+
+try:
+    GUII.OSInfo["terminal size"]=os.get_terminal_size()
+except:
+    pass
+try:
+    GUII.OSInfo["PRIO_PROCESS"]=os.PRIO_PROCESS
+except:
+    pass
+try:
+    GUII.OSInfo["PRIO_PGRP"]=os.PRIO_PGRP
+except:
+    pass
+try:
+    GUII.OSInfo["O_NONBLOCK"]=os.O_NONBLOCK
+except:
+    pass
+try:
+    GUII.OSInfo["O_NDELAY"]=os.O_NDELAY
+except:
+    pass
+try:
+    GUII.OSInfo["O_SYNC"]=os.O_SYNC
+except:
+    pass
+try:
+    GUII.OSInfo["PRIO_USER"]=os.PRIO_USER
+except:
+    pass
+try:
+    GUII.OSInfo["O_RSYNC"]=os.O_RSYNC
+except:
+    pass
+try:
+    GUII.OSInfo["O_DSYNC"]=os.O_DSYNC
+except:
+    pass
+try:
+    GUII.OSInfo["O_DIRECT"]=os.O_DIRECT
+except:
+    pass
+try:
+    GUII.OSInfo["F_LOCK"]=os.F_LOCK
+except:
+    pass
+try:
+    GUII.OSInfo["RWF_NOWAIT"]=os.RWF_NOWAIT
+except:
+    pass
+try:
+    GUII.OSInfo["POSIX_FADV_DONTNEED"]=os.POSIX_FADV_DONTNEED
+except:
+    pass
+try:
+    GUII.OSInfo["POSIX_FADV_WILLNEED"]=os.POSIX_FADV_WILLNEED
+except:
+    pass
+try:
+    GUII.OSInfo["POSIX_FADV_NOREUSE"]=os.POSIX_FADV_NOREUSE
+except:
+    pass
+try:
+    GUII.OSInfo["POSIX_FADV_RANDOM"]=os.POSIX_FADV_RANDOM
+except:
+    pass
+try:
+    GUII.OSInfo["POSIX_FADV_SEQUENTIAL"]=os.POSIX_FADV_SEQUENTIAL
+except:
+    pass
+try:
+    GUII.OSInfo["POSIX_FADV_NORMAL"]=os.POSIX_FADV_NORMAL
+except:
+    pass
+
+try:
+    GUII.OSInfo["O_CLOEXEC"]=os.O_CLOEXEC
+except:
+    pass
+try:
+    GUII.OSInfo["O_ASYNC"]=os.O_ASYNC
+except:
+    pass
+try:
+    GUII.OSInfo["pathconf_names"]=os.pathconf_names
+except:
+    pass
+
+try:
+    GUII.OSInfo["SF_SYNC"]=os.SF_SYNC
+except:
+    pass
+try:
+    GUII.OSInfo["SF_MNOWAIT"]=os.SF_MNOWAIT
+except:
+    pass
+try:
+    GUII.OSInfo["SF_NODISKIO"]=os.SF_NODISKIO
+except:
+    pass
+try:
+    GUII.OSInfo["RWF_HIPRI"]=os.RWF_HIPRI
+except:
+    pass
+try:
+    GUII.OSInfo["RWF_DSYNC"]=os.RWF_DSYNC
+except:
+    pass
+try:
+    GUII.OSInfo["RWF_SYNC"]=os.RWF_SYNC
+except:
+    pass
+try:
+    GUII.OSInfo["F_TEST"]=os.F_TEST
+except:
+    pass
+try:
+    GUII.OSInfo["F_ULOCK"]=os.F_ULOCK
+except:
+    pass
+try:
+    GUII.OSInfo["F_TLOCK"]=os.F_TLOCK
+except:
+    pass
+try:
+    GUII.OSInfo["O_NOCTTY"]=os.O_NOCTTY
+except:
+    pass
+try:
+    GUII.OSInfo["User ID"]=os.getuid()
+except:
+    pass
+try:
+    GUII.OSInfo["O_TMPFILE"]=os.O_TMPFILE
+except:
+    pass
+try:
+    GUII.OSInfo["O_PATH"]=os.O_PATH
+except:
+    pass
+try:
+    GUII.OSInfo["O_NOATIME"]=os.O_NOATIME
+except:
+    pass
+try:
+    GUII.OSInfo["O_NOFOLLOW"]=os.O_NOFOLLOW
+except:
+    pass
+try:
+    GUII.OSInfo["O_DIRECTORY"]=os.O_DIRECTORY
+except:
+    pass
+try:
+    GUII.OSInfo["O_SHLOCK"]=os.O_SHLOCK
+except:
+    pass
+try:
+    GUII.OSInfo["O_EXLOCK"]=os.O_EXLOCK
+except:
+    pass
+try:
+    GUII.OSInfo["MFD_HUGE_64KB"]=os.MFD_HUGE_64KB
+except:
+    pass
+try:
+    GUII.OSInfo["MFD_HUGE_MASK"]=os.MFD_HUGE_MASK
+except:
+    pass
+try:
+    GUII.OSInfo["MFD_HUGE_512KB"]=os.MFD_HUGE_512KB
+except:
+    pass
+try:
+    GUII.OSInfo["MFD_HUGE_1MB"]=os.MFD_HUGE_1MB
+except:
+    pass
+try:
+    GUII.OSInfo["MFD_HUGE_2MB"]=os.MFD_HUGE_2MB
+except:
+    pass
+try:
+    GUII.OSInfo["MFD_HUGE_SHIFT"]=os.MFD_HUGE_SHIFT
+except:
+    pass
+try:
+    GUII.OSInfo["MFD_HUGETLB"]=os.MFD_HUGETLB
+except:
+    pass
+try:
+    GUII.OSInfo["MFD_ALLOW_SEALING"]=os.MFD_ALLOW_SEALING
+except:
+    pass
+try:
+    GUII.OSInfo["MFD_CLOEXEC"]=os.MFD_CLOEXEC
+except:
+    pass       
+try:
+    GUII.OSInfo["EX_NOTFOUND"]=os.EX_NOTFOUND
+except:
+    pass
+try:
+    GUII.OSInfo["EX_CONFIG"]=os.EX_CONFIG
+except:
+    pass
+try:
+    GUII.OSInfo["EX_NOPERM"]=os.EX_NOPERM
+except:
+    pass
+try:
+    GUII.OSInfo["EX_PROTOCOL"]=os.EX_PROTOCOL
+except:
+    pass
+try:
+    GUII.OSInfo["EX_TEMPFAIL"]=os.EX_TEMPFAIL
+except:
+    pass
+try:
+    GUII.OSInfo["EX_IOERR"]=os.EX_IOERR
+except:
+    pass
+try:
+    GUII.OSInfo["EX_CANTCREAT"]=os.EX_CANTCREAT
+except:
+    pass
+try:
+    GUII.OSInfo["EX_OSFILE"]=os.EX_OSFILE
+except:
+    pass
+try:
+    GUII.OSInfo["EX_SOFTWARE"]=os.EX_SOFTWARE
+except:
+    pass
+try:
+    GUII.OSInfo["EX_OSERR"]=os.EX_OSERR
+except:
+    pass
+try:
+    GUII.OSInfo["EX_NOHOST"]=os.EX_NOHOST
+except:
+    pass
+try:
+    GUII.OSInfo["EX_UNAVAILABLE"]=os.EX_UNAVAILABLE
+except:
+    pass
+try:
+    GUII.OSInfo["EX_NOUSER"]=os.EX_NOUSER
+except:
+    pass
+try:
+    GUII.OSInfo["EX_DATAERR"]=os.EX_DATAERR
+except:
+    pass
+try:
+    GUII.OSInfo["EX_NOINPUT"]=os.EX_NOINPUT
+except:
+    pass
+try:
+    GUII.OSInfo["EX_USAGE"]=os.EX_USAGE
+except:
+    pass
+try:
+    GUII.OSInfo["EX_OK"]=os.EX_OK
+except:
+    pass
+try:
+    GUII.OSInfo["MFD_HUGE_2GB"]=os.MFD_HUGE_2GB
+except:
+    pass
+try:
+    GUII.OSInfo["MFD_HUGE_16GB"]=os.MFD_HUGE_16GB
+except:
+    pass
+try:
+    GUII.OSInfo["MFD_HUGE_512MB"]=os.MFD_HUGE_512MB
+except:
+    pass
+try:
+    GUII.OSInfo["MFD_HUGE_1GB"]=os.MFD_HUGE_1GB
+except:
+    pass
+try:
+    GUII.OSInfo["MFD_HUGE_256MB"]=os.MFD_HUGE_256MB
+except:
+    pass
+try:
+    GUII.OSInfo["MFD_HUGE_32MB"]=os.MFD_HUGE_32MB
+except:
+    pass
+try:
+    GUII.OSInfo["MFD_HUGE_16MB"]=os.MFD_HUGE_16MB
+except:
+    pass
+try:
+    GUII.OSInfo["MFD_HUGE_8MB"]=os.MFD_HUGE_8MB
+except:
+    pass
+            
+try:
+    GUII.OSInfo["sysconf_names"]=os.sysconf_names
+except:
+    pass
+try:
+    GUII.OSInfo["confstr_names"]=os.confstr_names
+except:
+    pass
+try:
+    GUII.OSInfo["SCHED_RESET_ON_FORK"]=os.SCHED_RESET_ON_FORK
+except:
+    pass
+try:
+    GUII.OSInfo["SCHED_RR"]=os.SCHED_RR
+except:
+    pass
+try:
+    GUII.OSInfo["SCHED_FIFO"]=os.SCHED_FIFO
+except:
+    pass
+try:
+    GUII.OSInfo["SCHED_SPORADIC"]=os.SCHED_SPORADIC
+except:
+    pass
+try:
+    GUII.OSInfo["SCHED_IDLE"]=os.SCHED_IDLE
+except:
+    pass
+try:
+    GUII.OSInfo["SCHED_BATCH"]=os.SCHED_BATCH
+except:
+    pass
+try:
+    GUII.OSInfo["SCHED_OTHER"]=os.SCHED_OTHER
+except:
+    pass
+try:
+    GUII.OSInfo["WCONTINUED"]=os.WCONTINUED
+except:
+    pass
+try:
+    GUII.OSInfo["WNOHANG"]=os.WNOHANG
+except:
+    pass
+try:
+    GUII.OSInfo["CLD_CONTINUED"]=os.CLD_CONTINUED
+except:
+    pass
+try:
+    GUII.OSInfo["WUNTRACED"]=os.WUNTRACED
+except:
+    pass
+try:
+    GUII.OSInfo["CLD_EXITED"]=os.CLD_EXITED
+except:
+    pass
+try:
+    GUII.OSInfo["WSTOPPED"]=os.WSTOPPED
+except:
+    pass
+try:
+    GUII.OSInfo["WEXITED"]=os.WEXITED
+except:
+    pass
+try:
+    GUII.OSInfo["WNOWAIT"]=os.WNOWAIT
+except:
+    pass
+try:
+    GUII.OSInfo["P_PIDFD"]=os.P_PIDFD
+except:
+    pass
+try:
+    GUII.OSInfo["P_ALL"]=os.P_ALL
+except:
+    pass
+try:
+    GUII.OSInfo["P_PGID"]=os.P_PGID
+except:
+    pass
+try:
+    GUII.OSInfo["P_PID"]=os.P_PID
+except:
+    pass
+try:
+    GUII.OSInfo["CLD_KILLED"]=os.CLD_KILLED
+except:
+    pass
+try:
+    GUII.OSInfo["CLD_DUMPED"]=os.CLD_DUMPED
+except:
+    pass
+try:
+    GUII.OSInfo["CLD_TRAPPED"]=os.CLD_TRAPPED
+except:
+    pass
+try:
+    GUII.OSInfo["CLD_STOPPED"]=os.CLD_STOPPED
+except:
+    pass
+try:
+    GUII.OSInfo["RTLD_LOCAL"]=os.RTLD_LOCAL
+except:
+    pass
+try:
+    GUII.OSInfo["RTLD_NOLOAD"]=os.RTLD_NOLOAD
+except:
+    pass
+try:
+    GUII.OSInfo["RTLD_NODELETE"]=os.RTLD_NODELETE
+except:
+    pass
+try:
+    GUII.OSInfo["RTLD_GLOBAL"]=os.RTLD_GLOBAL
+except:
+    pass
+try:
+    GUII.OSInfo["RTLD_NOW"]=os.RTLD_NOW
+except:
+    pass
+try:
+    GUII.OSInfo["RTLD_LAZY"]=os.RTLD_LAZY
+except:
+    pass
+try:
+    GUII.OSInfo["RTLD_DEEPBIND"]=os.RTLD_DEEPBIND
+except:
+    pass
+try:
+    GUII.OSInfo["GRND_NONBLOCK"]=os.GRND_NONBLOCK
+except:
+    pass
+try:
+    GUII.OSInfo["GRND_RANDOM"]=os.GRND_RANDOM
+except:
+    pass
+
+GUI.Windows.start(GUII)
+
+
+
