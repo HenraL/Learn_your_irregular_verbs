@@ -49,10 +49,10 @@ class languages:
             print(f"self.sortList={self.sortList}")
             # pause()
             for i in range(len(e)):
-                print(f"i={i},len(e)={len(e)}")
+                # print(f"i={i},len(e)={len(e)}")
                 sub_temp={}
                 for b in range(len(self.sortList)):
-                    print(f"i={i},len(e[i])={len(e[i])} len(self.sortList)={len(self.sortList)},self.sortList[b]={self.sortList[b]}")
+                    # print(f"i={i},len(e[i])={len(e[i])} len(self.sortList)={len(self.sortList)},self.sortList[b]={self.sortList[b]}")
                     sub_temp[self.sortList[b]]=e[i][b]
                 temp.append(sub_temp)
             return temp

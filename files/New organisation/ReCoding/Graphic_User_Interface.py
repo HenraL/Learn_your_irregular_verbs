@@ -23,6 +23,12 @@ class Windows:
         self.size_x=700
         self.size_y=350
         self.geometry=f"{self.size_x}x{self.size_y}"
+        self.size_questions_x=self.size_x-20
+        self.size_questions_y=self.size_y-180
+        self.geometry_questions=f"{self.size_questions_x}x{self.size_questions_y}"
+        self.size_small_window_x=self.size_x-550
+        self.size_small_window_y=self.size_y-300
+        self.geometry_small_window=f"{self.size_small_window_x}x{self.size_small_window_y}"
         #__________________ Vars for the software Icon __________________
         self.icon=""
         self.hasIcon=False
@@ -35,6 +41,7 @@ class Windows:
         self.logDir="logs"
         #_________________ Vars for loading from saved files _________________
         self.loadedSavedProgress=False
+        self.timeInfoRestore=0
 
         #_________________ Gathering DATA _________________
         self.OSInfo={
@@ -116,10 +123,10 @@ class Windows:
         self.ChosenLanguage="EN"
         self.ContentLanguage=EN
         self.ListLength=len(EN)
-        self.enableOrDisable={"EN":"disable","DE":"disable","ES":"disable","FR":"disable","written":"normal","radio":"disable"}
+        self.enableOrDisable={"EN":"disable","DE":"disable","ES":"disable","FR":"disable","written":"normal","radio":"disable","female":"disabled","male":"disabled"}
         self.errorColors=["red2","orange","blue","IndianRed2","DarkGoldenrod3","brown3","tomato","tomato2","tomato3","tomato4","orange red","SteelBlue3","MediumPurple4","gray29"]
         self.successColors=["sea green","forest green","green4","OliveDrab4","SpringGreen4","LightGoldenrod4","aquamarine4","dark green","dark olive green","cyan4"]
-
+        
         #__________________________ setting all the time variables to "" __________________________
         self.microsecond=""
         self.second=""
@@ -133,12 +140,23 @@ class Windows:
         self.Timep=""
         self.All=""
         self.Alls=""
+        self.first_time_started=0
+        #_____________________________ Audio preferences _____________________________
+        self.VoiceType="Female"
         #_____________________________ Var that controls the internal gameplay _____________________________
         self.ToAdd=0
 
     class SubOperations:
-        def splitTime(self,Start_time,Stop_time):
+        def Excess(time,format):
+            """Calculates the excess time so that it can be added to the time above it ms>s>minutes>h>d>months>y"""
+            overflow=0
+            while time>=format:
+                time-=format
+                overflow+=1
+            return overflow,time
+        def splitTime(self,Start_time,Stop_time,total_time=0):
             update.date(self)
+            print(f"Start_time={Start_time},Stop_time={Stop_time}")
             st=Start_time.split("/")
             st_d=int(st.pop(0))
             st_mo=int(st.pop(0))
@@ -167,35 +185,205 @@ class Windows:
             et=et[0].split("m")
             et_ms=int(et.pop(0))
 
-            d=et_d-st_d
-            mo=et_mo-st_mo
-            y=et_y-st_y
-            h=et_h-st_h
-            minute=et_min-st_min
-            s=et_s-st_s
-            ms=et_ms-st_ms
-            try:
-                ms=str(ms).split("-")
-                ms=int(ms[1])
-            except:
-                pass
-            r={"dp":int(d),"mop":int(mo),"yp":int(y),"hp":int(h),"minutep":int(minute),"sp":int(s),"msp":int(ms)}
+
+            if et_ms>st_ms:
+                ms=et_ms-st_ms
+            else:
+                ms=st_ms-et_ms
+            grub=Windows.SubOperations.Excess(time=ms,format=1000)
+            ms=int(grub[1])
+            et_s+=int(grub[0])
+
+            if et_s>st_s:
+                s=et_s-st_s
+            else:
+                s=st_s-et_s
+            grub=Windows.SubOperations.Excess(time=s,format=60)
+            s=grub[1]
+            et_min+=grub[0]
+            
+            if et_min>st_min:
+                minute=et_min-st_min
+            else:
+                minute=st_min-et_min
+            grub=Windows.SubOperations.Excess(time=minute,format=60)
+            minute=int(grub[1])
+            et_h+=int(grub[0])
+            
+            if et_h>st_h:
+                h=et_h-st_h
+            else:
+                h=st_h-et_h
+            grub=Windows.SubOperations.Excess(time=h,format=24)
+            h=int(grub[1])
+            et_d+=int(grub[0])
+            
+            if et_d>st_d:
+                d=et_d-st_d
+            else:
+                d=st_d-et_d
+            grub=Windows.SubOperations.Excess(time=d,format=30)
+            d=int(grub[1])
+            et_mo+=int(grub[0])
+
+            if et_mo>st_mo:
+                mo=et_mo-st_mo
+            else:
+                mo=st_mo-et_mo
+            grub=Windows.SubOperations.Excess(time=mo,format=12)
+            mo=int(grub[1])
+            et_y+=int(grub[0])
+
+            if et_y>st_y:
+                y=et_y-st_y
+            else:
+                y=st_y-et_y
+            
+            if total_time!=0:
+                print(f"total_time={total_time}")
+                if total_time["ms"]>ms:
+                    ms=total_time["ms"]+ms
+                else:
+                    ms=ms+total_time["ms"]
+                grub=Windows.SubOperations.Excess(time=ms,format=1000)
+                ms=int(grub[1])
+                et_s+=int(grub[0])
+                
+                if total_time["s"]>s:
+                    s=total_time["s"]+s
+                else:
+                    s=s+total_time["s"]
+                grub=Windows.SubOperations.Excess(time=s,format=60)
+                s=int(grub[1])
+                et_min+=int(grub[0])
+                
+                if total_time["minute"]>minute:
+                    minute=total_time["minute"]+minute
+                else:
+                    minute=minute+total_time["minute"]
+                grub=Windows.SubOperations.Excess(time=minute,format=60)
+                minute=int(grub[1])
+                et_h+=int(grub[0])
+
+                if total_time["h"]>h:
+                    h=total_time["h"]+h
+                else:
+                    h=h+total_time["h"]
+                grub=Windows.SubOperations.Excess(time=h,format=24)
+                h=int(grub[1])
+                et_d+=int(grub[0])
+                
+                if total_time["d"]>d:
+                    d=total_time["d"]+d
+                else:
+                    d=d+total_time["d"]
+                grub=Windows.SubOperations.Excess(time=d,format=30)
+                d=int(grub[1])
+                et_mo+=int(grub[0])
+                
+                if total_time["mo"]>mo:
+                    mo=total_time["mo"]+mo
+                else:
+                    mo=mo+total_time["mo"]
+                grub=Windows.SubOperations.Excess(time=mo,format=12)
+                mo=int(grub[1])
+                et_y+=int(grub[0])
+                if total_time["y"]>y:
+                    y=total_time["y"]+y
+                else:
+                    y=y+total_time["y"]
+                
+            print(f"d={d},type({d})={type(d)},mo={mo},type({mo})={type(mo)},y={y},type({y})={type(y)},h={h},type({h})={type(h)},minute={minute},type({minute})={type(minute)},s={s},type({s})={type(s)},ms={ms},type({ms})={type(ms)}")
+            # r={"dp":int(d),"mop":int(mo),"yp":int(y),"hp":int(h),"minutep":int(minute),"sp":int(s),"msp":int(ms)}
+            r={"dp":d,"mop":mo,"yp":y,"hp":h,"minutep":minute,"sp":s,"msp":ms}
             p={"dp":"","mop":"","yp":"","hp":"","minutep":"","sp":"","msp":""}
             for i in p:
+                print(f"type({r[i]})=type(r[{i}])={type(r[i])}")
                 e=int(r[i])
                 if e>1:
                     p[i]="s"
             return {"d":d,"mo":mo,"y":y,"h":h,"minute":minute,"s":s,"ms":ms,"r":r,"p":p}
         def TrippleTermCall(self,exercise,WTOrTW=0):
+            """Function for the interaction of a three entry box"""
             print(f"Tripple Term Call,exercise={exercise},WTOrTW={WTOrTW}")
-
+            update.date(self)
+            log.ExerciseStarted(self,exercise)
+            start_time=self.Alls
+            continueExercise=True
+            index=score=0
+            Windows.RestoreProgress(self,language=self.ChosenLanguage,exercise=exercise)
+            print(f"\n\n\nexercise={exercise}\nstart_time={start_time}\ncontinueExercise={continueExercise}\nindex={index}\nscore={score}\nself.ListLength={self.ListLength}\n\n\nRestoredResults={self.timeInfoRestore}")
+            if self.timeInfoRestore!=0:
+                index=self.timeInfoRestore["index"]
+                score=self.timeInfoRestore["score"]
+            while continueExercise==True and index<=self.ListLength:
+                print(f"\n\n\nexercise={exercise}\nstart_time={start_time}\ncontinueExercise={continueExercise}\nindex={index}\nscore={score}\nself.ListLength={self.ListLength}\n\n\n")
+                # print(f"self.ContentLanguage={self.ContentLanguage}")
+                current=self.ContentLanguage[index]
+                term=""
+                if 'trad_fr' in current:
+                    term+=f"{current['trad_fr']}/"
+                if 'trad_eng' in current:
+                    term+=f"{current['trad_eng']}/"
+                if 'trad_de' in current:
+                    term+=f"{current['trad_de']}/"
+                if 'trad_es' in current:
+                    term+=f"{current['trad_es']}"
+                if self.ChosenLanguage=='EN':
+                    lang='infinitive'
+                elif self.ChosenLanguage=='DE':
+                    lang='inf'
+                elif self.ChosenLanguage=='ES':
+                    lang=''
+                else:
+                    lang='infinitif'
+                hintENG=hintDE=hintES=hintFR=""
+                if 'hint_eng' in current:
+                    hintENG=current['hint_eng']
+                if 'hint_de' in current:
+                    hintDE=current['hint_de']
+                if 'hint_es' in current:
+                    hintES=current['hint_es']
+                if 'hint_fr' in current:
+                    hintFR=current['hint_fr']
+                if WTOrTW==0:
+                    result=Windows.SubOperations.AskTripple(self,typeRequired="definition",word=term,correctAnswer=current[lang],hintFR=hintFR,hintENG=hintENG,hintDE=hintDE,hintES=hintES)
+                else:
+                    result=Windows.SubOperations.AskTripple(self,typeRequired="term",word=current[lang],correctAnswer=term,hintFR=hintFR,hintENG=hintENG,hintDE=hintDE,hintES=hintES)
+                print("################################################################################################################################################################################")
+                print(f"\n\n\nexercise={exercise}\nstart_time={start_time}\ncontinueExercise={continueExercise}\nindex={index}\nscore={score}\nself.ListLength={self.ListLength}\nresult={result}\n\n\n")
+                print("################################################################################################################################################################################")
+                if self.ToAdd=="Stop exercise":
+                    continueExercise=False
+                else:
+                    print(f"result={result},self.ToAdd={self.ToAdd}")
+                    score+=self.ToAdd
+                    index+=1
+                    print(f"score={score},index={index}")
+                print(f"\n\n\nexercise={exercise}\nstart_time={start_time}\ncontinueExercise={continueExercise}\nindex={index}\nscore={score}\nself.ListLength={self.ListLength}\nresult={result}\n\n\n")
+                
+            print("out of loop")
+            update.date(self)
+            log.ExerciseStopped(self,exercise)
+            end_time=self.Alls
+            
+            if index>0 and index<self.ListLength:
+                Windows.SaveProgress(self,language=self.ChosenLanguage,progress=index,score=score,exercise=exercise,time_start=start_time,time_end=end_time,total_time=self.timeInfoRestore)
+            Windows.ScoreBoard(self,score=score,answ_questions=index,tot_questions=self.ListLength,exercise=exercise,time_start=start_time,time_stop=end_time,total_time=self.timeInfoRestore)
+            log.questions(self,answ_questions=index,tot_questions=self.ListLength,exercise=exercise)
+            log.score(self,score,exercise)
+            log.Time(self,Start_time=start_time,Stop_time=end_time,exercise=exercise,total_time=self.timeInfoRestore)
         def DoubleTermCall(self,exercise,TDOrDT=0):
             update.date(self)
             log.ExerciseStarted(self,exercise)
             start_time=self.Alls
             continueExercise=True
             index=score=0
-            print(f"\n\n\nexercise={exercise}\nstart_time={start_time}\ncontinueExercise={continueExercise}\nindex={index}\nscore={score}\nself.ListLength={self.ListLength}\n\n\n")
+            Windows.RestoreProgress(self,language=self.ChosenLanguage,exercise=exercise)
+            print(f"\n\n\nexercise={exercise}\nstart_time={start_time}\ncontinueExercise={continueExercise}\nindex={index}\nscore={score}\nself.ListLength={self.ListLength}\n\n\nRestoredResults={self.timeInfoRestore}")
+            if self.timeInfoRestore!=0:
+                index=self.timeInfoRestore["index"]
+                score=self.timeInfoRestore["score"]
             while continueExercise==True and index<=self.ListLength:
                 print(f"\n\n\nexercise={exercise}\nstart_time={start_time}\ncontinueExercise={continueExercise}\nindex={index}\nscore={score}\nself.ListLength={self.ListLength}\n\n\n")
                 # print(f"self.ContentLanguage={self.ContentLanguage}")
@@ -246,11 +434,13 @@ class Windows:
             update.date(self)
             log.ExerciseStopped(self,exercise)
             end_time=self.Alls
-            Windows.SaveProgress(self,language=self.ChosenLanguage,progress=index,score=score,exercise=exercise,time_start=start_time,time_end=end_time)
-            Windows.ScoreBoard(self,score=score,answ_questions=index,tot_questions=self.ListLength,exercise=exercise,time_start=start_time,time_stop=end_time)
+            
+            if index>0 and index<self.ListLength:
+                Windows.SaveProgress(self,language=self.ChosenLanguage,progress=index,score=score,exercise=exercise,time_start=start_time,time_end=end_time,total_time=self.timeInfoRestore)
+            Windows.ScoreBoard(self,score=score,answ_questions=index,tot_questions=self.ListLength,exercise=exercise,time_start=start_time,time_stop=end_time,total_time=self.timeInfoRestore)
             log.questions(self,answ_questions=index,tot_questions=self.ListLength,exercise=exercise)
             log.score(self,score,exercise)
-            log.Time(self,Start_time=start_time,Stop_time=end_time,exercise=exercise)
+            log.Time(self,Start_time=start_time,Stop_time=end_time,exercise=exercise,total_time=self.timeInfoRestore)
         def gameCheck(hintUsed,Answer,correctAnswer,AnswerRevealed):
             total=0
             tryAgain=False
@@ -360,12 +550,14 @@ class Windows:
                 ButtonRevealAnswer.pack_forget()
                 print(f"\ncorrectAnswer={correctAnswer}\nself.hintUsed={self.hintUsed}\nself.AnswerRevealed={self.AnswerRevealed}\ncorrectAnswer={correctAnswer}\n\n\n")
                 print("")
+            
             TTT = Tk()
-            TTT.geometry(self.geometry)
-            TTT.minsize(self.size_x,self.size_y)
+            geometry_questions=f"{self.size_questions_x}x{self.size_questions_y+55}"
+            TTT.geometry(geometry_questions)
+            TTT.minsize(self.size_questions_x,self.size_questions_y+55)
             TTT['bg']=self.universalBackground
             if self.hasIcon==True:TTT.iconbitmap=self.icon
-            WordLabel=Label(TTT,text=f"What is the {typeRequired} of {word}:",bg=self.universalBackground,font=self.defaultFont,anchor="w",wraplength=400)
+            WordLabel=Label(TTT,text=f"What is the {typeRequired} of {word}:",bg=self.universalBackground,font=self.defaultFont,anchor="w")
             WordLabel.pack(side=TOP,fill=X)
             LabelWrong=Label(TTT,text="",bg=self.universalBackground,font=self.defaultFont,anchor="center")
             LabelWrong.pack(side=TOP,fill=X)
@@ -389,10 +581,11 @@ class Windows:
             ShowHintDE=Label(TTT,text="",bg=self.universalBackground)
             ShowHintES=Label(TTT,text="",bg=self.universalBackground)
             StopButton=Button(TTT,text="Stop exercise!",command=stopAll)
-            StopButton.pack(side=TOP, fill=X)
+            StopButton.pack(side=TOP, fill=X,padx=5)
             PackHints(hintFR,hintENG,hintDE,hintES)
             TTT.mainloop()
-        
+        def AskTripple(self,typeRequired,word,correctAnswer,hintFR,hintENG,hintDE,hintES):
+            """ This function is the one in charge of gathering the user entries for the exercise."""
     def Home(self):
         """The main screen"""
         main=[self.EN,self.DE,self.ES,self.FR]
@@ -538,7 +731,21 @@ class Windows:
                 self.PMethod="written"
             else:
                 self.PMethod="radio"
-        
+        def setRadioLanguage():
+            if self.ChosenLanguage=="EN":
+                return 1
+            elif self.ChosenLanguage=="DE":
+                return 2
+            elif self.ChosenLanguage=="ES":
+                return 3
+            else:
+                return 4
+        def setRadioWrittenOrRadio():
+            if self.PMethod=="written":
+                return 1
+            else:
+                return 2
+    
         TT = Tk()
         TT["bg"]=self.universalBackground
         TT.title("Main Menu - Language")
@@ -625,7 +832,7 @@ class Windows:
         WriteOrRadioLanguage=Frame(FrameContentMenu,bg=self.universalBackground,padx=0,pady=10)
         WriteOrRadioLanguage.pack(fill=X,side=RIGHT,padx=self.innerPadding,pady=0)
         MethValue = StringVar()
-        MethValue.set(1)
+        MethValue.set(setRadioWrittenOrRadio())
         buttonWrite = Radiobutton(WriteOrRadioLanguage, text="Written", variable=MethValue, value=1,bg=self.universalBackground,font=self.defaultFont,command=updateGameMethod,state=self.enableOrDisable["written"])
         buttonRadio = Radiobutton(WriteOrRadioLanguage, text="Radio choice", variable=MethValue, value=2,bg=self.universalBackground,font=self.defaultFont,command=updateGameMethod,state=self.enableOrDisable["radio"])
         buttonRadio.pack(fill=X,side=RIGHT)
@@ -635,7 +842,7 @@ class Windows:
         FrameLanguage=Frame(FrameContentMenu,bg=self.universalBackground,padx=0,pady=10)
         FrameLanguage.pack(fill=X,side=TOP,padx=self.innerPadding,pady=0)
         value = StringVar()
-        value.set(1)
+        value.set(setRadioLanguage())
         buttonEnglish = Radiobutton(FrameLanguage, text="English", variable=value, value=1,bg=self.universalBackground,font=self.defaultFont,command=updateRadio,state=self.enableOrDisable["EN"])
         buttonGerman = Radiobutton(FrameLanguage, text="German", variable=value, value=2,bg=self.universalBackground,font=self.defaultFont,command=updateRadio,state=self.enableOrDisable["DE"])
         buttonSpanish = Radiobutton(FrameLanguage, text="Spanish", variable=value, value=3,bg=self.universalBackground,font=self.defaultFont,command=updateRadio,state=self.enableOrDisable["ES"])
@@ -665,13 +872,105 @@ class Windows:
 
         TT.mainloop()
     def Language(self):
-        """Choose the language"""
+        """Choose the language and adjust other settings."""
+        def setRadioLanguage():
+            if self.ChosenLanguage=="EN":
+                return 1
+            elif self.ChosenLanguage=="DE":
+                return 2
+            elif self.ChosenLanguage=="ES":
+                return 3
+            else:
+                return 4
+        def setRadioWrittenOrRadio():
+            if self.PMethod=="written":
+                return 1
+            else:
+                return 2
+        def setVoicePreference():
+            if self.VoiceType=="Female":
+                return 1
+            else:
+                return 2
+        def getRadioLanguage(*args):
+            e=int(value.get())
+            print(f"e={e},type(e)={type(e)}")
+            if e==1:
+                self.ChosenLanguage="EN"
+                self.ContentLanguage=self.EN
+                self.ListLength=len(self.ChosenLanguage)-1
+            elif e==2:
+                self.ChosenLanguage="DE"
+                self.ContentLanguage=self.DE
+                self.ListLength=len(self.ChosenLanguage)-1
+            elif e==3:
+                self.ChosenLanguage="ES"
+                self.ContentLanguage=self.ES
+                self.ListLength=len(self.ChosenLanguage)-1
+            else:
+                self.ChosenLanguage="FR"
+                self.ContentLanguage=self.FR
+                self.ListLength=len(self.ChosenLanguage)-1
+            print(f"Chosen Langauge={self.ChosenLanguage}")
+        def updateGameMethod(*args):
+            method=MethValue.get()
+            if method==1:
+                self.PMethod="written"
+            else:
+                self.PMethod="radio"
+        def updateVoicePreference(*args):
+            preference=VoiceValue.get()
+            if preference==1:
+                self.VoiceType="Female"
+            else:
+                self.VoiceType="Male"
         TTT=Tk()
-        TTT.geometry(self.geometry)
-        TTT.minsize(self.size_x,self.size_y)
-        TTT.title="Select the language"
+        geometry_questions=f"{self.size_questions_x}x{self.size_questions_y+15}"
+        TTT.geometry(geometry_questions)
+        TTT.minsize(self.size_questions_x,self.size_questions_y+15)
+        TTT.title("Select the language")
         TTT['bg']=self.universalBackground
         if self.hasIcon==True:TTT.iconbitmap=self.icon
+        TitleLabel=Label(TTT,text="Settings for the language & Co.",fg=self.universalBackground,bg=self.universalForeground,font=(self.Font,self.Size+10,"bold"),anchor="center")
+        TitleLabel.pack(side=TOP,fill=X)
+        FrameMain=Frame(TTT,bg=self.universalBackground,relief=FLAT,borderwidth=0)
+        FrameMain.pack(side=TOP,fill=X)
+        # LanguageLabel=Label(FrameMain,text="Choose the language you wish to study.",fg=self.universalForeground,bg=self.universalBackground,font=self.defaultFont,anchor="nw")
+        # LanguageLabel.pack(side=TOP,fill=X)
+        FrameLanguage=LabelFrame(FrameMain,text="Choose the language you wish to study.",fg=self.universalForeground,font=self.defaultFont,bg=self.universalBackground,padx=0,pady=5)
+        FrameLanguage.pack(fill=X,side=TOP,padx=self.innerPadding,pady=0)
+        value = StringVar()
+        value.set(setRadioLanguage())
+        buttonEnglish = Radiobutton(FrameLanguage, text="English", variable=value, value=1,bg=self.universalBackground,font=self.defaultFont,command=getRadioLanguage,state=self.enableOrDisable["EN"])
+        buttonGerman = Radiobutton(FrameLanguage, text="German", variable=value, value=2,bg=self.universalBackground,font=self.defaultFont,command=getRadioLanguage,state=self.enableOrDisable["DE"])
+        buttonSpanish = Radiobutton(FrameLanguage, text="Spanish", variable=value, value=3,bg=self.universalBackground,font=self.defaultFont,command=getRadioLanguage,state=self.enableOrDisable["ES"])
+        buttonFrench = Radiobutton(FrameLanguage, text="French", variable=value, value=4,bg=self.universalBackground,font=self.defaultFont,command=getRadioLanguage,state=self.enableOrDisable["FR"])
+        buttonEnglish.pack(fill=X,side=LEFT)
+        buttonGerman.pack(fill=X,side=LEFT)
+        buttonSpanish.pack(fill=X,side=LEFT)
+        buttonFrench.pack(fill=X,side=LEFT)
+        WriteOrRadioLanguage=LabelFrame(FrameMain,text="Do you wish to write the words or choose from a list.",fg=self.universalForeground,font=self.defaultFont,bg=self.universalBackground,padx=0,pady=0)
+        WriteOrRadioLanguage.pack(fill=None,side=RIGHT,padx=self.innerPadding,pady=0)
+        MethValue = StringVar()
+        MethValue.set(setRadioWrittenOrRadio())
+        buttonWrite = Radiobutton(WriteOrRadioLanguage, text="Written", variable=MethValue, value=1,bg=self.universalBackground,font=self.defaultFont,command=updateGameMethod,state=self.enableOrDisable["written"])
+        buttonRadio = Radiobutton(WriteOrRadioLanguage, text="Radio choice", variable=MethValue, value=2,bg=self.universalBackground,font=self.defaultFont,command=updateGameMethod,state=self.enableOrDisable["radio"])
+        buttonRadio.pack(fill=X,side=RIGHT)
+        buttonWrite.pack(fill=X,side=RIGHT)
+        # TitleVoicePreferenceLabel=Label(FrameMain,text="Choose your the voice of the person reading.",bg=self.universalBackground,fg=self.universalForeground,font=self.defaultFont,anchor="nw")
+        # TitleVoicePreferenceLabel.pack(side=TOP,fill=X)
+        VoicePreference=LabelFrame(FrameMain,text="Choose your narrators voice:",fg=self.universalForeground,bg=self.universalBackground,padx=0,pady=5)
+        VoicePreference.pack(fill=None,side=LEFT,padx=self.innerPadding,pady=0)
+        VoiceValue = StringVar()
+        VoiceValue.set(setVoicePreference())
+        buttonFemale = Radiobutton(VoicePreference, text="Female", variable=VoiceValue, value=1,bg=self.universalBackground,font=self.defaultFont,command=updateVoicePreference,state=self.enableOrDisable["female"])
+        buttonMale = Radiobutton(VoicePreference, text="Male", variable=VoiceValue, value=2,bg=self.universalBackground,font=self.defaultFont,command=updateVoicePreference,state=self.enableOrDisable["male"])
+        buttonFemale.pack(fill=X,side=LEFT)
+        buttonMale.pack(fill=X,side=LEFT)
+        ButtonClose=Button(TTT,text="Close",fg=self.universalForeground,bg=self.universalBackground,font=self.defaultFont,command=TTT.destroy)
+        ButtonClose.pack(side=RIGHT,padx=5)
+        WatermarkLabel=Label(TTT,text=self.watermark,fg=self.universalForeground,bg=self.universalBackground,font=self.defaultFont)
+        WatermarkLabel.pack(side=LEFT,padx=5)
         TTT.mainloop()
     def DW(self):
         print("ee")
@@ -716,28 +1015,36 @@ class Windows:
     def FV(self):
         print("hi")
     def TS(self):
-        print("hi")
-    def SaveProgress(self,language,progress,score,exercise,time_start,time_end):
+        print("hi")                #index   ToAdd
+    def SaveProgress(self,language,progress,score,exercise,time_start,time_end,total_time=0):
+        """This will save the users progress for a given exercise"""
         def SaveTheProgress():
             if os.path.exists(self.ProgressFolder)==False:
                 os.mkdir(self.ProgressFolder)
             f=open(f"{self.ProgressFolder}/{self.username}_{language}_{exercise}.save","w")
-            f.write(f"{language}\n{exercise}\n{progress}\n{score}\n{d}\n{mo}\n{y}\n{h}\n{minute}\n{s}\n{ms}\n")
+            f.write(f"{language}\n{exercise}\n{progress}\n{score}\n{d}\n{mo}\n{y}\n{h}\n{minute}\n{s}\n{ms}\n{time_start}\n{time_end}\n")
+            if total_time==0:
+                f.write(f"{time_start}\n")
+                self.first_time_started=time_start
+            else:
+                f.write(f"{total_time['first_time_started']}\n")
             f.close()
+            def CloseBoth():
+                Saved.destroy()
+                Progress.destroy()
             Saved=Tk()
-            Saved.geometry(self.geometry)
-            Saved.minsize(self.size_x,self.size_y)
+            Saved.geometry(self.geometry_small_window)
+            Saved.minsize(self.size_small_window_x,self.size_small_window_y)
             if self.hasIcon==True:Saved.iconbitmap=self.icon
             Saved.title("Saved")
             SavedLabel=Label(Saved,text="Progress Saved",bg=self.universalBackground,fg=self.universalForeground,font=self.defaultFont,anchor="center")
             SavedLabel.pack(side=TOP, fill=X)
-            SavedButton=Button(Saved,text="OK!",bg=self.universalBackground,fg=self.universalForeground,font=self.defaultFont,anchor="center",command=Saved.destroy)
+            SavedButton=Button(Saved,text="OK!",bg=self.universalBackground,fg=self.universalForeground,font=self.defaultFont,anchor="center",command=CloseBoth)
             SavedButton.pack(side=TOP,fill=X)
             Saved.mainloop()
-            Progress.destroy()
         def DiscardTheProgress():
             Progress.destroy()
-        timeInfo=Windows.SubOperations.splitTime(self,Start_time=time_start,Stop_time=time_end)
+        timeInfo=Windows.SubOperations.splitTime(self,Start_time=time_start,Stop_time=time_end,total_time=total_time)
         d=timeInfo["d"]
         mo=timeInfo["mo"]
         y=timeInfo["y"]
@@ -745,11 +1052,14 @@ class Windows:
         minute=timeInfo["minute"]
         s=timeInfo["s"]
         ms=timeInfo["ms"]
-        p=timeInfo["p"]
+        p=timeInfo["p"] #dictionnary
+        print(f"d={d},mo={mo},y={y},h={h},minute={minute},s={s},ms={ms},p={p},type({d})={type(d)},type({mo})={type(mo)},type({y})={type(y)},type({h})={type(h)},type({minute})={type(minute)},type({s})={type(s)},type({ms})={type(ms)},type({p})={type(p)}")
+
+        
 
         Progress=Tk()
-        Progress.geometry(self.geometry)
-        Progress.minsize(self.size_x,self.size_y)
+        Progress.geometry(self.geometry_questions)
+        Progress.minsize(self.size_questions_x,self.size_questions_y)
         if self.hasIcon==True:Progress.iconbitmap=self.icon
         Progress.title("Save Progress?")
         Progress['bg']=self.universalBackground
@@ -761,15 +1071,80 @@ class Windows:
         ButtonYes.pack(side=TOP,fill=BOTH,pady=5)
         ButtonNo=Button(FrameOptions,text="No",bg=self.universalBackground,fg=self.universalForeground,command=DiscardTheProgress,anchor="center",font=self.defaultFont)
         ButtonNo.pack(side=BOTTOM,fill=BOTH,pady=5)
-        InfoLabel=Label(Progress,text=f"For the language '{language}'.\nYour score is {score}.\nAnd your progress is {progress}/{self.ListLength*2} in a total of {y} year{p['yp']}, {mo} month{p['mop']}, {d} day{p['dp']}, {h} hour{p['hp']}, {minute} minute{p['minutep']} {s} second{p['sp']}, {ms} millisecond{p['msp']}",bg=self.universalForeground,fg=self.universalBackground,font=self.defaultFont,anchor="center")
+        InfoLabel=Label(Progress,text=f"For the language '{language}'.\nYour score is {score}/{self.ListLength*2} points.\nAnd your progress is {progress}/{self.ListLength} questions in a total of\n {y} year{p['yp']}, {mo} month{p['mop']}, {d} day{p['dp']}, {h} hour{p['hp']}, {minute} minute{p['minutep']} {s} second{p['sp']}, {ms} millisecond{p['msp']}",bg=self.universalForeground,fg=self.universalBackground,font=self.defaultFont,anchor="center")
         InfoLabel.pack(side=TOP,fill=X)
         Progress.mainloop()
 
+    def RestoreProgress(self,language,exercise):
+        """If save file found for a specific user and exercise, it will give the choice to the user if he wishes to restore the saved file or not."""
+        def RestoreTheProgress():
+            def CloseBoth():
+                Saved.destroy()
+                Progress.destroy()
+                self.first_time_started=timeInfoRestore["first_time_started"]
+            Saved=Tk()
+            Saved.geometry(self.geometry_small_window)
+            Saved.minsize(self.size_small_window_x,self.size_small_window_y)
+            if self.hasIcon==True:Saved.iconbitmap=self.icon
+            Saved.title("Restored")
+            SavedLabel=Label(Saved,text="Progress Restored",bg=self.universalBackground,fg=self.universalForeground,font=self.defaultFont,anchor="center")
+            SavedLabel.pack(side=TOP, fill=X)
+            SavedButton=Button(Saved,text="OK!",bg=self.universalBackground,fg=self.universalForeground,font=self.defaultFont,anchor="center",command=CloseBoth)
+            SavedButton.pack(side=TOP,fill=X)
+            Saved.mainloop()
+            self.timeInfoRestore=timeInfoRestore
+        def DiscardTheProgress():
+            Progress.destroy()
+            os.remove(f"{self.ProgressFolder}/{self.username}_{language}_{exercise}.save")
+            self.timeInfoRestore=0
+            update.date()
+            self.first_time_started=self.Alls
+            return 0
+        try:
+            if os.path.exists(self.ProgressFolder)==False:
+                self.timeInfoRestore=0
+                return 0
+            f=open(f"{self.ProgressFolder}/{self.username}_{language}_{exercise}.save","r")
+            Content=f.read()#{language}\n{exercise}\n{progress}\n{score}\n{d}\n{mo}\n{y}\n{h}\n{minute}\n{s}\n{ms}\n{time_start}\n{time_end}\n
+            f.close()
+            Content=Content.split("\n")
+            ToPlace=["language","exercise","progress","score","d","mo","y","h","minute","s","ms","time_start","time_end","first_time_started"]
+            timeInfoRestore={}
+            for i in range(len(ToPlace)):
+                try: 
+                    Content[i]=int(Content[i])
+                except:
+                    pass
+                timeInfoRestore[ToPlace[i]]=Content[i]
+            timeInfoRestore["index"]=timeInfoRestore["progress"]
+        except:
+            self.timeInfoRestore=0
+            return 0
+        print(f"timeInfo={timeInfoRestore}\n")
+        timeInfo=Windows.SubOperations.splitTime(self,Start_time=timeInfoRestore["time_start"],Stop_time=timeInfoRestore["time_end"])
+        p=timeInfo["p"]
+        Progress=Tk()
+        Progress.geometry(self.geometry_questions)
+        Progress.minsize(self.size_questions_x,self.size_questions_y)
+        if self.hasIcon==True:Progress.iconbitmap=self.icon
+        Progress.title("Restore Progress?")
+        Progress['bg']=self.universalBackground
+        TitleLabel=Label(Progress,text="Do you wish to restore your progress for this exercise?",bg=self.universalForeground,fg=self.universalBackground,font=self.defaultFont,anchor="center")
+        TitleLabel.pack(side=TOP,fill=X)
+        FrameOptions=Frame(Progress,bg=self.universalBackground,relief=FLAT,borderwidth=0)
+        FrameOptions.pack(side=TOP,fill=BOTH)
+        ButtonYes=Button(FrameOptions,text="Yes",bg=self.universalBackground,fg=self.universalForeground,command=RestoreTheProgress,anchor="center",font=self.defaultFont)
+        ButtonYes.pack(side=TOP,fill=BOTH,pady=5)
+        ButtonNo=Button(FrameOptions,text="No",bg=self.universalBackground,fg=self.universalForeground,command=DiscardTheProgress,anchor="center",font=self.defaultFont)
+        ButtonNo.pack(side=BOTTOM,fill=BOTH,pady=5)
+        InfoLabel=Label(Progress,text=f"For the language '{timeInfoRestore['language']}'.\nYour score is {timeInfoRestore['score']}/{self.ListLength*2} points.\nAnd your progress is {timeInfoRestore['progress']}/{self.ListLength} questions in a total of\n {timeInfoRestore['y']} year{p['yp']}, {timeInfoRestore['mo']} month{p['mop']}, {timeInfoRestore['d']} day{p['dp']}, {timeInfoRestore['h']} hour{p['hp']}, {timeInfoRestore['minute']} minute{p['minutep']} {timeInfoRestore['s']} second{p['sp']}, {timeInfoRestore['ms']} millisecond{p['msp']}.",bg=self.universalForeground,fg=self.universalBackground,font=self.defaultFont,anchor="center")
+        InfoLabel.pack(side=TOP,fill=X)
+        Progress.mainloop()
 
     def goodbye(self):
         TT=Tk()
-        TT.geometry(self.geometry)
-        TT.minsize(self.size_x,self.size_y)
+        TT.geometry(self.geometry_small_window)
+        TT.minsize(self.size_small_window_x,self.size_small_window_y)
         if self.hasIcon==True:TT.iconbitmap=self.icon
         TT["bg"]=self.universalBackground
         Go=Label(TT,text="Goodbye",anchor="center",bg=self.universalBackground)
@@ -777,11 +1152,14 @@ class Windows:
         bu=Button(TT,text="Close",command=TT.destroy,anchor="center")
         bu.pack(fill=X)
         TT.mainloop()
-    def ScoreBoard(self,score,answ_questions,tot_questions,exercise,time_start,time_stop):
+    def ScoreBoard(self,score,answ_questions,tot_questions,exercise,time_start,time_stop,total_time=0):
+        """Displays a few stats about the user for a given module."""
         print("################################################################################################################################################################################")
         print(f"score={score},answ_questions={answ_questions},tot_questions={tot_questions},exercise={exercise},time_start={time_start},time_stop={time_stop}")
         print("################################################################################################################################################################################")
-        timeInfo=Windows.SubOperations.splitTime(self,Start_time=time_start,Stop_time=time_stop)
+        timeInfo=Windows.SubOperations.splitTime(self,Start_time=time_start,Stop_time=time_stop,total_time=total_time)
+        if total_time!=0:
+            time_start=total_time["time_start"]
         d=timeInfo["d"]
         mo=timeInfo["mo"]
         y=timeInfo["y"]
@@ -790,9 +1168,10 @@ class Windows:
         s=timeInfo["s"]
         ms=timeInfo["ms"]
         p=timeInfo["p"]
+            
         TS=Tk()
-        TS.geometry(self.geometry)
-        TS.minsize(self.size_x,self.size_y)
+        TS.geometry(self.geometry_questions)
+        TS.minsize(self.size_questions_x,self.size_questions_y)
         if self.hasIcon==True:TS.iconbitmap=self.icon
         TS['bg']=self.universalBackground
         TS.title("Results")
@@ -810,6 +1189,8 @@ class Windows:
         LabelQuestions.pack(side=TOP,fill=X)
         LabelToTimeUsed=Label(TS,text=f"You took {y} year{p['yp']}, {mo} month{p['mop']}, {d} day{p['dp']}, {h} hour{p['hp']}, {minute} minute{p['minutep']} {s} second{p['sp']}, {ms} millisecond{p['msp']} for the exercise: '{exercise}'.",bg=self.universalBackground)
         LabelToTimeUsed.pack(side=TOP,fill=X)
+        LabelFirstTimeStart=Label(TS,text=f"Exercise ({exercise}) first time started on {self.first_time_started}",bg=self.universalBackground)
+        LabelFirstTimeStart.pack(side=TOP,fill=X)
         LabelTimeStart=Label(TS,text=f"Exercise ({exercise}) started at {time_start}.",bg=self.universalBackground)
         LabelTimeStart.pack(side=TOP,fill=X)
         LabelTimeStop=Label(TS,text=f"Exercise ({exercise}) finished at {time_stop}.",bg=self.universalBackground)
@@ -844,9 +1225,11 @@ class log(Windows):
         else:
             pluralt=""
         log.AppendLog(self,f"[{self.Alls}]: You have answered {answ_questions} question{plurala} of {tot_questions} question{pluralt} for the exercise '{exercise}'.\n")
-    def Time(self,Start_time,Stop_time,exercise):
-        timeInfo=Windows.SubOperations.splitTime(self,Start_time,Stop_time)
+    def Time(self,Start_time,Stop_time,exercise,total_time=0):
+        timeInfo=Windows.SubOperations.splitTime(self,Start_time,Stop_time,total_time=total_time)
         p=timeInfo["p"]
+        if total_time!=0:
+            Start_time=total_time["time_start"]
         log.AppendLog(self,f"[{self.Alls}]: You took {timeInfo['y']} year{p['yp']}, {timeInfo['mo']} month{p['mop']}, {timeInfo['d']} day{p['dp']}, {timeInfo['h']} hour{p['hp']}, {timeInfo['minute']} minute{p['minutep']} {timeInfo['s']} second{p['sp']}, {timeInfo['ms']} millisecond{p['msp']} for the exercise: '{exercise}', exercise started at {Start_time} and finished at {Stop_time}.\n")
     def ExerciseStarted(self,exercise):
         update.date(self)
@@ -856,7 +1239,10 @@ class log(Windows):
         log.AppendLog(self,f"[{self.Alls}]: Exercise {exercise} stopped.\n")
     def ProgStarted(self,prog):
         update.date(self)
-        log.AppendLog(self,f"[{self.Alls}]: Program {prog} started.\n")
+        log.AppendLog(self,f"[{self.Alls}]:@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n")
+        log.AppendLog(self,f"[{self.Alls}]:+--------------------------+\n")
+        log.AppendLog(self,f"[{self.Alls}]:|  Program {prog} started. |\n")
+        log.AppendLog(self,f"[{self.Alls}]:+--------------------------+\n")
     def ProgStopped(self,prog):
         update.date(self)
         log.AppendLog(self,f"[{self.Alls}]: Program {prog} stopped.\n")
