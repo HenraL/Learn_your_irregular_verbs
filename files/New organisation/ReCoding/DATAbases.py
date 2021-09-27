@@ -7,6 +7,7 @@ class languages:
         self.path="metadata/writtenList"
         self.sortList=["inf","pras","prat","perf","trad_fr","hint_fr","trad_eng","hint_eng"]
     def GetVerbs(self,file,path):
+        """Treats a csv file and retruns the table as a list containing dictionaries for the lines"""
         print(f"path={path}, file={file}.csv,path/file={path}/{file}.csv")
         # pause()
         try:
@@ -63,13 +64,17 @@ class languages:
         print("English")
         self.sortList=["inf","pret","pastSimp.","trad_fr","hint_fr","trad_de","hint_de","hint_eng","trad_es","hint_es"]
         EN=languages.GetVerbs(self,"English",self.path)
+        ColumnsEN=self.sortList
         print("French")
         self.sortList=["inf","pres","pret","perf","trad_fr","hint_fr","trad_eng","hint_eng"]
         FR=languages.GetVerbs(self,"French",self.path)
+        ColumnsFR=self.sortList
         print("German")
         self.sortList=["inf","pras","prat","perf","trad_fr","hint_fr","trad_eng","hint_eng"]
         DE=languages.GetVerbs(self,"German",self.path)
+        ColumnsDE=self.sortList
         print("Spanish")
         self.sortList=["inf","pras","prat","perf","trad_fr","hint_fr","trad_eng","hint_eng"]
         ES=languages.GetVerbs(self,"Spanish",self.path)
-        return {"EN":EN,"FR":FR,"DE":DE,"ES":ES}
+        ColumnsES=self.sortList
+        return {"EN":EN,"FR":FR,"DE":DE,"ES":ES},{"EN":ColumnsEN,"FR":ColumnsFR,"DE":ColumnsDE,"ES":ColumnsES}

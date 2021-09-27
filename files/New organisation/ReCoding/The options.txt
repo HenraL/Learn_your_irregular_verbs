@@ -4,9 +4,9 @@
 1) Words and definitions
 	a.	The User can choose to just learn the words and their definition (0)
 	b.	The User can choose to learn the definition then the words (1)
-2) Words and tenses
-	a.	The User can choose to learn the words and their tenses (0)
-	b.      The User can choose to learn the tenses and the words (1)
+2) Words and tenses                                                        /|\
+	a.	The User can choose to learn the words and their tenses (1) |
+	b.      The User can choose to learn the tenses and the words (2)---|
 3) Words Tenses & definition
 	a.	The User can choose to learn the words, their tenses then definition (2)
 	b.	The User can choose to learn the words, their definition and tenses  (3)

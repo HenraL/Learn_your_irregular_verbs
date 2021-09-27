@@ -11,7 +11,7 @@ try:
 except:
     from Tkinter import *
 class Windows:
-    def __init__(self,EN,DE,ES,FR):
+    def __init__(self,EN,DE,ES,FR,ColumnsLang):
         #__________________ everything is OK __________________
         self.a="GUI"
         #__________________ Default name of the current user __________________
@@ -24,8 +24,11 @@ class Windows:
         self.size_y=350
         self.geometry=f"{self.size_x}x{self.size_y}"
         self.size_questions_x=self.size_x-20
-        self.size_questions_y=self.size_y-180
+        self.size_questions_y=self.size_y-100
         self.geometry_questions=f"{self.size_questions_x}x{self.size_questions_y}"
+        self.size_stat_windows_x=self.size_x-20
+        self.size_stat_windows_y=self.size_y-180
+        self.geometry_stat_windows=f"{self.size_stat_windows_x}x{self.size_stat_windows_y}"
         self.size_small_window_x=self.size_x-550
         self.size_small_window_y=self.size_y-300
         self.geometry_small_window=f"{self.size_small_window_x}x{self.size_small_window_y}"
@@ -123,6 +126,7 @@ class Windows:
         self.ChosenLanguage="EN"
         self.ContentLanguage=EN
         self.ListLength=len(EN)
+        self.ColumnsLang=ColumnsLang
         self.enableOrDisable={"EN":"disable","DE":"disable","ES":"disable","FR":"disable","written":"normal","radio":"disable","female":"disabled","male":"disabled"}
         self.errorColors=["red2","orange","blue","IndianRed2","DarkGoldenrod3","brown3","tomato","tomato2","tomato3","tomato4","orange red","SteelBlue3","MediumPurple4","gray29"]
         self.successColors=["sea green","forest green","green4","OliveDrab4","SpringGreen4","LightGoldenrod4","aquamarine4","dark green","dark olive green","cyan4"]
@@ -145,6 +149,10 @@ class Windows:
         self.VoiceType="Female"
         #_____________________________ Var that controls the internal gameplay _____________________________
         self.ToAdd=0
+        self.InfAnswerRevealed=0
+        self.PresAnswerRevealed=0
+        self.PretAnswerRevealed=0
+        self.PerfAnswerRevealed=0
 
     class SubOperations:
         def Excess(time,format):
@@ -337,6 +345,11 @@ class Windows:
                     lang=''
                 else:
                     lang='infinitif'
+                CorrectAnswer=[]
+                for i in range(2):
+                    CorrectAnswer.append(current[self.ColumnsLang[self.ChosenLanguage][i]])
+                if self.ChosenLanguage!="EN": 
+                    CorrectAnswer.append(current[self.ColumnsLang[self.ChosenLanguage][3]])
                 hintENG=hintDE=hintES=hintFR=""
                 if 'hint_eng' in current:
                     hintENG=current['hint_eng']
@@ -347,9 +360,9 @@ class Windows:
                 if 'hint_fr' in current:
                     hintFR=current['hint_fr']
                 if WTOrTW==0:
-                    result=Windows.SubOperations.AskTripple(self,typeRequired="definition",word=term,correctAnswer=current[lang],hintFR=hintFR,hintENG=hintENG,hintDE=hintDE,hintES=hintES)
+                    result=Windows.SubOperations.AskTripple(self,typeRequired="definition",word=term,correctAnswer=CorrectAnswer,hintFR=hintFR,hintENG=hintENG,hintDE=hintDE,hintES=hintES,WTOrTW=WTOrTW)
                 else:
-                    result=Windows.SubOperations.AskTripple(self,typeRequired="term",word=current[lang],correctAnswer=term,hintFR=hintFR,hintENG=hintENG,hintDE=hintDE,hintES=hintES)
+                    result=Windows.SubOperations.AskTripple(self,typeRequired="term",word=current[lang],correctAnswer=CorrectAnswer,hintFR=hintFR,hintENG=hintENG,hintDE=hintDE,hintES=hintES,WTOrTW=WTOrTW)
                 print("################################################################################################################################################################################")
                 print(f"\n\n\nexercise={exercise}\nstart_time={start_time}\ncontinueExercise={continueExercise}\nindex={index}\nscore={score}\nself.ListLength={self.ListLength}\nresult={result}\n\n\n")
                 print("################################################################################################################################################################################")
@@ -441,7 +454,7 @@ class Windows:
             log.questions(self,answ_questions=index,tot_questions=self.ListLength,exercise=exercise)
             log.score(self,score,exercise)
             log.Time(self,Start_time=start_time,Stop_time=end_time,exercise=exercise,total_time=self.timeInfoRestore)
-        def gameCheck(hintUsed,Answer,correctAnswer,AnswerRevealed):
+        def gameCheck(hintUsed,Answer,correctAnswer,AnswerRevealed,Block=None):
             total=0
             tryAgain=False
             if AnswerRevealed==1:
@@ -456,7 +469,10 @@ class Windows:
                 print(f"total={total}")
             else:
                 tryAgain=True
-                returnContent="Wrong Answer, try again."
+                if Block!=None:
+                    returnContent=f"Wrong Answer for {Block}, try again."
+                else:
+                    returnContent="Wrong Answer, try again."
             print(f"\n\n\ntotal={total}\ntryAgain={tryAgain}\nreturnContent={returnContent}\n\n\n")
             return total,tryAgain,returnContent
         def AskDouble(self,typeRequired="definition",word="ee",correctAnswer="ee",hintFR="",hintENG="",hintDE="",hintES=""):
@@ -584,8 +600,215 @@ class Windows:
             StopButton.pack(side=TOP, fill=X,padx=5)
             PackHints(hintFR,hintENG,hintDE,hintES)
             TTT.mainloop()
-        def AskTripple(self,typeRequired,word,correctAnswer,hintFR,hintENG,hintDE,hintES):
+        def AskTripple(self,typeRequired,word,correctAnswer,hintFR,hintENG,hintDE,hintES,WTOrTW):
             """ This function is the one in charge of gathering the user entries for the exercise."""
+            self.hintUsed=0
+            self.InfAnswerRevealed=0
+            self.PresAnswerRevealed=0
+            self.PretAnswerRevealed=0
+            self.PerfAnswerRevealed=0
+            self.ToAdd=0
+            def submit(*args):
+                if WTOrTW==0:
+                    InfEntry.config(state="normal")
+                    InfAnsw=InfEntry.get()
+                    if len(InfAnsw)>0:
+                        InfVerdict=Windows.SubOperations.gameCheck(self.hintUsed,InfAnsw,correctAnswer[0],self.InfAnswerRevealed,Block=self.ColumnsLang[self.ChosenLanguage][0])
+                    else:
+                        InfVerdict=["",True,f"Please enter something in the {self.ColumnsLang[self.ChosenLanguage][0]} box before pressing Submit."]
+                    PresEntry.config(state="normal")
+                    PresAnsw=PresEntry.get()
+                    if len(InfAnsw)>0:
+                        PresVerdict=Windows.SubOperations.gameCheck(self.hintUsed,PresAnsw,correctAnswer[1],self.PresAnswerRevealed,Block=self.ColumnsLang[self.ChosenLanguage][1])
+                    else:
+                        PresVerdict=["",True,f"Please enter something in the {self.ColumnsLang[self.ChosenLanguage][1]} box before pressing Submit."]
+                    PretEntry.config(state="normal")
+                    PretAnsw=PretEntry.get()
+                    if len(InfAnsw)>0:
+                        PretVerdict=Windows.SubOperations.gameCheck(self.hintUsed,PretAnsw,correctAnswer[2],self.PretAnswerRevealed,Block=self.ColumnsLang[self.ChosenLanguage][2])
+                    else:
+                        PretVerdict=["",True,f"Please enter something in the {self.ColumnsLang[self.ChosenLanguage][2]} box before pressing Submit."]
+                    if self.ChosenLanguage!="EN":
+                        PerfEntry.config(state="normal")
+                        PerfAnsw=PerfEntry.get()
+                        if len(InfAnsw)>0:
+                            PerfVerdict=Windows.SubOperations.gameCheck(self.hintUsed,PerfAnsw,correctAnswer[3],self.PerfAnswerRevealed,Block=self.ColumnsLang[self.ChosenLanguage][3])
+                        else:
+                            PerfVerdict=["",True,f"Please enter something in the {self.ColumnsLang[self.ChosenLanguage][3]} box before pressing Submit."]
+
+                if (InfVerdict[1]==False and PresVerdict[1]==False and PretVerdict[1]==False) or (InfVerdict[1]==False and PresVerdict[1]==False and PretVerdict[1]==False and PerfVerdict[1]==False):
+                    LabelWrong.config(text=f"Correct.")
+                    LabelWrong.config(font=(self.Font,self.Size,"bold"))
+                    LabelWrong.config(fg=self.successColors[random.randint(0,len(self.successColors)-1)])
+                    ButtonContinue.pack(side=LEFT,fill=X)
+
+                    ButtonSubmit.pack_forget()
+                    ButtonHintFR.pack_forget()
+                    ButtonHintENG.pack_forget()
+                    ButtonHintDE.pack_forget()
+                    ButtonHintES.pack_forget()
+                    ButtonRevealAnswer.pack_forget()
+                    ButtonContinue.pack_configure(fill=X,side=BOTTOM)
+                    StopButton.pack_forget()
+                    print(f"\n\n\nself.hintUsed={self.hintUsed}\nself.AnswerRevealed={self.AnswerRevealed}\ncorrectAnswer={correctAnswer}\nVerdict={Verdict}\nVerdict[0]={Verdict[0]}\nVerdict[1]={Verdict[1]}\nVerdict[2]={Verdict[2]}\n\n\n")
+                    self.ToAdd=InfVerdict[0]+PresVerdict[0]+PretVerdict[0]
+                    if self.ChosenLanguage!="EN":
+                        self.ToAdd+=PerfVerdict[0]
+                    return self.ToAdd
+                else:
+                    if InfVerdict[2]==f"Please enter something in the {self.ColumnsLang[self.ChosenLanguage][0]} box before pressing Submit." or InfVerdict[2]==f"Wrong Answer for {self.ColumnsLang[self.ChosenLanguage][0]}, try again.":
+                        LabelWrong.config(text=InfVerdict[2])
+                    elif PresVerdict[2]==f"Please enter something in the {self.ColumnsLang[self.ChosenLanguage][1]} box before pressing Submit." or InfVerdict[2]==f"Wrong Answer for {self.ColumnsLang[self.ChosenLanguage][1]}, try again.":
+                        LabelWrong.config(text=PresVerdict[2])
+                    elif PretVerdict[2]==f"Please enter something in the {self.ColumnsLang[self.ChosenLanguage][2]} box before pressing Submit." or InfVerdict[2]==f"Wrong Answer for {self.ColumnsLang[self.ChosenLanguage][2]}, try again.":
+                        LabelWrong.config(text=PretVerdict[2])
+                    elif PerfVerdict[2]==f"Please enter something in the {self.ColumnsLang[self.ChosenLanguage][3]} box before pressing Submit." or InfVerdict[2]==f"Wrong Answer for {self.ColumnsLang[self.ChosenLanguage][3]}, try again.":
+                        LabelWrong.config(PerfVerdict[2])
+                    else:
+                        LabelWrong.config(text='Please Make sure you have entered ')
+                    LabelWrong.config(font=(self.Font,self.Size,"bold"))
+                    LabelWrong.config(fg=self.errorColors[random.randint(0,len(self.errorColors)-1)])
+                print(f"\n\n\nGivenAnswer='{GivenAnswer}'\nself.hintUsed={self.hintUsed}\nself.AnswerRevealed={self.AnswerRevealed}\ncorrectAnswer={correctAnswer}\nVerdict={Verdict}\n\n\n")
+                print("")
+            def proceed():
+                TTT.destroy()
+            def HintFR():
+                ShowHintFR.config(text=f"French Hint: '{hintFR}'")
+                self.hintUsed=1
+                print(f"\ncorrectAnswer={correctAnswer}\nself.hintUsed={self.hintUsed}\nself.AnswerRevealed={self.AnswerRevealed}\ncorrectAnswer={correctAnswer}\n\n\n")
+                print("")
+            def HintENG():
+                ShowHintENG.config(text=f"English Hint: '{hintENG}'")
+                self.hintUsed=1
+                print(f"\ncorrectAnswer={correctAnswer}\nself.hintUsed={self.hintUsed}\nself.AnswerRevealed={self.AnswerRevealed}\ncorrectAnswer={correctAnswer}\n\n\n")
+                print("")
+            def HintDE():
+                ShowHintDE.config(text=f"German Hint: '{hintDE}'")
+                self.hintUsed=1
+                print(f"\ncorrectAnswer={correctAnswer}\nself.hintUsed={self.hintUsed}\nself.AnswerRevealed={self.AnswerRevealed}\ncorrectAnswer={correctAnswer}\n\n\n")
+                print("")
+            def HintES():
+                ShowHintES.config(text=f"Spanish Hint: '{hintES}'")
+                self.hintUsed=1
+                print(f"\ncorrectAnswer={correctAnswer}\nself.hintUsed={self.hintUsed}\nself.AnswerRevealed={self.AnswerRevealed}\ncorrectAnswer={correctAnswer}\n\n\n")
+                print("")
+            def PackHints(hintFR,hintENG,hintDE,hintES):
+                if len(hintFR)>0:
+                    ButtonHintFR.pack(side=LEFT)
+                    ShowHintFR.pack(side=TOP)
+                if len(hintENG)>0:
+                    ButtonHintENG.pack(side=LEFT)
+                    ShowHintENG.pack(side=TOP)
+                if len(hintDE)>0:
+                    ButtonHintDE.pack(side=LEFT)
+                    ShowHintDE.pack(side=TOP)
+                if len(hintES)>0:
+                    ButtonHintES.pack(side=LEFT)
+                    ShowHintES.pack(side=TOP)
+            def stopAll():
+                TTT.destroy()
+                self.ToAdd="Stop exercise"
+                return "Stop exercise"
+            def RevealAnswer(*args):
+                print(f"\ncorrectAnswer={correctAnswer}\nself.hintUsed={self.hintUsed}\nself.AnswerRevealed={self.AnswerRevealed}\ncorrectAnswer={correctAnswer}\n\n\n")
+                print("")
+                entree.insert(0,f"{correctAnswer}")
+                self.AnswerRevealed=1
+                StopButton.place_forget()
+                ButtonHintENG.pack_forget()
+                ButtonHintDE.pack_forget()
+                ButtonHintES.pack_forget()
+                ButtonHintFR.pack_forget()
+                ButtonRevealAnswer.pack_forget()
+                print(f"\ncorrectAnswer={correctAnswer}\nself.hintUsed={self.hintUsed}\nself.AnswerRevealed={self.AnswerRevealed}\ncorrectAnswer={correctAnswer}\n\n\n")
+                print("")
+            def RevealAnswerInf(*args):
+                InfEntry.insert(0,f"{correctInfAnswer}")
+                InfEntry.config(state="disabled")
+                self.InfAnswerRevealed=1
+            def RevealAnswerPres(*args):
+                PresEntry.insert(0,f"{correctPresAnswer}")
+                PresEntry.config(state="disabled")
+                self.PresAnswerRevealed=1
+            def RevealAnswerPret(*args):
+                PretEntry.insert(0,f"{correctPretAnswer}")
+                PretEntry.config(state="disabled")
+                self.PretAnswerRevealed=1
+            def RevealAnswerPerf(*args):
+                PerfEntry.insert(0,f"{correctPerfAnswer}")
+                PerfEntry.config(state="disabled")
+                self.PerfAnswerRevealed=1     
+               
+            TTT = Tk()
+            geometry_questions=f"{self.size_questions_x}x{self.size_questions_y+55}"
+            TTT.geometry(geometry_questions)
+            TTT.minsize(self.size_questions_x,self.size_questions_y+55)
+            TTT['bg']=self.universalBackground
+            if self.hasIcon==True:TTT.iconbitmap=self.icon
+            WordLabel=Label(TTT,text=f"What is the {typeRequired} of {word}:",bg=self.universalBackground,font=self.defaultFont,anchor="w")
+            WordLabel.pack(side=TOP,fill=X)
+            LabelWrong=Label(TTT,text="",bg=self.universalBackground,font=self.defaultFont,anchor="center")
+            LabelWrong.pack(side=TOP,fill=X)
+            Frame1=Frame(TTT, borderwidth=2, relief=GROOVE)
+            Frame1.pack(side=TOP, padx=30, pady=30)
+            if WTOrTW==0:
+                subFrameTOP=Frame(Frame1, borderwidth=2, relief=FLAT)
+                subFrameTOP.pack(side=TOP, padx=0, pady=0,fill=X)
+                subFrameMID=Frame(Frame1, borderwidth=2, relief=FLAT)
+                subFrameMID.pack(side=TOP, padx=0, pady=0,fill=X)
+                subFrameBOTTOM=Frame(Frame1, borderwidth=2, relief=FLAT,bg=self.universalBackground)
+                subFrameBOTTOM.pack(side=TOP, padx=0, pady=0,fill=X)
+                
+                InfLabel=Label(subFrameTOP,text=f"{self.ColumnsLang[self.ChosenLanguage][0]}",bg=self.universalBackground,fg=self.universalForeground,font=self.defaultFont)
+                InfLabel.pack(side=LEFT,padx=15)
+                InfEntry=Entry(subFrameMID, width=30)#,text=ContentVar)
+                InfEntry.pack(side=LEFT,padx=10,pady=10)
+                ButtonInfRevAns=Button(subFrameBOTTOM,text=f"Reveal {self.ColumnsLang[self.ChosenLanguage][0]}",command=RevealAnswerInf,fg=self.universalForeground,bg=self.universalBackground)
+                ButtonInfRevAns.pack(side=LEFT)
+                
+                PresLabel=Label(subFrameTOP,text=f"{self.ColumnsLang[self.ChosenLanguage][1]}",bg=self.universalBackground,fg=self.universalForeground,font=self.defaultFont)
+                PresLabel.pack(side=LEFT,padx=15)
+                PresEntry=Entry(subFrameMID, width=30)#,text=ContentVar)
+                PresEntry.pack(side=LEFT,padx=10,pady=10)
+                ButtonPresRevAns=Button(subFrameBOTTOM,text=f"Reveal {self.ColumnsLang[self.ChosenLanguage][1]}",command=RevealAnswerPres,fg=self.universalForeground,bg=self.universalBackground)
+                ButtonPresRevAns.pack(side=LEFT)
+                
+                PretLabel=Label(subFrameTOP,text=f"{self.ColumnsLang[self.ChosenLanguage][2]}",bg=self.universalBackground,fg=self.universalForeground,font=self.defaultFont)
+                PretLabel.pack(side=LEFT,padx=15)
+                PretEntry=Entry(subFrameMID, width=30)#,text=ContentVar)
+                PretEntry.pack(side=LEFT,padx=10,pady=10)
+                ButtonPretRevAns=Button(subFrameBOTTOM,text=f"Reveal {self.ColumnsLang[self.ChosenLanguage][2]}",command=RevealAnswerPret,fg=self.universalForeground,bg=self.universalBackground)
+                ButtonPretRevAns.pack(side=LEFT)
+                
+                if self.ChosenLanguage!="EN":
+                    PerfLabel=Label(subFrameTOP,text=f"{self.ColumnsLang[self.ChosenLanguage][3]}",bg=self.universalBackground,fg=self.universalForeground,font=self.defaultFont)
+                    PerfLabel.pack(side=LEFT,padx=3)
+                    PerfEntry=Entry(subFrameMID, width=30)#,text=ContentVar)
+                    PerfEntry.pack(side=LEFT,padx=10,pady=10)
+                    ButtonPerfRevAns=Button(subFrameBOTTOM,text=f"Reveal {self.ColumnsLang[self.ChosenLanguage][3]}",command=RevealAnswerPerf,fg=self.universalForeground,bg=self.universalBackground)
+                    ButtonPerfRevAns.pack(side=LEFT)
+            else:
+                # ContentVar = StringVar()
+                # ContentVar.set("oo")
+                entree = Entry(Frame1, width=30)#,text=ContentVar)
+                entree.pack(side=TOP,padx=10,pady=10)
+            ButtonSubmit=Button(Frame1, text="Submit", command=submit)
+            ButtonSubmit.pack(side=RIGHT,padx=10,pady=10)
+            ButtonContinue=Button(Frame1,text="Continue",command=proceed)
+            ButtonHintFR=Button(Frame1,text="French Hint",command=HintFR)
+            ButtonHintENG=Button(Frame1,text="English Hint",command=HintENG)
+            ButtonHintDE=Button(Frame1,text="German Hint",command=HintDE)
+            ButtonHintES=Button(Frame1,text="Spanish Hint",command=HintES)
+            ButtonRevealAnswer=Button(Frame1,text="Reveal Answer",command=RevealAnswer)
+            ButtonRevealAnswer.pack(side=LEFT)
+            ShowHintFR=Label(TTT,text="",bg=self.universalBackground)
+            ShowHintENG=Label(TTT,text="",bg=self.universalBackground)
+            ShowHintDE=Label(TTT,text="",bg=self.universalBackground)
+            ShowHintES=Label(TTT,text="",bg=self.universalBackground)
+            StopButton=Button(TTT,text="Stop exercise!",command=stopAll)
+            StopButton.pack(side=TOP, fill=X,padx=5)
+            PackHints(hintFR,hintENG,hintDE,hintES)
+            TTT.mainloop()
     def Home(self):
         """The main screen"""
         main=[self.EN,self.DE,self.ES,self.FR]
@@ -616,7 +839,7 @@ class Windows:
             """ Words then their tenses """
             TT.destroy()
             exercise="Words then their tenses"
-            Windows.SubOperations.DoubleTermCall(self,exercise,TDOrDT=1)
+            Windows.SubOperations.TrippleTermCall(self,exercise,WTOrTW=0)
             Windows.Home(self)
         def TW():
             """ Tenses then the words """
@@ -1058,8 +1281,8 @@ class Windows:
         
 
         Progress=Tk()
-        Progress.geometry(self.geometry_questions)
-        Progress.minsize(self.size_questions_x,self.size_questions_y)
+        Progress.geometry(self.geometry_stat_windows)
+        Progress.minsize(self.size_stat_windows_x,self.size_stat_windows_y)
         if self.hasIcon==True:Progress.iconbitmap=self.icon
         Progress.title("Save Progress?")
         Progress['bg']=self.universalBackground
@@ -1124,8 +1347,8 @@ class Windows:
         timeInfo=Windows.SubOperations.splitTime(self,Start_time=timeInfoRestore["time_start"],Stop_time=timeInfoRestore["time_end"])
         p=timeInfo["p"]
         Progress=Tk()
-        Progress.geometry(self.geometry_questions)
-        Progress.minsize(self.size_questions_x,self.size_questions_y)
+        Progress.geometry(self.geometry_stat_windows)
+        Progress.minsize(self.size_stat_windows_x,self.size_stat_windows_y)
         if self.hasIcon==True:Progress.iconbitmap=self.icon
         Progress.title("Restore Progress?")
         Progress['bg']=self.universalBackground
@@ -1170,8 +1393,8 @@ class Windows:
         p=timeInfo["p"]
             
         TS=Tk()
-        TS.geometry(self.geometry_questions)
-        TS.minsize(self.size_questions_x,self.size_questions_y)
+        TS.geometry(self.geometry_stat_windows)
+        TS.minsize(self.size_stat_windows_x,self.size_stat_windows_y)
         if self.hasIcon==True:TS.iconbitmap=self.icon
         TS['bg']=self.universalBackground
         TS.title("Results")

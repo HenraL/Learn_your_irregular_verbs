@@ -14,10 +14,10 @@ class root:
     def __init__(self,e):
         self.PyVersion=sys.version_info.major
         self.BG=e
-        self.EN=e["EN"]
-        self.DE=e["DE"]
-        self.FR=e["FR"]
-        self.ES=e["ES"]
+        self.EN=e[0]["EN"]
+        self.DE=e[0]["DE"]
+        self.FR=e[0]["FR"]
+        self.ES=e[0]["ES"]
     def start(self):
         print(f"EN={self.EN}\nDE={self.DE}\nFR={self.FR}\nES={self.ES}")
     def AddInfoToDict(self,Dict,key,element):
@@ -28,7 +28,7 @@ class root:
 # e={"EN":"","DE":"","FR":"","ES":""} #bypass the DATA load process
 RI=root(e)
 root.start(RI)
-GUII=GUI.Windows(EN=e["EN"],DE=e["DE"],ES=e["ES"],FR=e["FR"])
+GUII=GUI.Windows(EN=e[0]["EN"],DE=e[0]["DE"],ES=e[0]["ES"],FR=e[0]["FR"],ColumnsLang=e[1])
 
 try:
     GUII.OSInfo["terminal size"]=os.get_terminal_size()
