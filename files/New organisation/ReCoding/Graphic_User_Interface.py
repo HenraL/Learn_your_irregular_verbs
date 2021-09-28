@@ -17,8 +17,11 @@ class Windows:
         #__________________ Default name of the current user __________________
         self.username=f"Henry Letellier (test)_{os.getlogin()}"
         #__________________ Default colours for the foreground and the Background __________________
+        # These colors are considered as the light theme, the dark theme is 
         self.universalBackground="white"
         self.universalForeground="black"
+        self.firstAppliedBckground=self.universalBackground
+        self.firstAppliedForeground=self.universalForeground
         #__________________ Default size for tkinter windows __________________
         self.size_x=700
         self.size_y=350
@@ -42,6 +45,8 @@ class Windows:
         #_________________ Name of the folders for the different files _________________
         self.ProgressFolder="SavedProgress"
         self.logDir="logs"
+        self.userPrefFolder="UserPreference" #folder containing the user preference files.
+        self.themePath="theme.pref"
         #_________________ Vars for loading from saved files _________________
         self.loadedSavedProgress=False
         self.timeInfoRestore=0
@@ -127,7 +132,7 @@ class Windows:
         self.ContentLanguage=EN
         self.ListLength=len(EN)
         self.ColumnsLang=ColumnsLang
-        self.enableOrDisable={"EN":"disable","DE":"disable","ES":"disable","FR":"disable","written":"normal","radio":"disable","female":"disabled","male":"disabled"}
+        self.enableOrDisable={"EN":"disable","DE":"disable","ES":"disable","FR":"disable","written":"normal","radio":"disable","female":"disabled","male":"disabled","light":"normal","dark":"normal"}
         self.errorColors=["red2","orange","blue","IndianRed2","DarkGoldenrod3","brown3","tomato","tomato2","tomato3","tomato4","orange red","SteelBlue3","MediumPurple4","gray29"]
         self.successColors=["sea green","forest green","green4","OliveDrab4","SpringGreen4","LightGoldenrod4","aquamarine4","dark green","dark olive green","cyan4"]
         
@@ -749,15 +754,15 @@ class Windows:
             WordLabel.pack(side=TOP,fill=X)
             LabelWrong=Label(TTT,text="",bg=self.universalBackground,font=self.defaultFont,anchor="center")
             LabelWrong.pack(side=TOP,fill=X)
-            Frame1=Frame(TTT, borderwidth=2, relief=GROOVE)
+            Frame1=Frame(TTT, borderwidth=2, relief=GROOVE,bg=self.universalBackground)
             Frame1.pack(side=TOP, padx=30, pady=30)
             if WTOrTW==0:
-                subFrameTOP=Frame(Frame1, borderwidth=2, relief=FLAT)
-                subFrameTOP.pack(side=TOP, padx=0, pady=0,fill=X)
-                subFrameMID=Frame(Frame1, borderwidth=2, relief=FLAT)
-                subFrameMID.pack(side=TOP, padx=0, pady=0,fill=X)
+                subFrameTOP=Frame(Frame1, borderwidth=2, relief=FLAT,bg=self.universalBackground)
+                subFrameTOP.pack(side=TOP, padx=0, pady=0,fill=X,expand=YES)
+                subFrameMID=Frame(Frame1, borderwidth=2, relief=FLAT,bg=self.universalBackground)
+                subFrameMID.pack(side=TOP, padx=0, pady=0,fill=X,expand=YES)
                 subFrameBOTTOM=Frame(Frame1, borderwidth=2, relief=FLAT,bg=self.universalBackground)
-                subFrameBOTTOM.pack(side=TOP, padx=0, pady=0,fill=X)
+                subFrameBOTTOM.pack(side=TOP, padx=0, pady=0,fill=X,expand=YES)
                 
                 InfLabel=Label(subFrameTOP,text=f"{self.ColumnsLang[self.ChosenLanguage][0]}",bg=self.universalBackground,fg=self.universalForeground,font=self.defaultFont)
                 InfLabel.pack(side=LEFT,padx=15)
@@ -792,14 +797,14 @@ class Windows:
                 # ContentVar.set("oo")
                 entree = Entry(Frame1, width=30)#,text=ContentVar)
                 entree.pack(side=TOP,padx=10,pady=10)
-            ButtonSubmit=Button(Frame1, text="Submit", command=submit)
+            ButtonSubmit=Button(Frame1, text="Submit", command=submit,bg=self.universalBackground)
             ButtonSubmit.pack(side=RIGHT,padx=10,pady=10)
-            ButtonContinue=Button(Frame1,text="Continue",command=proceed)
-            ButtonHintFR=Button(Frame1,text="French Hint",command=HintFR)
-            ButtonHintENG=Button(Frame1,text="English Hint",command=HintENG)
-            ButtonHintDE=Button(Frame1,text="German Hint",command=HintDE)
-            ButtonHintES=Button(Frame1,text="Spanish Hint",command=HintES)
-            ButtonRevealAnswer=Button(Frame1,text="Reveal Answer",command=RevealAnswer)
+            ButtonContinue=Button(Frame1,text="Continue",command=proceed,bg=self.universalBackground)
+            ButtonHintFR=Button(Frame1,text="French Hint",command=HintFR,bg=self.universalBackground)
+            ButtonHintENG=Button(Frame1,text="English Hint",command=HintENG,bg=self.universalBackground)
+            ButtonHintDE=Button(Frame1,text="German Hint",command=HintDE,bg=self.universalBackground)
+            ButtonHintES=Button(Frame1,text="Spanish Hint",command=HintES,bg=self.universalBackground)
+            ButtonRevealAnswer=Button(Frame1,text="Reveal Answer",command=RevealAnswer,bg=self.universalBackground)
             ButtonRevealAnswer.pack(side=LEFT)
             ShowHintFR=Label(TTT,text="",bg=self.universalBackground)
             ShowHintENG=Label(TTT,text="",bg=self.universalBackground)
@@ -1147,6 +1152,29 @@ class Windows:
                 self.VoiceType="Female"
             else:
                 self.VoiceType="Male"
+        def updateTheme(*args):
+            print("in updateTheme")
+            method=ThemeValue.get()
+            print(f"method={method}")
+            if method=="L":
+                print("in if")
+                update.Theme(self)
+                log.Theme(self,Theme="L")#Light
+                # TTT.update()
+            else:
+                print("in else")
+                update.Theme(self)
+                log.Theme(self,Theme="D")#Dark
+                # TTT.update()
+        def setRadioThemeDarkOrLight():
+            print("in setRadioThemeDarkOrLight")
+            content=log.getTheme(self)
+            if content=="D":
+                update.Theme(self)
+                return "D"
+            else:
+                return "L"
+
         TTT=Tk()
         geometry_questions=f"{self.size_questions_x}x{self.size_questions_y+15}"
         TTT.geometry(geometry_questions)
@@ -1164,10 +1192,10 @@ class Windows:
         FrameLanguage.pack(fill=X,side=TOP,padx=self.innerPadding,pady=0)
         value = StringVar()
         value.set(setRadioLanguage())
-        buttonEnglish = Radiobutton(FrameLanguage, text="English", variable=value, value=1,bg=self.universalBackground,font=self.defaultFont,command=getRadioLanguage,state=self.enableOrDisable["EN"])
-        buttonGerman = Radiobutton(FrameLanguage, text="German", variable=value, value=2,bg=self.universalBackground,font=self.defaultFont,command=getRadioLanguage,state=self.enableOrDisable["DE"])
-        buttonSpanish = Radiobutton(FrameLanguage, text="Spanish", variable=value, value=3,bg=self.universalBackground,font=self.defaultFont,command=getRadioLanguage,state=self.enableOrDisable["ES"])
-        buttonFrench = Radiobutton(FrameLanguage, text="French", variable=value, value=4,bg=self.universalBackground,font=self.defaultFont,command=getRadioLanguage,state=self.enableOrDisable["FR"])
+        buttonEnglish = Radiobutton(FrameLanguage, text="English", variable=value, value=1,bg=self.universalBackground,fg=self.universalForeground,font=self.defaultFont,command=getRadioLanguage,state=self.enableOrDisable["EN"])
+        buttonGerman = Radiobutton(FrameLanguage, text="German", variable=value, value=2,bg=self.universalBackground,fg=self.universalForeground,font=self.defaultFont,command=getRadioLanguage,state=self.enableOrDisable["DE"])
+        buttonSpanish = Radiobutton(FrameLanguage, text="Spanish", variable=value, value=3,bg=self.universalBackground,fg=self.universalForeground,font=self.defaultFont,command=getRadioLanguage,state=self.enableOrDisable["ES"])
+        buttonFrench = Radiobutton(FrameLanguage, text="French", variable=value, value=4,bg=self.universalBackground,fg=self.universalForeground,font=self.defaultFont,command=getRadioLanguage,state=self.enableOrDisable["FR"])
         buttonEnglish.pack(fill=X,side=LEFT)
         buttonGerman.pack(fill=X,side=LEFT)
         buttonSpanish.pack(fill=X,side=LEFT)
@@ -1176,8 +1204,8 @@ class Windows:
         WriteOrRadioLanguage.pack(fill=None,side=RIGHT,padx=self.innerPadding,pady=0)
         MethValue = StringVar()
         MethValue.set(setRadioWrittenOrRadio())
-        buttonWrite = Radiobutton(WriteOrRadioLanguage, text="Written", variable=MethValue, value=1,bg=self.universalBackground,font=self.defaultFont,command=updateGameMethod,state=self.enableOrDisable["written"])
-        buttonRadio = Radiobutton(WriteOrRadioLanguage, text="Radio choice", variable=MethValue, value=2,bg=self.universalBackground,font=self.defaultFont,command=updateGameMethod,state=self.enableOrDisable["radio"])
+        buttonWrite = Radiobutton(WriteOrRadioLanguage, text="Written", variable=MethValue, value=1,bg=self.universalBackground,fg=self.universalForeground,font=self.defaultFont,command=updateGameMethod,state=self.enableOrDisable["written"])
+        buttonRadio = Radiobutton(WriteOrRadioLanguage, text="Radio choice", variable=MethValue, value=2,bg=self.universalBackground,fg=self.universalForeground,font=self.defaultFont,command=updateGameMethod,state=self.enableOrDisable["radio"])
         buttonRadio.pack(fill=X,side=RIGHT)
         buttonWrite.pack(fill=X,side=RIGHT)
         # TitleVoicePreferenceLabel=Label(FrameMain,text="Choose your the voice of the person reading.",bg=self.universalBackground,fg=self.universalForeground,font=self.defaultFont,anchor="nw")
@@ -1186,10 +1214,20 @@ class Windows:
         VoicePreference.pack(fill=None,side=LEFT,padx=self.innerPadding,pady=0)
         VoiceValue = StringVar()
         VoiceValue.set(setVoicePreference())
-        buttonFemale = Radiobutton(VoicePreference, text="Female", variable=VoiceValue, value=1,bg=self.universalBackground,font=self.defaultFont,command=updateVoicePreference,state=self.enableOrDisable["female"])
-        buttonMale = Radiobutton(VoicePreference, text="Male", variable=VoiceValue, value=2,bg=self.universalBackground,font=self.defaultFont,command=updateVoicePreference,state=self.enableOrDisable["male"])
+        buttonFemale = Radiobutton(VoicePreference, text="Female", variable=VoiceValue, value=1,bg=self.universalBackground,fg=self.universalForeground,font=self.defaultFont,command=updateVoicePreference,state=self.enableOrDisable["female"])
+        buttonMale = Radiobutton(VoicePreference, text="Male", variable=VoiceValue, value=2,bg=self.universalBackground,fg=self.universalForeground,font=self.defaultFont,command=updateVoicePreference,state=self.enableOrDisable["male"])
         buttonFemale.pack(fill=X,side=LEFT)
         buttonMale.pack(fill=X,side=LEFT)
+        LightOrDarkTheme=LabelFrame(FrameMain,text="Whish theme do you wish to apply?",fg=self.universalForeground,font=self.defaultFont,bg=self.universalBackground,padx=0,pady=0)
+        LightOrDarkTheme.pack(fill=None,side=RIGHT,padx=self.innerPadding,pady=0)
+        ThemeValue = StringVar()
+        ThemeValue.set(setRadioThemeDarkOrLight())
+        print(f"ThemeValue={ThemeValue.get()}")
+        buttonLight = Radiobutton(LightOrDarkTheme, text="Light", variable=ThemeValue, value="L",bg=self.universalBackground,fg=self.universalForeground,font=self.defaultFont,command=updateTheme,state=self.enableOrDisable["light"])
+        buttonDark = Radiobutton(LightOrDarkTheme, text="Dark", variable=ThemeValue, value="D",bg=self.universalBackground,fg=self.universalForeground,font=self.defaultFont,command=updateTheme,state=self.enableOrDisable["dark"])
+        print(f"ThemeValue={ThemeValue.get()}")
+        buttonDark.pack(fill=X,side=RIGHT)
+        buttonLight.pack(fill=X,side=RIGHT)
         ButtonClose=Button(TTT,text="Close",fg=self.universalForeground,bg=self.universalBackground,font=self.defaultFont,command=TTT.destroy)
         ButtonClose.pack(side=RIGHT,padx=5)
         WatermarkLabel=Label(TTT,text=self.watermark,fg=self.universalForeground,bg=self.universalBackground,font=self.defaultFont)
@@ -1424,6 +1462,9 @@ class Windows:
     def start(self):
         log.ProgStarted(self,__name__)
         log.CompInfo(self,self.OSInfo)
+        Theme=log.getTheme(self)
+        if Theme=="D":
+            update.Theme(self)
         Windows.Home(self)
         log.ProgStopped(self,__name__)
 
@@ -1501,6 +1542,30 @@ class log(Windows):
         Close=Button(Display,text="Close",bg=self.universalBackground,fg=self.universalForeground,anchor="center",command=Display.destroy)
         Close.pack(side=TOP,fill=X)
         Display.mainloop()
+    def Theme(self,Theme):
+        if os.path.exists(self.userPrefFolder)==False:
+            os.mkdir(self.userPrefFolder)
+        f=open(f"{self.userPrefFolder}/{self.themePath}","w")
+        f.write(Theme)
+        f.close()
+    def getTheme(self):
+        try:
+            f=open(f"{self.userPrefFolder}/{self.themePath}","r")
+            Theme=f.read()
+            f.close()
+            print(f"Theme={Theme}")
+            try:
+                Theme=Theme.split("\n")
+                try:
+                    Theme=Theme[0]
+                except:
+                    print("failed 2")
+            except:
+                print("failed 1")
+            return Theme
+        except:
+            return "L"
+        
 
 class update(Windows):
     def date(self):
@@ -1517,3 +1582,8 @@ class update(Windows):
         self.Timep=f"{self.hour}h{self.minute}min{self.second}s{self.microsecond}ms"
         self.All=f"{self.day}/{self.month}/{self.year}:{self.hour}h{self.minute}min{self.second}s"
         self.Alls=f"{self.day}/{self.month}/{self.year}:{self.hour}h{self.minute}min{self.second}s{self.microsecond}ms"
+    def Theme(self):
+        print("in update.Theme")
+        temp=self.universalBackground
+        self.universalBackground=self.universalForeground
+        self.universalForeground=temp
