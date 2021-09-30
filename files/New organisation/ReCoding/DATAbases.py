@@ -1,6 +1,43 @@
 import sys
+import requests
+import os
 def pause():
     pause=input("Press enter to continue...")
+class Get:
+    def __init__(self):
+        self.home="https://henral.github.io/Learn_your_irregular_verbs/"
+        self.data="files/website/additionnal_files/metadata/writtenList"
+        self.dataFiles=['English(AInsi).txt', 'English(safe).txt', 'English.csv', 'English.xlsx', 'formats.txt', 'French.csv', 'German.csv', 'read.py', 'Spanish.csv', 'start.cmd', 'test(default format).csv', 'test.csv', 'translate.py']
+        self.folders=["metadat","writtenList"]
+    def prepareTheTerrain(self):
+        self.temp="./"
+        for i in range(len(self.folders)):
+            if os.path.exists(f"{self.temp}{self.folders[i]}")==False:
+                os.mkdir(f"{self.temp}{self.folders[i]}")
+            self.temp+=f"{self.folders[i]}/"
+    def folders(self):
+        for i in range(len(self.dataFiles)):
+            if os.path.exists(f"{self.temp}{self.dataFiles[i]}")==False:
+                fileContent=Get.link(f"{self.home}/{self.data}/{self.temp}{self.dataFiles[i]}")
+                if type(fileContent)==type(b"ee"):
+                    f=open(f"{self.temp}{self.dataFiles[i]}","wb")
+                    f.write(fileContent)
+                    f.close()
+                elif type(fileContent)==type(""):
+                    f=open(f"{self.temp}{self.dataFiles[i]}","w")
+                    f.write(fileContent)
+                    f.close()
+                else:
+                    print(f"Error:\nFile {self.dataFiles[i]} could not be found in the database.")
+    def link(url):
+        try:
+            e=requests.get(url)
+            return e.content
+        except:
+            return ["",""]
+    def start(self):
+        Get.prepareTheTerrain(self)
+        Get.folders(self)
 class languages:
     def __init__(self):
         self.a="DATAbases"
@@ -60,6 +97,7 @@ class languages:
         else:
             return ''
     def start(self):
+        Get.start(Get())
         print(f"self.a={self.a}")
         print("English")
         self.sortList=["inf","pret","pastSimp.","trad_fr","hint_fr","trad_de","hint_de","hint_eng","trad_es","hint_es"]
