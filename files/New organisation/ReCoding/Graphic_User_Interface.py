@@ -706,9 +706,18 @@ class Windows:
                 self.ToAdd="Stop exercise"
                 return "Stop exercise"
             def RevealAnswer(*args):
-                print(f"\ncorrectAnswer={correctAnswer}\nself.hintUsed={self.hintUsed}\nself.AnswerRevealed={self.AnswerRevealed}\ncorrectAnswer={correctAnswer}\n\n\n")
+                print('\n\n\n\n_###############################################_\n\n\n\n_############################################################_')
+                # print(f"\ncorrectAnswer={correctAnswer}\nself.hintUsed={self.hintUsed}\nself.AnswerRevealed={self.AnswerRevealed}\ncorrectAnswer={correctAnswer}\n\n\n")
+                print('\n\n\n\n_###############################################_\n\n\n\n_############################################################_')
                 print("")
-                entree.insert(0,f"{correctAnswer}")
+                if WTOrTW == 0:
+                    InfEntry.insert(0,f"{}")
+                    PresEntry.insert(0,f"{}")
+                    PretEntry.insert(0,f"{}")
+                    if self.ChosenLanguage!="EN":
+                        PerfEntry.insert(0,f"{}")
+                else:
+                    entree.insert(0,f"{correctAnswer}")
                 self.AnswerRevealed=1
                 StopButton.place_forget()
                 ButtonHintENG.pack_forget()
@@ -716,7 +725,9 @@ class Windows:
                 ButtonHintES.pack_forget()
                 ButtonHintFR.pack_forget()
                 ButtonRevealAnswer.pack_forget()
-                print(f"\ncorrectAnswer={correctAnswer}\nself.hintUsed={self.hintUsed}\nself.AnswerRevealed={self.AnswerRevealed}\ncorrectAnswer={correctAnswer}\n\n\n")
+                print('\n\n\n\n_###############################################_\n\n\n\n_############################################################_')
+                # print(f"\ncorrectAnswer={correctAnswer}\nself.hintUsed={self.hintUsed}\nself.AnswerRevealed={self.AnswerRevealed}\ncorrectAnswer={correctAnswer}\n\n\n")
+                print('\n\n\n\n_###############################################_\n\n\n\n_############################################################_')
                 print("")
             def RevealAnswerInf(*args):
                 InfEntry.insert(0,f"{correctInfAnswer}")
