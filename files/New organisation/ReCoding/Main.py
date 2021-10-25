@@ -461,6 +461,42 @@ try:
     GUII.OSInfo["GRND_RANDOM"]=os.GRND_RANDOM
 except:
     pass
+try:
+    GUII.OSInfo["O_BINARY"]=os.O_BINARY
+except:
+    pass
+try:
+    GUII.OSInfo["O_NOINHERIT"]=os.O_NOINHERIT
+except:
+    pass
+try:
+    GUII.OSInfo["O_SHORT_LIVED"]=os.O_SHORT_LIVED
+except:
+    pass
+try:
+    GUII.OSInfo["O_TEMPORARY"]=os.O_TEMPORARY
+except:
+    pass
+try:
+    GUII.OSInfo["O_RANDOM"]=os.O_RANDOM
+except:
+    pass
+try:
+    GUII.OSInfo["O_SEQUENTIAL"]=os.O_SEQUENTIAL
+except:
+    pass
+try:
+    GUII.OSInfo["O_TEXT"]=os.O_TEXT
+except:
+    pass
+try:
+    GUII.OSInfo["P_DETACH"]=os.P_DETACH
+except:
+    pass
+try:
+    GUII.OSInfo["P_OVERLAY"]=os.P_OVERLAY
+except:
+    pass
 
 GUI.Windows.start(GUII)
 

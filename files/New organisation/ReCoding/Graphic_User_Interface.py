@@ -23,7 +23,7 @@ class Windows:
         self.firstAppliedBckground=self.universalBackground
         self.firstAppliedForeground=self.universalForeground
         #__________________ Default size for tkinter windows __________________
-        self.size_x=700
+        self.size_x=900
         self.size_y=350
         self.geometry=f"{self.size_x}x{self.size_y}"
         self.size_questions_x=self.size_x-20
@@ -74,7 +74,6 @@ class Windows:
             "get_inheritable":os.get_inheritable(1),
             "supports_bytes_environ":os.supports_bytes_environ,
             "O_APPEND":os.O_APPEND,
-            "O_BINARY":os.O_BINARY,
             "O_CREAT":os.O_CREAT,
             "__spec__":os.__spec__,
             "O_RDONLY":os.O_RDONLY,
@@ -82,12 +81,6 @@ class Windows:
             "O_RDWR":os.O_RDWR,
             "O_EXCL":os.O_EXCL,
             "O_TRUNC":os.O_TRUNC,
-            "O_NOINHERIT":os.O_NOINHERIT,
-            "O_SHORT_LIVED":os.O_SHORT_LIVED,
-            "O_TEMPORARY":os.O_TEMPORARY,
-            "O_RANDOM":os.O_RANDOM,
-            "O_SEQUENTIAL":os.O_SEQUENTIAL,
-            "O_TEXT":os.O_TEXT,
             "R_OK":os.R_OK,
             "W_OK":os.W_OK,
             "X_OK":os.X_OK,
@@ -101,8 +94,6 @@ class Windows:
             "P_NOWAIT":os.P_NOWAIT,
             "P_NOWAITO":os.P_NOWAITO,
             "P_WAIT":os.P_WAIT,
-            "P_DETACH":os.P_DETACH,
-            "P_OVERLAY":os.P_OVERLAY,
             "directory string":os.pardir,
             "separate pathname components":os.sep,
             "character seperating search paths":os.pathsep,
@@ -756,39 +747,41 @@ class Windows:
             LabelWrong.pack(side=TOP,fill=X)
             Frame1=Frame(TTT, borderwidth=2, relief=GROOVE,bg=self.universalBackground)
             Frame1.pack(side=TOP, padx=30, pady=30)
+            box_width = 20
+            Label_padding_x = 50#"  "
             if WTOrTW==0:
                 subFrameTOP=Frame(Frame1, borderwidth=2, relief=FLAT,bg=self.universalBackground)
                 subFrameTOP.pack(side=TOP, padx=0, pady=0,fill=X,expand=YES)
-                subFrameMID=Frame(Frame1, borderwidth=2, relief=FLAT,bg=self.universalBackground)
+                subFrameMID=Frame(Frame1, borderwidth=0, relief=FLAT,bg=self.universalBackground)
                 subFrameMID.pack(side=TOP, padx=0, pady=0,fill=X,expand=YES)
-                subFrameBOTTOM=Frame(Frame1, borderwidth=2, relief=FLAT,bg=self.universalBackground)
+                subFrameBOTTOM=Frame(Frame1, borderwidth=0, relief=FLAT,bg=self.universalBackground)
                 subFrameBOTTOM.pack(side=TOP, padx=0, pady=0,fill=X,expand=YES)
-                
+
                 InfLabel=Label(subFrameTOP,text=f"{self.ColumnsLang[self.ChosenLanguage][0]}",bg=self.universalBackground,fg=self.universalForeground,font=self.defaultFont)
-                InfLabel.pack(side=LEFT,padx=15)
-                InfEntry=Entry(subFrameMID, width=30)#,text=ContentVar)
+                InfLabel.pack(side=LEFT,padx=Label_padding_x)
+                InfEntry=Entry(subFrameMID, width=box_width)#,text=ContentVar)
                 InfEntry.pack(side=LEFT,padx=10,pady=10)
                 ButtonInfRevAns=Button(subFrameBOTTOM,text=f"Reveal {self.ColumnsLang[self.ChosenLanguage][0]}",command=RevealAnswerInf,fg=self.universalForeground,bg=self.universalBackground)
                 ButtonInfRevAns.pack(side=LEFT)
                 
                 PresLabel=Label(subFrameTOP,text=f"{self.ColumnsLang[self.ChosenLanguage][1]}",bg=self.universalBackground,fg=self.universalForeground,font=self.defaultFont)
-                PresLabel.pack(side=LEFT,padx=15)
-                PresEntry=Entry(subFrameMID, width=30)#,text=ContentVar)
+                PresLabel.pack(side=LEFT,padx=Label_padding_x)
+                PresEntry=Entry(subFrameMID, width=box_width)#,text=ContentVar)
                 PresEntry.pack(side=LEFT,padx=10,pady=10)
                 ButtonPresRevAns=Button(subFrameBOTTOM,text=f"Reveal {self.ColumnsLang[self.ChosenLanguage][1]}",command=RevealAnswerPres,fg=self.universalForeground,bg=self.universalBackground)
                 ButtonPresRevAns.pack(side=LEFT)
                 
                 PretLabel=Label(subFrameTOP,text=f"{self.ColumnsLang[self.ChosenLanguage][2]}",bg=self.universalBackground,fg=self.universalForeground,font=self.defaultFont)
-                PretLabel.pack(side=LEFT,padx=15)
-                PretEntry=Entry(subFrameMID, width=30)#,text=ContentVar)
+                PretLabel.pack(side=LEFT,padx=Label_padding_x)#15
+                PretEntry=Entry(subFrameMID, width=box_width)#,text=ContentVar)
                 PretEntry.pack(side=LEFT,padx=10,pady=10)
                 ButtonPretRevAns=Button(subFrameBOTTOM,text=f"Reveal {self.ColumnsLang[self.ChosenLanguage][2]}",command=RevealAnswerPret,fg=self.universalForeground,bg=self.universalBackground)
                 ButtonPretRevAns.pack(side=LEFT)
                 
                 if self.ChosenLanguage!="EN":
                     PerfLabel=Label(subFrameTOP,text=f"{self.ColumnsLang[self.ChosenLanguage][3]}",bg=self.universalBackground,fg=self.universalForeground,font=self.defaultFont)
-                    PerfLabel.pack(side=LEFT,padx=3)
-                    PerfEntry=Entry(subFrameMID, width=30)#,text=ContentVar)
+                    PerfLabel.pack(side=LEFT,padx=Label_padding_x)
+                    PerfEntry=Entry(subFrameMID, width=box_width)#,text=ContentVar)
                     PerfEntry.pack(side=LEFT,padx=10,pady=10)
                     ButtonPerfRevAns=Button(subFrameBOTTOM,text=f"Reveal {self.ColumnsLang[self.ChosenLanguage][3]}",command=RevealAnswerPerf,fg=self.universalForeground,bg=self.universalBackground)
                     ButtonPerfRevAns.pack(side=LEFT)
