@@ -711,11 +711,15 @@ class Windows:
                 print('\n\n\n\n_###############################################_\n\n\n\n_############################################################_')
                 print("")
                 if WTOrTW == 0:
-                    InfEntry.insert(0,f"{}")
-                    PresEntry.insert(0,f"{}")
-                    PretEntry.insert(0,f"{}")
+                    # InfEntry.insert(0,f"{}")
+                    # PresEntry.insert(0,f"{}")
+                    # PretEntry.insert(0,f"{}")
+                    InfEntry.insert(0,"1")
+                    PresEntry.insert(0,"2")
+                    PretEntry.insert(0,"3")
                     if self.ChosenLanguage!="EN":
-                        PerfEntry.insert(0,f"{}")
+                        # PerfEntry.insert(0,f"{}")
+                        PerfEntry.insert(0,"4")
                 else:
                     entree.insert(0,f"{correctAnswer}")
                 self.AnswerRevealed=1

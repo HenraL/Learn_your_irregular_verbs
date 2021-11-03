@@ -4341,3 +4341,326 @@
 [25/10/2021:21h58min24s635570ms]: Your score is '0' for the exercise: 'Words then their tenses'.
 [25/10/2021:21h58min24s635739ms]: You took 0 year, 0 month, 0 day, 0 hour, 8 minutes 46 seconds, 960 milliseconds for the exercise: 'Words then their tenses', exercise started at 25/10/2021:21h58min18s131835ms and finished at 25/10/2021:21h58min23s653795ms.
 [25/10/2021:21h58min27s887885ms]: Program Learn Your Vocab stopped.
+[2/11/2021:15h39min15s886079ms]:@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+[2/11/2021:15h39min15s886079ms]:+--------------------------+
+[2/11/2021:15h39min15s886079ms]:|  Program Learn Your Vocab started. |
+[2/11/2021:15h39min15s886079ms]:+--------------------------+
+[2/11/2021:15h39min15s886642ms]:##################################################################################################################################
+[2/11/2021:15h39min15s886642ms]:Begining of usseless but usable data.
+[2/11/2021:15h39min15s886715ms]:name=posix
+[2/11/2021:15h39min15s886751ms]:CPU count=16
+[2/11/2021:15h39min15s886789ms]:Curent directory=.
+[2/11/2021:15h39min15s886826ms]:Directory seperator=None
+[2/11/2021:15h39min15s886864ms]:defpath=/bin:/usr/bin
+[2/11/2021:15h39min15s886900ms]:devnull=/dev/null
+[2/11/2021:15h39min15s886936ms]:device_encoding(0)=UTF-8
+[2/11/2021:15h39min15s886973ms]:device_encoding(1)=UTF-8
+[2/11/2021:15h39min15s887008ms]:device_encoding(2)=UTF-8
+[2/11/2021:15h39min15s887044ms]:environement=environ({'SHELL': '/bin/bash', 'IMSETTINGS_INTEGRATE_DESKTOP': 'yes', 'SESSION_MANAGER': 'local/unix:@/tmp/.ICE-unix/1671,unix/unix:/tmp/.ICE-unix/1671', 'WINDOWID': '28436203', 'COLORTERM': 'truecolor', 'XDG_CONFIG_DIRS': '/etc/xdg', 'XDG_SESSION_PATH': '/org/freedesktop/DisplayManager/Session0', 'HISTCONTROL': 'ignoredups', 'XDG_MENU_PREFIX': 'xfce-', 'TERM_PROGRAM_VERSION': '1.61.2', 'APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL': 'true', 'HISTSIZE': '1000', 'HOSTNAME': 'fedora', 'SSH_AUTH_SOCK': '/tmp/ssh-XXXXXXb00wpo/agent.1671', 'BREAKPAD_DUMP_LOCATION': '/home/hlatalliard/.config/Code/exthost Crash Reports', 'XMODIFIERS': '@im=none', 'DESKTOP_SESSION': 'xfce', 'SSH_AGENT_PID': '1858', 'NO_AT_BRIDGE': '1', 'EDITOR': '/usr/bin/nano', 'XDG_SEAT': 'seat0', 'PWD': '/home/hlatalliard/Documents/001_Github/HenraL/Learn_your_irregular_verbs/files/New organisation/ReCoding', 'LOGNAME': 'hlatalliard', 'XDG_SESSION_DESKTOP': 'xfce', 'XDG_SESSION_TYPE': 'x11', 'XAUTHORITY': '/run/lightdm/hlatalliard/xauthority', 'SDL_VIDEO_MINIMIZE_ON_FOCUS_LOSS': '0', 'VSCODE_GIT_ASKPASS_NODE': '/usr/share/code/code', 'XDG_GREETER_DATA_DIR': '/var/lib/lightdm-data/hlatalliard', 'GDM_LANG': 'en_GB.utf8', 'HOME': '/home/hlatalliard', 'SSH_ASKPASS': '/usr/libexec/openssh/gnome-ssh-askpass', 'LANG': 'en_GB.utf8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;37;41:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=01;36:*.au=01;36:*.flac=01;36:*.m4a=01;36:*.mid=01;36:*.midi=01;36:*.mka=01;36:*.mp3=01;36:*.mpc=01;36:*.ogg=01;36:*.ra=01;36:*.wav=01;36:*.oga=01;36:*.opus=01;36:*.spx=01;36:*.xspf=01;36:', 'XDG_CURRENT_DESKTOP': 'XFCE', 'VTE_VERSION': '6402', 'GIT_ASKPASS': '/usr/share/code/resources/app/extensions/git/dist/askpass.sh', 'XDG_SEAT_PATH': '/org/freedesktop/DisplayManager/Seat0', 'IMSETTINGS_MODULE': 'none', 'CHROME_DESKTOP': 'code-url-handler.desktop', 'STEAM_FRAME_FORCE_CLOSE': '1', 'MOZ_GMP_PATH': '/usr/lib64/mozilla/plugins/gmp-gmpopenh264/system-installed', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'LESSOPEN': '||/usr/bin/lesspipe.sh %s', 'USER': 'hlatalliard', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-de48f46da0.sock', 'DISPLAY': ':0.0', 'SHLVL': '3', 'QT_IM_MODULE': 'xim', 'XDG_VTNR': '1', 'XDG_SESSION_ID': '2', 'XDG_RUNTIME_DIR': '/run/user/1000', 'which_declare': 'declare -f', 'VSCODE_GIT_ASKPASS_MAIN': '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js', 'GTK3_MODULES': 'xapp-gtk3-module', 'XDG_DATA_DIRS': '/home/hlatalliard/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop:/usr/share', 'GDK_BACKEND': 'x11', 'PATH': '/home/hlatalliard/manually_installed_software/shortcuts/:/home/hlatalliard/my_scripts:/home/hlatalliard/my_scripts/my_ascii_images:/home/hlatalliard/manually_installed_software/shortcuts/:/home/hlatalliard/my_scripts:/home/hlatalliard/my_scripts/my_ascii_images:/home/hlatalliard/manually_installed_software/shortcuts/:/home/hlatalliard/my_scripts:/home/hlatalliard/my_scripts/my_ascii_images:/home/hlatalliard/.local/bin:/home/hlatalliard/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/var/lib/snapd/snap/bin:/usr/local/go/bin:/usr/local/go/bin:/usr/local/go/bin', 'GDMSESSION': 'xfce', 'ORIGINAL_XDG_CURRENT_DESKTOP': 'XFCE', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'MAIL': '/var/spool/mail/hlatalliard', 'TERM_PROGRAM': 'vscode', 'BASH_FUNC_which%%': '() {  ( alias;\n eval ${which_declare} ) | /usr/bin/which --tty-only --read-alias --read-functions --show-tilde --show-dot "$@"\n}', '_': '/bin/python'})
+[2/11/2021:15h39min15s887260ms]:cwd=/home/hlatalliard/Documents/001_Github/HenraL/Learn_your_irregular_verbs/files/New organisation/ReCoding
+[2/11/2021:15h39min15s887319ms]:dir Content=['Launch.py', 'Main.py', 'Credits.py', 'metadat', '.vscode', 'SearchBar.py', 'dist', 'The options.txt', 'DATAbases.py', 'onefile.spec', '__pycache__', 'requirements.py', '.dist', 'second_window_tk.py', 'build', 'recoding_Learn_your_Vocab.code-workspace', 'img', 'SavedProgress', 'logs', 'UserPreference', 'Graphic_User_Interface.py', 'metadata', 'Main.spec']
+[2/11/2021:15h39min15s887367ms]:Logged in account=hlatalliard
+[2/11/2021:15h39min15s887403ms]:Current process ID=140183
+[2/11/2021:15h39min15s887439ms]:exstep=.
+[2/11/2021:15h39min15s887474ms]:F_OK=0
+[2/11/2021:15h39min15s887516ms]:getcwdb=b'/home/hlatalliard/Documents/001_Github/HenraL/Learn_your_irregular_verbs/files/New organisation/ReCoding'
+[2/11/2021:15h39min15s887556ms]:PPID=139925
+[2/11/2021:15h39min15s887592ms]:get_inheritable=True
+[2/11/2021:15h39min15s887631ms]:supports_bytes_environ=True
+[2/11/2021:15h39min15s887668ms]:O_APPEND=1024
+[2/11/2021:15h39min15s887705ms]:O_CREAT=64
+[2/11/2021:15h39min15s887742ms]:__spec__=ModuleSpec(name='os', loader=<_frozen_importlib_external.SourceFileLoader object at 0x7f6f69dc52e0>, origin='/usr/lib64/python3.9/os.py')
+[2/11/2021:15h39min15s887802ms]:O_RDONLY=0
+[2/11/2021:15h39min15s887839ms]:O_WRONLY=1
+[2/11/2021:15h39min15s887874ms]:O_RDWR=2
+[2/11/2021:15h39min15s887910ms]:O_EXCL=128
+[2/11/2021:15h39min15s887946ms]:O_TRUNC=512
+[2/11/2021:15h39min15s887982ms]:R_OK=4
+[2/11/2021:15h39min15s888018ms]:W_OK=2
+[2/11/2021:15h39min15s888057ms]:X_OK=1
+[2/11/2021:15h39min15s888099ms]:SEEK_SET=0
+[2/11/2021:15h39min15s888136ms]:SEEK_CUR=1
+[2/11/2021:15h39min15s888171ms]:SEEK_END=2
+[2/11/2021:15h39min15s888208ms]:supports_dir_fd={<built-in function chown>, <built-in function unlink>, <built-in function mknod>, <built-in function stat>, <built-in function access>, <built-in function utime>, <built-in function mkfifo>, <built-in function mkdir>, <built-in function open>, <built-in function symlink>, <built-in function rmdir>, <built-in function rename>, <built-in function readlink>, <built-in function chmod>, <built-in function link>}
+[2/11/2021:15h39min15s888264ms]:supports_effective_ids={<built-in function access>}
+[2/11/2021:15h39min15s888326ms]:supports_fd={<built-in function chown>, <built-in function listdir>, <built-in function stat>, <built-in function pathconf>, <built-in function utime>, <built-in function chdir>, <built-in function scandir>, <built-in function statvfs>, <built-in function truncate>, <built-in function chmod>, <built-in function execve>}
+[2/11/2021:15h39min15s888375ms]:supports_follow_symlinks={<built-in function chown>, <built-in function stat>, <built-in function access>, <built-in function utime>, <built-in function link>}
+[2/11/2021:15h39min15s888418ms]:P_NOWAIT=1
+[2/11/2021:15h39min15s888454ms]:P_NOWAITO=1
+[2/11/2021:15h39min15s888492ms]:P_WAIT=0
+[2/11/2021:15h39min15s888530ms]:directory string=..
+[2/11/2021:15h39min15s888568ms]:separate pathname components=/
+[2/11/2021:15h39min15s888604ms]:character seperating search paths=:
+[2/11/2021:15h39min15s888640ms]:default search path=/bin:/usr/bin
+[2/11/2021:15h39min15s888677ms]:string used to separate lines="
+"
+[2/11/2021:15h39min15s888714ms]:The files path of the null device=/dev/null
+[2/11/2021:15h39min15s888751ms]:terminal size=os.terminal_size(columns=98, lines=59)
+[2/11/2021:15h39min15s888792ms]:PRIO_PROCESS=0
+[2/11/2021:15h39min15s888827ms]:PRIO_PGRP=1
+[2/11/2021:15h39min15s888863ms]:O_NONBLOCK=2048
+[2/11/2021:15h39min15s888899ms]:O_NDELAY=2048
+[2/11/2021:15h39min15s888936ms]:O_SYNC=1052672
+[2/11/2021:15h39min15s888972ms]:PRIO_USER=2
+[2/11/2021:15h39min15s889008ms]:O_RSYNC=1052672
+[2/11/2021:15h39min15s889046ms]:O_DSYNC=4096
+[2/11/2021:15h39min15s889084ms]:O_DIRECT=16384
+[2/11/2021:15h39min15s889121ms]:F_LOCK=1
+[2/11/2021:15h39min15s889155ms]:RWF_NOWAIT=8
+[2/11/2021:15h39min15s889189ms]:POSIX_FADV_DONTNEED=4
+[2/11/2021:15h39min15s889222ms]:POSIX_FADV_WILLNEED=3
+[2/11/2021:15h39min15s889256ms]:POSIX_FADV_NOREUSE=5
+[2/11/2021:15h39min15s889308ms]:POSIX_FADV_RANDOM=1
+[2/11/2021:15h39min15s889344ms]:POSIX_FADV_SEQUENTIAL=2
+[2/11/2021:15h39min15s889378ms]:POSIX_FADV_NORMAL=0
+[2/11/2021:15h39min15s889413ms]:O_CLOEXEC=524288
+[2/11/2021:15h39min15s889445ms]:O_ASYNC=8192
+[2/11/2021:15h39min15s889479ms]:pathconf_names={'PC_ALLOC_SIZE_MIN': 18, 'PC_ASYNC_IO': 10, 'PC_CHOWN_RESTRICTED': 6, 'PC_FILESIZEBITS': 13, 'PC_LINK_MAX': 0, 'PC_MAX_CANON': 1, 'PC_MAX_INPUT': 2, 'PC_NAME_MAX': 3, 'PC_NO_TRUNC': 7, 'PC_PATH_MAX': 4, 'PC_PIPE_BUF': 5, 'PC_PRIO_IO': 11, 'PC_REC_INCR_XFER_SIZE': 14, 'PC_REC_MAX_XFER_SIZE': 15, 'PC_REC_MIN_XFER_SIZE': 16, 'PC_REC_XFER_ALIGN': 17, 'PC_SOCK_MAXBUF': 12, 'PC_SYMLINK_MAX': 19, 'PC_SYNC_IO': 9, 'PC_VDISABLE': 8}
+[2/11/2021:15h39min15s889545ms]:RWF_HIPRI=1
+[2/11/2021:15h39min15s889585ms]:RWF_DSYNC=2
+[2/11/2021:15h39min15s889621ms]:RWF_SYNC=4
+[2/11/2021:15h39min15s889657ms]:F_TEST=3
+[2/11/2021:15h39min15s889692ms]:F_ULOCK=0
+[2/11/2021:15h39min15s889730ms]:F_TLOCK=2
+[2/11/2021:15h39min15s889765ms]:O_NOCTTY=256
+[2/11/2021:15h39min15s889801ms]:User ID=1000
+[2/11/2021:15h39min15s889838ms]:O_TMPFILE=4259840
+[2/11/2021:15h39min15s889874ms]:O_PATH=2097152
+[2/11/2021:15h39min15s889938ms]:O_NOATIME=262144
+[2/11/2021:15h39min15s890006ms]:O_NOFOLLOW=131072
+[2/11/2021:15h39min15s890049ms]:O_DIRECTORY=65536
+[2/11/2021:15h39min15s890099ms]:MFD_HUGE_64KB=1073741824
+[2/11/2021:15h39min15s890169ms]:MFD_HUGE_MASK=63
+[2/11/2021:15h39min15s890240ms]:MFD_HUGE_512KB=1275068416
+[2/11/2021:15h39min15s890407ms]:MFD_HUGE_1MB=1342177280
+[2/11/2021:15h39min15s890465ms]:MFD_HUGE_2MB=1409286144
+[2/11/2021:15h39min15s890501ms]:MFD_HUGE_SHIFT=26
+[2/11/2021:15h39min15s890534ms]:MFD_HUGETLB=4
+[2/11/2021:15h39min15s890570ms]:MFD_ALLOW_SEALING=2
+[2/11/2021:15h39min15s890637ms]:MFD_CLOEXEC=1
+[2/11/2021:15h39min15s890687ms]:EX_CONFIG=78
+[2/11/2021:15h39min15s890725ms]:EX_NOPERM=77
+[2/11/2021:15h39min15s890763ms]:EX_PROTOCOL=76
+[2/11/2021:15h39min15s890799ms]:EX_TEMPFAIL=75
+[2/11/2021:15h39min15s890833ms]:EX_IOERR=74
+[2/11/2021:15h39min15s890867ms]:EX_CANTCREAT=73
+[2/11/2021:15h39min15s890903ms]:EX_OSFILE=72
+[2/11/2021:15h39min15s890939ms]:EX_SOFTWARE=70
+[2/11/2021:15h39min15s890975ms]:EX_OSERR=71
+[2/11/2021:15h39min15s891011ms]:EX_NOHOST=68
+[2/11/2021:15h39min15s891046ms]:EX_UNAVAILABLE=69
+[2/11/2021:15h39min15s891084ms]:EX_NOUSER=67
+[2/11/2021:15h39min15s891120ms]:EX_DATAERR=65
+[2/11/2021:15h39min15s891155ms]:EX_NOINPUT=66
+[2/11/2021:15h39min15s891189ms]:EX_USAGE=64
+[2/11/2021:15h39min15s891224ms]:EX_OK=0
+[2/11/2021:15h39min15s891261ms]:MFD_HUGE_2GB=2080374784
+[2/11/2021:15h39min15s891317ms]:MFD_HUGE_16GB=-2013265920
+[2/11/2021:15h39min15s891353ms]:MFD_HUGE_512MB=1946157056
+[2/11/2021:15h39min15s891387ms]:MFD_HUGE_1GB=2013265920
+[2/11/2021:15h39min15s891421ms]:MFD_HUGE_256MB=1879048192
+[2/11/2021:15h39min15s891453ms]:MFD_HUGE_32MB=1677721600
+[2/11/2021:15h39min15s891487ms]:MFD_HUGE_16MB=1610612736
+[2/11/2021:15h39min15s891541ms]:MFD_HUGE_8MB=1543503872
+[2/11/2021:15h39min15s891591ms]:sysconf_names={'SC_2_CHAR_TERM': 95, 'SC_2_C_BIND': 47, 'SC_2_C_DEV': 48, 'SC_2_C_VERSION': 96, 'SC_2_FORT_DEV': 49, 'SC_2_FORT_RUN': 50, 'SC_2_LOCALEDEF': 52, 'SC_2_SW_DEV': 51, 'SC_2_UPE': 97, 'SC_2_VERSION': 46, 'SC_AIO_LISTIO_MAX': 23, 'SC_AIO_MAX': 24, 'SC_AIO_PRIO_DELTA_MAX': 25, 'SC_ARG_MAX': 0, 'SC_ASYNCHRONOUS_IO': 12, 'SC_ATEXIT_MAX': 87, 'SC_AVPHYS_PAGES': 86, 'SC_BC_BASE_MAX': 36, 'SC_BC_DIM_MAX': 37, 'SC_BC_SCALE_MAX': 38, 'SC_BC_STRING_MAX': 39, 'SC_CHARCLASS_NAME_MAX': 45, 'SC_CHAR_BIT': 101, 'SC_CHAR_MAX': 102, 'SC_CHAR_MIN': 103, 'SC_CHILD_MAX': 1, 'SC_CLK_TCK': 2, 'SC_COLL_WEIGHTS_MAX': 40, 'SC_DELAYTIMER_MAX': 26, 'SC_EQUIV_CLASS_MAX': 41, 'SC_EXPR_NEST_MAX': 42, 'SC_FSYNC': 15, 'SC_GETGR_R_SIZE_MAX': 69, 'SC_GETPW_R_SIZE_MAX': 70, 'SC_INT_MAX': 104, 'SC_INT_MIN': 105, 'SC_IOV_MAX': 60, 'SC_JOB_CONTROL': 7, 'SC_LINE_MAX': 43, 'SC_LOGIN_NAME_MAX': 71, 'SC_LONG_BIT': 106, 'SC_MAPPED_FILES': 16, 'SC_MB_LEN_MAX': 108, 'SC_MEMLOCK': 17, 'SC_MEMLOCK_RANGE': 18, 'SC_MEMORY_PROTECTION': 19, 'SC_MESSAGE_PASSING': 20, 'SC_MQ_OPEN_MAX': 27, 'SC_MQ_PRIO_MAX': 28, 'SC_NGROUPS_MAX': 3, 'SC_NL_ARGMAX': 119, 'SC_NL_LANGMAX': 120, 'SC_NL_MSGMAX': 121, 'SC_NL_NMAX': 122, 'SC_NL_SETMAX': 123, 'SC_NL_TEXTMAX': 124, 'SC_NPROCESSORS_CONF': 83, 'SC_NPROCESSORS_ONLN': 84, 'SC_NZERO': 109, 'SC_OPEN_MAX': 4, 'SC_PAGESIZE': 30, 'SC_PAGE_SIZE': 30, 'SC_PASS_MAX': 88, 'SC_PHYS_PAGES': 85, 'SC_PII': 53, 'SC_PII_INTERNET': 56, 'SC_PII_INTERNET_DGRAM': 62, 'SC_PII_INTERNET_STREAM': 61, 'SC_PII_OSI': 57, 'SC_PII_OSI_CLTS': 64, 'SC_PII_OSI_COTS': 63, 'SC_PII_OSI_M': 65, 'SC_PII_SOCKET': 55, 'SC_PII_XTI': 54, 'SC_POLL': 58, 'SC_PRIORITIZED_IO': 13, 'SC_PRIORITY_SCHEDULING': 10, 'SC_REALTIME_SIGNALS': 9, 'SC_RE_DUP_MAX': 44, 'SC_RTSIG_MAX': 31, 'SC_SAVED_IDS': 8, 'SC_SCHAR_MAX': 111, 'SC_SCHAR_MIN': 112, 'SC_SELECT': 59, 'SC_SEMAPHORES': 21, 'SC_SEM_NSEMS_MAX': 32, 'SC_SEM_VALUE_MAX': 33, 'SC_SHARED_MEMORY_OBJECTS': 22, 'SC_SHRT_MAX': 113, 'SC_SHRT_MIN': 114, 'SC_SIGQUEUE_MAX': 34, 'SC_SSIZE_MAX': 110, 'SC_STREAM_MAX': 5, 'SC_SYNCHRONIZED_IO': 14, 'SC_THREADS': 67, 'SC_THREAD_ATTR_STACKADDR': 77, 'SC_THREAD_ATTR_STACKSIZE': 78, 'SC_THREAD_DESTRUCTOR_ITERATIONS': 73, 'SC_THREAD_KEYS_MAX': 74, 'SC_THREAD_PRIORITY_SCHEDULING': 79, 'SC_THREAD_PRIO_INHERIT': 80, 'SC_THREAD_PRIO_PROTECT': 81, 'SC_THREAD_PROCESS_SHARED': 82, 'SC_THREAD_SAFE_FUNCTIONS': 68, 'SC_THREAD_STACK_MIN': 75, 'SC_THREAD_THREADS_MAX': 76, 'SC_TIMERS': 11, 'SC_TIMER_MAX': 35, 'SC_TTY_NAME_MAX': 72, 'SC_TZNAME_MAX': 6, 'SC_T_IOV_MAX': 66, 'SC_UCHAR_MAX': 115, 'SC_UINT_MAX': 116, 'SC_UIO_MAXIOV': 60, 'SC_ULONG_MAX': 117, 'SC_USHRT_MAX': 118, 'SC_VERSION': 29, 'SC_WORD_BIT': 107, 'SC_XBS5_ILP32_OFF32': 125, 'SC_XBS5_ILP32_OFFBIG': 126, 'SC_XBS5_LP64_OFF64': 127, 'SC_XBS5_LPBIG_OFFBIG': 128, 'SC_XOPEN_CRYPT': 92, 'SC_XOPEN_ENH_I18N': 93, 'SC_XOPEN_LEGACY': 129, 'SC_XOPEN_REALTIME': 130, 'SC_XOPEN_REALTIME_THREADS': 131, 'SC_XOPEN_SHM': 94, 'SC_XOPEN_UNIX': 91, 'SC_XOPEN_VERSION': 89, 'SC_XOPEN_XCU_VERSION': 90, 'SC_XOPEN_XPG2': 98, 'SC_XOPEN_XPG3': 99, 'SC_XOPEN_XPG4': 100}
+[2/11/2021:15h39min15s891703ms]:confstr_names={'CS_GNU_LIBC_VERSION': 2, 'CS_GNU_LIBPTHREAD_VERSION': 3, 'CS_LFS64_CFLAGS': 1004, 'CS_LFS64_LDFLAGS': 1005, 'CS_LFS64_LIBS': 1006, 'CS_LFS64_LINTFLAGS': 1007, 'CS_LFS_CFLAGS': 1000, 'CS_LFS_LDFLAGS': 1001, 'CS_LFS_LIBS': 1002, 'CS_LFS_LINTFLAGS': 1003, 'CS_PATH': 0, 'CS_XBS5_ILP32_OFF32_CFLAGS': 1100, 'CS_XBS5_ILP32_OFF32_LDFLAGS': 1101, 'CS_XBS5_ILP32_OFF32_LIBS': 1102, 'CS_XBS5_ILP32_OFF32_LINTFLAGS': 1103, 'CS_XBS5_ILP32_OFFBIG_CFLAGS': 1104, 'CS_XBS5_ILP32_OFFBIG_LDFLAGS': 1105, 'CS_XBS5_ILP32_OFFBIG_LIBS': 1106, 'CS_XBS5_ILP32_OFFBIG_LINTFLAGS': 1107, 'CS_XBS5_LP64_OFF64_CFLAGS': 1108, 'CS_XBS5_LP64_OFF64_LDFLAGS': 1109, 'CS_XBS5_LP64_OFF64_LIBS': 1110, 'CS_XBS5_LP64_OFF64_LINTFLAGS': 1111, 'CS_XBS5_LPBIG_OFFBIG_CFLAGS': 1112, 'CS_XBS5_LPBIG_OFFBIG_LDFLAGS': 1113, 'CS_XBS5_LPBIG_OFFBIG_LIBS': 1114, 'CS_XBS5_LPBIG_OFFBIG_LINTFLAGS': 1115}
+[2/11/2021:15h39min15s891760ms]:SCHED_RESET_ON_FORK=1073741824
+[2/11/2021:15h39min15s891799ms]:SCHED_RR=2
+[2/11/2021:15h39min15s891835ms]:SCHED_FIFO=1
+[2/11/2021:15h39min15s891870ms]:SCHED_IDLE=5
+[2/11/2021:15h39min15s891905ms]:SCHED_BATCH=3
+[2/11/2021:15h39min15s891942ms]:SCHED_OTHER=0
+[2/11/2021:15h39min15s891977ms]:WCONTINUED=8
+[2/11/2021:15h39min15s892013ms]:WNOHANG=1
+[2/11/2021:15h39min15s892048ms]:CLD_CONTINUED=6
+[2/11/2021:15h39min15s892084ms]:WUNTRACED=2
+[2/11/2021:15h39min15s892119ms]:CLD_EXITED=1
+[2/11/2021:15h39min15s892155ms]:WSTOPPED=2
+[2/11/2021:15h39min15s892192ms]:WEXITED=4
+[2/11/2021:15h39min15s892228ms]:WNOWAIT=16777216
+[2/11/2021:15h39min15s892264ms]:P_PIDFD=3
+[2/11/2021:15h39min15s892319ms]:P_ALL=0
+[2/11/2021:15h39min15s892355ms]:P_PGID=2
+[2/11/2021:15h39min15s892389ms]:P_PID=1
+[2/11/2021:15h39min15s892423ms]:CLD_KILLED=2
+[2/11/2021:15h39min15s892457ms]:CLD_DUMPED=3
+[2/11/2021:15h39min15s892533ms]:CLD_TRAPPED=4
+[2/11/2021:15h39min15s892660ms]:CLD_STOPPED=5
+[2/11/2021:15h39min15s892752ms]:RTLD_LOCAL=0
+[2/11/2021:15h39min15s892788ms]:RTLD_NOLOAD=4
+[2/11/2021:15h39min15s892822ms]:RTLD_NODELETE=4096
+[2/11/2021:15h39min15s892858ms]:RTLD_GLOBAL=256
+[2/11/2021:15h39min15s892927ms]:RTLD_NOW=2
+[2/11/2021:15h39min15s892983ms]:RTLD_LAZY=1
+[2/11/2021:15h39min15s893019ms]:RTLD_DEEPBIND=8
+[2/11/2021:15h39min15s893052ms]:GRND_NONBLOCK=1
+[2/11/2021:15h39min15s893085ms]:GRND_RANDOM=2
+[2/11/2021:15h39min15s893122ms]:Ending of usseless but usable data.
+[2/11/2021:15h39min15s893122ms]:##################################################################################################################################
+[2/11/2021:15h39min51s132426ms]: Exercise Words then the definition started.
+[2/11/2021:15h41min28s315937ms]: Exercise Words then the definition stopped.
+[2/11/2021:15h41min29s35867ms]: You have answered 0 question of 206 questions for the exercise 'Words then the definition'.
+[2/11/2021:15h41min29s36148ms]: Your score is '0' for the exercise: 'Words then the definition'.
+[2/11/2021:15h41min29s36265ms]: You took 0 year, 0 month, 0 day, 0 hour, 4 minutes 40 seconds, 511 milliseconds for the exercise: 'Words then the definition', exercise started at 2/11/2021:15h39min51s132426ms and finished at 2/11/2021:15h41min28s315937ms.
+[3/11/2021:19h57min18s212640ms]:@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+[3/11/2021:19h57min18s212640ms]:+--------------------------+
+[3/11/2021:19h57min18s212640ms]:|  Program Learn Your Vocab started. |
+[3/11/2021:19h57min18s212640ms]:+--------------------------+
+[3/11/2021:19h57min18s213473ms]:##################################################################################################################################
+[3/11/2021:19h57min18s213473ms]:Begining of usseless but usable data.
+[3/11/2021:19h57min18s213579ms]:name=posix
+[3/11/2021:19h57min18s213659ms]:CPU count=16
+[3/11/2021:19h57min18s213723ms]:Curent directory=.
+[3/11/2021:19h57min18s213772ms]:Directory seperator=None
+[3/11/2021:19h57min18s213830ms]:defpath=/bin:/usr/bin
+[3/11/2021:19h57min18s213903ms]:devnull=/dev/null
+[3/11/2021:19h57min18s213977ms]:device_encoding(0)=UTF-8
+[3/11/2021:19h57min18s214033ms]:device_encoding(1)=UTF-8
+[3/11/2021:19h57min18s214083ms]:device_encoding(2)=UTF-8
+[3/11/2021:19h57min18s214133ms]:environement=environ({'SHELL': '/bin/bash', 'IMSETTINGS_INTEGRATE_DESKTOP': 'yes', 'SESSION_MANAGER': 'local/unix:@/tmp/.ICE-unix/1694,unix/unix:/tmp/.ICE-unix/1694', 'WINDOWID': '27296293', 'COLORTERM': 'truecolor', 'XDG_CONFIG_DIRS': '/etc/xdg', 'XDG_SESSION_PATH': '/org/freedesktop/DisplayManager/Session0', 'HISTCONTROL': 'ignoredups', 'XDG_MENU_PREFIX': 'xfce-', 'TERM_PROGRAM_VERSION': '1.61.2', 'APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL': 'true', 'HISTSIZE': '1000', 'HOSTNAME': 'fedora', 'SSH_AUTH_SOCK': '/tmp/ssh-XXXXXXFEVKd8/agent.1694', 'BREAKPAD_DUMP_LOCATION': '/home/hlatalliard/.config/Code/exthost Crash Reports', 'XMODIFIERS': '@im=none', 'DESKTOP_SESSION': 'xfce', 'SSH_AGENT_PID': '1881', 'NO_AT_BRIDGE': '1', 'EDITOR': '/usr/bin/nano', 'XDG_SEAT': 'seat0', 'PWD': '/home/hlatalliard/Documents/001_Github/HenraL/Learn_your_irregular_verbs/files/New organisation/ReCoding', 'LOGNAME': 'hlatalliard', 'XDG_SESSION_DESKTOP': 'xfce', 'XDG_SESSION_TYPE': 'x11', 'XAUTHORITY': '/run/lightdm/hlatalliard/xauthority', 'SDL_VIDEO_MINIMIZE_ON_FOCUS_LOSS': '0', 'VSCODE_GIT_ASKPASS_NODE': '/usr/share/code/code', 'XDG_GREETER_DATA_DIR': '/var/lib/lightdm-data/hlatalliard', 'GDM_LANG': 'en_GB.utf8', 'HOME': '/home/hlatalliard', 'SSH_ASKPASS': '/usr/libexec/openssh/gnome-ssh-askpass', 'LANG': 'en_GB.utf8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;37;41:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=01;36:*.au=01;36:*.flac=01;36:*.m4a=01;36:*.mid=01;36:*.midi=01;36:*.mka=01;36:*.mp3=01;36:*.mpc=01;36:*.ogg=01;36:*.ra=01;36:*.wav=01;36:*.oga=01;36:*.opus=01;36:*.spx=01;36:*.xspf=01;36:', 'XDG_CURRENT_DESKTOP': 'XFCE', 'VTE_VERSION': '6402', 'GIT_ASKPASS': '/usr/share/code/resources/app/extensions/git/dist/askpass.sh', 'XDG_SEAT_PATH': '/org/freedesktop/DisplayManager/Seat0', 'IMSETTINGS_MODULE': 'none', 'CHROME_DESKTOP': 'code-url-handler.desktop', 'STEAM_FRAME_FORCE_CLOSE': '1', 'MOZ_GMP_PATH': '/usr/lib64/mozilla/plugins/gmp-gmpopenh264/system-installed', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'LESSOPEN': '||/usr/bin/lesspipe.sh %s', 'USER': 'hlatalliard', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-de48f46da0.sock', 'DISPLAY': ':0.0', 'SHLVL': '3', 'QT_IM_MODULE': 'xim', 'XDG_VTNR': '1', 'XDG_SESSION_ID': '2', 'XDG_RUNTIME_DIR': '/run/user/1000', 'which_declare': 'declare -f', 'VSCODE_GIT_ASKPASS_MAIN': '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js', 'GTK3_MODULES': 'xapp-gtk3-module', 'XDG_DATA_DIRS': '/home/hlatalliard/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop:/usr/share', 'GDK_BACKEND': 'x11', 'PATH': '/home/hlatalliard/manually_installed_software/shortcuts/:/home/hlatalliard/my_scripts:/home/hlatalliard/my_scripts/my_ascii_images:/home/hlatalliard/manually_installed_software/shortcuts/:/home/hlatalliard/my_scripts:/home/hlatalliard/my_scripts/my_ascii_images:/home/hlatalliard/manually_installed_software/shortcuts/:/home/hlatalliard/my_scripts:/home/hlatalliard/my_scripts/my_ascii_images:/home/hlatalliard/.local/bin:/home/hlatalliard/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/var/lib/snapd/snap/bin:/usr/local/go/bin:/usr/local/go/bin:/usr/local/go/bin', 'GDMSESSION': 'xfce', 'ORIGINAL_XDG_CURRENT_DESKTOP': 'XFCE', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'MAIL': '/var/spool/mail/hlatalliard', 'OLDPWD': '/home/hlatalliard/Documents/001_Github/HenraL/Learn_your_irregular_verbs/files/New organisation', 'TERM_PROGRAM': 'vscode', 'BASH_FUNC_which%%': '() {  ( alias;\n eval ${which_declare} ) | /usr/bin/which --tty-only --read-alias --read-functions --show-tilde --show-dot "$@"\n}', '_': '/bin/python'})
+[3/11/2021:19h57min18s214567ms]:cwd=/home/hlatalliard/Documents/001_Github/HenraL/Learn_your_irregular_verbs/files/New organisation/ReCoding
+[3/11/2021:19h57min18s214627ms]:dir Content=['Launch.py', 'Main.py', 'Credits.py', 'metadat', '.vscode', 'SearchBar.py', 'dist', 'The options.txt', 'DATAbases.py', 'onefile.spec', '__pycache__', 'requirements.py', '.dist', 'second_window_tk.py', 'build', 'recoding_Learn_your_Vocab.code-workspace', 'img', 'SavedProgress', 'logs', 'UserPreference', 'Graphic_User_Interface.py', 'metadata', 'Main.spec']
+[3/11/2021:19h57min18s214688ms]:Logged in account=hlatalliard
+[3/11/2021:19h57min18s214736ms]:Current process ID=45184
+[3/11/2021:19h57min18s214783ms]:exstep=.
+[3/11/2021:19h57min18s214828ms]:F_OK=0
+[3/11/2021:19h57min18s214874ms]:getcwdb=b'/home/hlatalliard/Documents/001_Github/HenraL/Learn_your_irregular_verbs/files/New organisation/ReCoding'
+[3/11/2021:19h57min18s214924ms]:PPID=45150
+[3/11/2021:19h57min18s214971ms]:get_inheritable=True
+[3/11/2021:19h57min18s215021ms]:supports_bytes_environ=True
+[3/11/2021:19h57min18s215068ms]:O_APPEND=1024
+[3/11/2021:19h57min18s215114ms]:O_CREAT=64
+[3/11/2021:19h57min18s215159ms]:__spec__=ModuleSpec(name='os', loader=<_frozen_importlib_external.SourceFileLoader object at 0x7f81d730a310>, origin='/usr/lib64/python3.9/os.py')
+[3/11/2021:19h57min18s215253ms]:O_RDONLY=0
+[3/11/2021:19h57min18s215302ms]:O_WRONLY=1
+[3/11/2021:19h57min18s215348ms]:O_RDWR=2
+[3/11/2021:19h57min18s215392ms]:O_EXCL=128
+[3/11/2021:19h57min18s215438ms]:O_TRUNC=512
+[3/11/2021:19h57min18s215484ms]:R_OK=4
+[3/11/2021:19h57min18s215530ms]:W_OK=2
+[3/11/2021:19h57min18s215575ms]:X_OK=1
+[3/11/2021:19h57min18s215621ms]:SEEK_SET=0
+[3/11/2021:19h57min18s215665ms]:SEEK_CUR=1
+[3/11/2021:19h57min18s215710ms]:SEEK_END=2
+[3/11/2021:19h57min18s215755ms]:supports_dir_fd={<built-in function chown>, <built-in function unlink>, <built-in function mknod>, <built-in function stat>, <built-in function access>, <built-in function utime>, <built-in function mkfifo>, <built-in function mkdir>, <built-in function open>, <built-in function symlink>, <built-in function rmdir>, <built-in function rename>, <built-in function readlink>, <built-in function chmod>, <built-in function link>}
+[3/11/2021:19h57min18s215854ms]:supports_effective_ids={<built-in function access>}
+[3/11/2021:19h57min18s215925ms]:supports_fd={<built-in function chown>, <built-in function listdir>, <built-in function stat>, <built-in function pathconf>, <built-in function utime>, <built-in function chdir>, <built-in function scandir>, <built-in function statvfs>, <built-in function truncate>, <built-in function chmod>, <built-in function execve>}
+[3/11/2021:19h57min18s215987ms]:supports_follow_symlinks={<built-in function chown>, <built-in function stat>, <built-in function access>, <built-in function utime>, <built-in function link>}
+[3/11/2021:19h57min18s216039ms]:P_NOWAIT=1
+[3/11/2021:19h57min18s216086ms]:P_NOWAITO=1
+[3/11/2021:19h57min18s216130ms]:P_WAIT=0
+[3/11/2021:19h57min18s216195ms]:directory string=..
+[3/11/2021:19h57min18s216244ms]:separate pathname components=/
+[3/11/2021:19h57min18s216290ms]:character seperating search paths=:
+[3/11/2021:19h57min18s216336ms]:default search path=/bin:/usr/bin
+[3/11/2021:19h57min18s216381ms]:string used to separate lines="
+"
+[3/11/2021:19h57min18s216426ms]:The files path of the null device=/dev/null
+[3/11/2021:19h57min18s216471ms]:terminal size=os.terminal_size(columns=98, lines=59)
+[3/11/2021:19h57min18s216520ms]:PRIO_PROCESS=0
+[3/11/2021:19h57min18s216565ms]:PRIO_PGRP=1
+[3/11/2021:19h57min18s216610ms]:O_NONBLOCK=2048
+[3/11/2021:19h57min18s216657ms]:O_NDELAY=2048
+[3/11/2021:19h57min18s216702ms]:O_SYNC=1052672
+[3/11/2021:19h57min18s216747ms]:PRIO_USER=2
+[3/11/2021:19h57min18s216792ms]:O_RSYNC=1052672
+[3/11/2021:19h57min18s216838ms]:O_DSYNC=4096
+[3/11/2021:19h57min18s216884ms]:O_DIRECT=16384
+[3/11/2021:19h57min18s216928ms]:F_LOCK=1
+[3/11/2021:19h57min18s216974ms]:RWF_NOWAIT=8
+[3/11/2021:19h57min18s217019ms]:POSIX_FADV_DONTNEED=4
+[3/11/2021:19h57min18s217063ms]:POSIX_FADV_WILLNEED=3
+[3/11/2021:19h57min18s217109ms]:POSIX_FADV_NOREUSE=5
+[3/11/2021:19h57min18s217154ms]:POSIX_FADV_RANDOM=1
+[3/11/2021:19h57min18s217213ms]:POSIX_FADV_SEQUENTIAL=2
+[3/11/2021:19h57min18s217260ms]:POSIX_FADV_NORMAL=0
+[3/11/2021:19h57min18s217305ms]:O_CLOEXEC=524288
+[3/11/2021:19h57min18s217351ms]:O_ASYNC=8192
+[3/11/2021:19h57min18s217396ms]:pathconf_names={'PC_ALLOC_SIZE_MIN': 18, 'PC_ASYNC_IO': 10, 'PC_CHOWN_RESTRICTED': 6, 'PC_FILESIZEBITS': 13, 'PC_LINK_MAX': 0, 'PC_MAX_CANON': 1, 'PC_MAX_INPUT': 2, 'PC_NAME_MAX': 3, 'PC_NO_TRUNC': 7, 'PC_PATH_MAX': 4, 'PC_PIPE_BUF': 5, 'PC_PRIO_IO': 11, 'PC_REC_INCR_XFER_SIZE': 14, 'PC_REC_MAX_XFER_SIZE': 15, 'PC_REC_MIN_XFER_SIZE': 16, 'PC_REC_XFER_ALIGN': 17, 'PC_SOCK_MAXBUF': 12, 'PC_SYMLINK_MAX': 19, 'PC_SYNC_IO': 9, 'PC_VDISABLE': 8}
+[3/11/2021:19h57min18s217457ms]:RWF_HIPRI=1
+[3/11/2021:19h57min18s217503ms]:RWF_DSYNC=2
+[3/11/2021:19h57min18s217549ms]:RWF_SYNC=4
+[3/11/2021:19h57min18s217595ms]:F_TEST=3
+[3/11/2021:19h57min18s217640ms]:F_ULOCK=0
+[3/11/2021:19h57min18s217685ms]:F_TLOCK=2
+[3/11/2021:19h57min18s217730ms]:O_NOCTTY=256
+[3/11/2021:19h57min18s217776ms]:User ID=1000
+[3/11/2021:19h57min18s217822ms]:O_TMPFILE=4259840
+[3/11/2021:19h57min18s217867ms]:O_PATH=2097152
+[3/11/2021:19h57min18s217914ms]:O_NOATIME=262144
+[3/11/2021:19h57min18s217960ms]:O_NOFOLLOW=131072
+[3/11/2021:19h57min18s218005ms]:O_DIRECTORY=65536
+[3/11/2021:19h57min18s218050ms]:MFD_HUGE_64KB=1073741824
+[3/11/2021:19h57min18s218095ms]:MFD_HUGE_MASK=63
+[3/11/2021:19h57min18s218143ms]:MFD_HUGE_512KB=1275068416
+[3/11/2021:19h57min18s218201ms]:MFD_HUGE_1MB=1342177280
+[3/11/2021:19h57min18s218248ms]:MFD_HUGE_2MB=1409286144
+[3/11/2021:19h57min18s218294ms]:MFD_HUGE_SHIFT=26
+[3/11/2021:19h57min18s218341ms]:MFD_HUGETLB=4
+[3/11/2021:19h57min18s218387ms]:MFD_ALLOW_SEALING=2
+[3/11/2021:19h57min18s218432ms]:MFD_CLOEXEC=1
+[3/11/2021:19h57min18s218477ms]:EX_CONFIG=78
+[3/11/2021:19h57min18s218535ms]:EX_NOPERM=77
+[3/11/2021:19h57min18s218583ms]:EX_PROTOCOL=76
+[3/11/2021:19h57min18s218631ms]:EX_TEMPFAIL=75
+[3/11/2021:19h57min18s218675ms]:EX_IOERR=74
+[3/11/2021:19h57min18s218720ms]:EX_CANTCREAT=73
+[3/11/2021:19h57min18s218766ms]:EX_OSFILE=72
+[3/11/2021:19h57min18s218811ms]:EX_SOFTWARE=70
+[3/11/2021:19h57min18s218856ms]:EX_OSERR=71
+[3/11/2021:19h57min18s218901ms]:EX_NOHOST=68
+[3/11/2021:19h57min18s218946ms]:EX_UNAVAILABLE=69
+[3/11/2021:19h57min18s218993ms]:EX_NOUSER=67
+[3/11/2021:19h57min18s219040ms]:EX_DATAERR=65
+[3/11/2021:19h57min18s219085ms]:EX_NOINPUT=66
+[3/11/2021:19h57min18s219131ms]:EX_USAGE=64
+[3/11/2021:19h57min18s219189ms]:EX_OK=0
+[3/11/2021:19h57min18s219240ms]:MFD_HUGE_2GB=2080374784
+[3/11/2021:19h57min18s219285ms]:MFD_HUGE_16GB=-2013265920
+[3/11/2021:19h57min18s219332ms]:MFD_HUGE_512MB=1946157056
+[3/11/2021:19h57min18s219377ms]:MFD_HUGE_1GB=2013265920
+[3/11/2021:19h57min18s219423ms]:MFD_HUGE_256MB=1879048192
+[3/11/2021:19h57min18s219470ms]:MFD_HUGE_32MB=1677721600
+[3/11/2021:19h57min18s219515ms]:MFD_HUGE_16MB=1610612736
+[3/11/2021:19h57min18s219560ms]:MFD_HUGE_8MB=1543503872
+[3/11/2021:19h57min18s219606ms]:sysconf_names={'SC_2_CHAR_TERM': 95, 'SC_2_C_BIND': 47, 'SC_2_C_DEV': 48, 'SC_2_C_VERSION': 96, 'SC_2_FORT_DEV': 49, 'SC_2_FORT_RUN': 50, 'SC_2_LOCALEDEF': 52, 'SC_2_SW_DEV': 51, 'SC_2_UPE': 97, 'SC_2_VERSION': 46, 'SC_AIO_LISTIO_MAX': 23, 'SC_AIO_MAX': 24, 'SC_AIO_PRIO_DELTA_MAX': 25, 'SC_ARG_MAX': 0, 'SC_ASYNCHRONOUS_IO': 12, 'SC_ATEXIT_MAX': 87, 'SC_AVPHYS_PAGES': 86, 'SC_BC_BASE_MAX': 36, 'SC_BC_DIM_MAX': 37, 'SC_BC_SCALE_MAX': 38, 'SC_BC_STRING_MAX': 39, 'SC_CHARCLASS_NAME_MAX': 45, 'SC_CHAR_BIT': 101, 'SC_CHAR_MAX': 102, 'SC_CHAR_MIN': 103, 'SC_CHILD_MAX': 1, 'SC_CLK_TCK': 2, 'SC_COLL_WEIGHTS_MAX': 40, 'SC_DELAYTIMER_MAX': 26, 'SC_EQUIV_CLASS_MAX': 41, 'SC_EXPR_NEST_MAX': 42, 'SC_FSYNC': 15, 'SC_GETGR_R_SIZE_MAX': 69, 'SC_GETPW_R_SIZE_MAX': 70, 'SC_INT_MAX': 104, 'SC_INT_MIN': 105, 'SC_IOV_MAX': 60, 'SC_JOB_CONTROL': 7, 'SC_LINE_MAX': 43, 'SC_LOGIN_NAME_MAX': 71, 'SC_LONG_BIT': 106, 'SC_MAPPED_FILES': 16, 'SC_MB_LEN_MAX': 108, 'SC_MEMLOCK': 17, 'SC_MEMLOCK_RANGE': 18, 'SC_MEMORY_PROTECTION': 19, 'SC_MESSAGE_PASSING': 20, 'SC_MQ_OPEN_MAX': 27, 'SC_MQ_PRIO_MAX': 28, 'SC_NGROUPS_MAX': 3, 'SC_NL_ARGMAX': 119, 'SC_NL_LANGMAX': 120, 'SC_NL_MSGMAX': 121, 'SC_NL_NMAX': 122, 'SC_NL_SETMAX': 123, 'SC_NL_TEXTMAX': 124, 'SC_NPROCESSORS_CONF': 83, 'SC_NPROCESSORS_ONLN': 84, 'SC_NZERO': 109, 'SC_OPEN_MAX': 4, 'SC_PAGESIZE': 30, 'SC_PAGE_SIZE': 30, 'SC_PASS_MAX': 88, 'SC_PHYS_PAGES': 85, 'SC_PII': 53, 'SC_PII_INTERNET': 56, 'SC_PII_INTERNET_DGRAM': 62, 'SC_PII_INTERNET_STREAM': 61, 'SC_PII_OSI': 57, 'SC_PII_OSI_CLTS': 64, 'SC_PII_OSI_COTS': 63, 'SC_PII_OSI_M': 65, 'SC_PII_SOCKET': 55, 'SC_PII_XTI': 54, 'SC_POLL': 58, 'SC_PRIORITIZED_IO': 13, 'SC_PRIORITY_SCHEDULING': 10, 'SC_REALTIME_SIGNALS': 9, 'SC_RE_DUP_MAX': 44, 'SC_RTSIG_MAX': 31, 'SC_SAVED_IDS': 8, 'SC_SCHAR_MAX': 111, 'SC_SCHAR_MIN': 112, 'SC_SELECT': 59, 'SC_SEMAPHORES': 21, 'SC_SEM_NSEMS_MAX': 32, 'SC_SEM_VALUE_MAX': 33, 'SC_SHARED_MEMORY_OBJECTS': 22, 'SC_SHRT_MAX': 113, 'SC_SHRT_MIN': 114, 'SC_SIGQUEUE_MAX': 34, 'SC_SSIZE_MAX': 110, 'SC_STREAM_MAX': 5, 'SC_SYNCHRONIZED_IO': 14, 'SC_THREADS': 67, 'SC_THREAD_ATTR_STACKADDR': 77, 'SC_THREAD_ATTR_STACKSIZE': 78, 'SC_THREAD_DESTRUCTOR_ITERATIONS': 73, 'SC_THREAD_KEYS_MAX': 74, 'SC_THREAD_PRIORITY_SCHEDULING': 79, 'SC_THREAD_PRIO_INHERIT': 80, 'SC_THREAD_PRIO_PROTECT': 81, 'SC_THREAD_PROCESS_SHARED': 82, 'SC_THREAD_SAFE_FUNCTIONS': 68, 'SC_THREAD_STACK_MIN': 75, 'SC_THREAD_THREADS_MAX': 76, 'SC_TIMERS': 11, 'SC_TIMER_MAX': 35, 'SC_TTY_NAME_MAX': 72, 'SC_TZNAME_MAX': 6, 'SC_T_IOV_MAX': 66, 'SC_UCHAR_MAX': 115, 'SC_UINT_MAX': 116, 'SC_UIO_MAXIOV': 60, 'SC_ULONG_MAX': 117, 'SC_USHRT_MAX': 118, 'SC_VERSION': 29, 'SC_WORD_BIT': 107, 'SC_XBS5_ILP32_OFF32': 125, 'SC_XBS5_ILP32_OFFBIG': 126, 'SC_XBS5_LP64_OFF64': 127, 'SC_XBS5_LPBIG_OFFBIG': 128, 'SC_XOPEN_CRYPT': 92, 'SC_XOPEN_ENH_I18N': 93, 'SC_XOPEN_LEGACY': 129, 'SC_XOPEN_REALTIME': 130, 'SC_XOPEN_REALTIME_THREADS': 131, 'SC_XOPEN_SHM': 94, 'SC_XOPEN_UNIX': 91, 'SC_XOPEN_VERSION': 89, 'SC_XOPEN_XCU_VERSION': 90, 'SC_XOPEN_XPG2': 98, 'SC_XOPEN_XPG3': 99, 'SC_XOPEN_XPG4': 100}
+[3/11/2021:19h57min18s219724ms]:confstr_names={'CS_GNU_LIBC_VERSION': 2, 'CS_GNU_LIBPTHREAD_VERSION': 3, 'CS_LFS64_CFLAGS': 1004, 'CS_LFS64_LDFLAGS': 1005, 'CS_LFS64_LIBS': 1006, 'CS_LFS64_LINTFLAGS': 1007, 'CS_LFS_CFLAGS': 1000, 'CS_LFS_LDFLAGS': 1001, 'CS_LFS_LIBS': 1002, 'CS_LFS_LINTFLAGS': 1003, 'CS_PATH': 0, 'CS_XBS5_ILP32_OFF32_CFLAGS': 1100, 'CS_XBS5_ILP32_OFF32_LDFLAGS': 1101, 'CS_XBS5_ILP32_OFF32_LIBS': 1102, 'CS_XBS5_ILP32_OFF32_LINTFLAGS': 1103, 'CS_XBS5_ILP32_OFFBIG_CFLAGS': 1104, 'CS_XBS5_ILP32_OFFBIG_LDFLAGS': 1105, 'CS_XBS5_ILP32_OFFBIG_LIBS': 1106, 'CS_XBS5_ILP32_OFFBIG_LINTFLAGS': 1107, 'CS_XBS5_LP64_OFF64_CFLAGS': 1108, 'CS_XBS5_LP64_OFF64_LDFLAGS': 1109, 'CS_XBS5_LP64_OFF64_LIBS': 1110, 'CS_XBS5_LP64_OFF64_LINTFLAGS': 1111, 'CS_XBS5_LPBIG_OFFBIG_CFLAGS': 1112, 'CS_XBS5_LPBIG_OFFBIG_LDFLAGS': 1113, 'CS_XBS5_LPBIG_OFFBIG_LIBS': 1114, 'CS_XBS5_LPBIG_OFFBIG_LINTFLAGS': 1115}
+[3/11/2021:19h57min18s219792ms]:SCHED_RESET_ON_FORK=1073741824
+[3/11/2021:19h57min18s219838ms]:SCHED_RR=2
+[3/11/2021:19h57min18s219884ms]:SCHED_FIFO=1
+[3/11/2021:19h57min18s219929ms]:SCHED_IDLE=5
+[3/11/2021:19h57min18s219975ms]:SCHED_BATCH=3
+[3/11/2021:19h57min18s220020ms]:SCHED_OTHER=0
+[3/11/2021:19h57min18s220065ms]:WCONTINUED=8
+[3/11/2021:19h57min18s220111ms]:WNOHANG=1
+[3/11/2021:19h57min18s220157ms]:CLD_CONTINUED=6
+[3/11/2021:19h57min18s220218ms]:WUNTRACED=2
+[3/11/2021:19h57min18s220265ms]:CLD_EXITED=1
+[3/11/2021:19h57min18s220311ms]:WSTOPPED=2
+[3/11/2021:19h57min18s220357ms]:WEXITED=4
+[3/11/2021:19h57min18s220402ms]:WNOWAIT=16777216
+[3/11/2021:19h57min18s220446ms]:P_PIDFD=3
+[3/11/2021:19h57min18s220491ms]:P_ALL=0
+[3/11/2021:19h57min18s220537ms]:P_PGID=2
+[3/11/2021:19h57min18s220581ms]:P_PID=1
+[3/11/2021:19h57min18s220625ms]:CLD_KILLED=2
+[3/11/2021:19h57min18s220670ms]:CLD_DUMPED=3
+[3/11/2021:19h57min18s220715ms]:CLD_TRAPPED=4
+[3/11/2021:19h57min18s220780ms]:CLD_STOPPED=5
+[3/11/2021:19h57min18s220830ms]:RTLD_LOCAL=0
+[3/11/2021:19h57min18s220873ms]:RTLD_NOLOAD=4
+[3/11/2021:19h57min18s220919ms]:RTLD_NODELETE=4096
+[3/11/2021:19h57min18s220972ms]:RTLD_GLOBAL=256
+[3/11/2021:19h57min18s221026ms]:RTLD_NOW=2
+[3/11/2021:19h57min18s221071ms]:RTLD_LAZY=1
+[3/11/2021:19h57min18s221116ms]:RTLD_DEEPBIND=8
+[3/11/2021:19h57min18s221178ms]:GRND_NONBLOCK=1
+[3/11/2021:19h57min18s221229ms]:GRND_RANDOM=2
+[3/11/2021:19h57min18s221275ms]:Ending of usseless but usable data.
+[3/11/2021:19h57min18s221275ms]:##################################################################################################################################
+[3/11/2021:19h57min49s911727ms]: Exercise Words then the definition started.
+[3/11/2021:19h58min24s473378ms]: Exercise Words then the definition stopped.
+[3/11/2021:19h58min27s600516ms]: You have answered 2 questions of 206 questions for the exercise 'Words then the definition'.
+[3/11/2021:19h58min27s600762ms]: Your score is '0' for the exercise: 'Words then the definition'.
+[3/11/2021:19h58min27s600862ms]: You took 0 year, 0 month, 0 day, 0 hour, 7 minutes 53 seconds, 349 milliseconds for the exercise: 'Words then the definition', exercise started at 3/11/2021:19h57min49s911727ms and finished at 3/11/2021:19h58min24s473378ms.
+[3/11/2021:19h58min30s149551ms]: Program Learn Your Vocab stopped.
