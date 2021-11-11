@@ -8,7 +8,7 @@ class Get:
         self.home="https://henral.github.io/Learn_your_irregular_verbs/"
         self.data="files/website/additionnal_files/metadata/writtenList"
         self.dataFiles=['English(AInsi).txt', 'English(safe).txt', 'English.csv', 'English.xlsx', 'formats.txt', 'French.csv', 'German.csv', 'read.py', 'Spanish.csv', 'start.cmd', 'test(default format).csv', 'test.csv', 'translate.py']
-        self.folders=["metadat","writtenList"]
+        self.folders=["metadata","writtenList"]
     def prepareTheTerrain(self):
         self.temp="./"
         for i in range(len(self.folders)):
