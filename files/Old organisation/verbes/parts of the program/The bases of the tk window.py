@@ -1,7 +1,44 @@
-name = input("Please enter the name of the file:")
-f=open("{}.py".format(name),"a")
-a="""#The imports\nfrom tkinter import *\nimport sys\n\n#Initialising the window\nfenetre = Tk()\nfenetre['bg']='white'\nfenetre.title("Language:")\nfenetre.geometry("250x200")\nfenetre.minsize(250,200)\n#fenetre.iconbitmap("the icone of the software in.ico")\nfenetre.config(background="#2CDF85")\n"""
-b="""\n#The few frames\n#First frame\nFrame1=Frame(fenetre, borderwidth=2, relief=F1, bg=FBG)\nFrame1.pack(side=LEFT, padx=10, pady=10)\n\n#Frame1=LabelFrame(fenetre, text="Choose You're Language:", padx=10, pady=-10, bg=FBG, fg=FFG)\n#Frame1.pack(fill="both",expand="yes")\n\n\n#Inner Top Frame\nFrame1Top=Frame(Frame1, borderwidth=2, relief=F1T, bg=FBG)\nFrame1Top.pack(side=TOP, padx=10, pady=10, expand=YES)\n\n\n#Inner middle frame\nFrame1bot=Frame(Frame1,borderwidth=2, relief=F1b, bg=FBG)\nFrame1bot.pack(side=BOTTOM, padx=10, pady=10, expand=YES)\n\n\n#Bottom inner frame\nFrame1quit=Frame(Frame1,borderwidth=2, relief=F1q, bg=FBG)\nFrame1quit.pack(side=BOTTOM, padx=30, pady=10, expand=YES)\n\n#Label, text (Inform the user of the content of the windows\nlabel = Label(Frame1, text="Choose you're language:", font=(Font,Size), bg=LBG, fg=LFG)\nlabel.pack(side=TOP, pady=10, expand=YES,fill=X)#padx=5)\n\n#Buttons\nDE=Button(Frame1, text="German", font=(Font,Size), bg=WBG, fg=WFG, command=languageDE ,activebackground=hbDE, activeforeground=hfDE)#, value="D")\nDE.pack(side=RIGHT,pady=0, expand=YES,padx=5)#fill=X)\n\nEN=Button(Frame1,text="English", font=(Font,Size), bg=WBG, fg=WFG, command=languageE ,activebackground=hbEN, activeforeground=hfEN)#, value="E")\nEN.pack(side=RIGHT,pady=0, expand=YES,padx=5)#fill=X)\n\nFR=Button(Frame1,text="French", font=(Font,Size), bg=WBG, fg=WFG, command=languageF ,activebackground=hbFR, activeforeground=hfFR)#, value="F")\nFR.pack(side=RIGHT,pady=0, expand=YES,padx=5)#fill=X)\n\nES=Button(Frame1,text="Spanish", font=(Font,Size), bg=WBG, fg=WFG, command=languageES ,activebackground=hbES, activeforeground=hfES)#, value="ES")\nES.pack(side=RIGHT,pady=0, expand=YES,padx=5)#fill=X)\n\nbouton=Button(Frame1quit, text="Quit", font=(Font,Size), bg=WBG, fg=WFG, command=languagequit ,activebackground=hbq, activeforeground=hfq)\nbouton.pack(side=BOTTOM,pady=10, expand=YES,fill=X)#padx=5)\n\nfenetre.mainloop()"""
-f.write(a)
-f.write(b)
-f.close()
+import os
+import re
+import sys
+
+# Constants
+SAFE_DIR = os.getcwd()  # or set this to a fixed path like "/tmp/safe_output"
+SAFE_FILENAME_RE = re.compile(r'^[\w\-]+\.py$')  # Only allow safe .py names
+
+# Validate and secure filename
+def is_safe_filename(filename):
+    return bool(SAFE_FILENAME_RE.fullmatch(filename))
+
+def secure_join(base, filename):
+    path = os.path.abspath(os.path.join(base, filename))
+    if not path.startswith(os.path.abspath(base)):
+        raise ValueError("Unsafe path detected")
+    return path
+
+# Get user input
+name = input("Please enter the name of the file (without path, must end in .py): ").strip()
+
+# Validate
+if not is_safe_filename(name):
+    print("Invalid filename. Must be alphanumeric with dashes/underscores and end in .py")
+    sys.exit(1)
+
+try:
+    full_path = secure_join(SAFE_DIR, name)
+except ValueError as ve:
+    print(ve)
+    sys.exit(1)
+
+# Optional: Use 'x' mode to avoid overwriting
+try:
+    with open(full_path, "x") as f:
+        a = """# The imports\nfrom tkinter import *\nimport sys\n\n# Initialising the window\nfenetre = Tk()\n..."""
+        b = """\n# The few frames\nFrame1 = Frame(fenetre, borderwidth=2, relief=F1, bg=FBG)\n...fenetre.mainloop()"""
+        f.write(a)
+        f.write(b)
+    print(f"File created at {full_path}")
+except FileExistsError:
+    print("Error: File already exists. Aborting.")
+except Exception as e:
+    print(f"Failed to write file: {e}")
